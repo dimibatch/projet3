@@ -6,12 +6,13 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { OngoingTestComponent } from './ongoing-test/ongoing-test.component';
 import { NewTestComponent } from './new-test/new-test.component';
+import { SearchPageComponent } from './search-page/search-page.component';
 
 const ROUTES:Route[] = 
 [
-  {path:"search", component:SearchComponent},
-  {path:"ongoingtest", component:OngoingTestComponent},
-  {path:"newtest", component:NewTestComponent}
+  {path:"searchPage", component:SearchComponent},
+  {path:"ongoingtestPage", component:OngoingTestComponent},
+  {path:"newtestPage", component:NewTestComponent}
 ]
 
 @NgModule({
@@ -19,7 +20,8 @@ const ROUTES:Route[] =
     AppComponent,
     SearchComponent,
     OngoingTestComponent,
-    NewTestComponent
+    NewTestComponent,
+    SearchPageComponent
   ],
   imports: [
     BrowserModule,
