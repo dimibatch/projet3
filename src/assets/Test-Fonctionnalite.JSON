@@ -1,0 +1,320 @@
+
+
+[
+   {
+      "ID": 1,
+      "Code": "DEV-I-001",
+      "Désignation": "Mesure dimensions boîte pliante fourreau intérieur ondulé"
+   },
+   {
+      "ID": 2,
+      "Code": "DEV-I-002",
+      "Désignation": "Mesure du grammage"
+   },
+   {
+      "ID": 3,
+      "Code": "DEV-I-005",
+      "Désignation": "Résistance à la température"
+   },
+   {
+      "ID": 4,
+      "Code": "DEV-I-006",
+      "Désignation": "Test de chute"
+   },
+   {
+      "ID": 5,
+      "Code": "DEV-I-007",
+      "Désignation": "Mesure de capacité d'un contenant"
+   },
+   {
+      "ID": 6,
+      "Code": "DEV-I-008",
+      "Désignation": "Qualité et mesure de l'angle de spray dose"
+   },
+   {
+      "ID": 7,
+      "Code": "DEV-I-010",
+      "Désignation": "Etanchéité sous pression réduite"
+   },
+   {
+      "ID": 8,
+      "Code": "DEV-I-011",
+      "Désignation": "Résistance en pression des récipients aérosols aluminium"
+   },
+   {
+      "ID": 9,
+      "Code": "DEV-I-014",
+      "Désignation": "Débit d'une pompe"
+   },
+   {
+      "ID": 10,
+      "Code": "DEV-I-021",
+      "Désignation": "Contrôle de l'auto-dévissage"
+   },
+   {
+      "ID": 11,
+      "Code": "DEV-I-022",
+      "Désignation": "Contrôle de tenue des poils de pinceaux de maquillage"
+   },
+   {
+      "ID": 12,
+      "Code": "DEV-I-023",
+      "Désignation": "Essai de lavage des pinceaux de maquillage"
+   },
+   {
+      "ID": 13,
+      "Code": "DEV-I-024",
+      "Désignation": "Vieillissement des assemblages par collage"
+   },
+   {
+      "ID": 14,
+      "Code": "DEV-I-025",
+      "Désignation": "Résistance à la torsion des charnières de capsules"
+   },
+   {
+      "ID": 15,
+      "Code": "DEV-I-026",
+      "Désignation": "Tenue des joints"
+   },
+   {
+      "ID": 16,
+      "Code": "DEV-I-027",
+      "Désignation": "Agressivité des habillages métalliques"
+   },
+   {
+      "ID": 17,
+      "Code": "DEV-I-028",
+      "Désignation": "Dosage de l'alcalinité libérée par le verre des flacons"
+   },
+   {
+      "ID": 18,
+      "Code": "DEV-I-029",
+      "Désignation": "Verticalité des flacons méthode tournette"
+   },
+   {
+      "ID": 19,
+      "Code": "DEV-I-031",
+      "Désignation": "Stabilité des éléments"
+   },
+   {
+      "ID": 20,
+      "Code": "DEV-I-032",
+      "Désignation": "Pompes courbure des tubes plongeurs"
+   },
+   {
+      "ID": 21,
+      "Code": "DEV-I-033",
+      "Désignation": "Tenue en traction verticale des éléments entre eux"
+   },
+   {
+      "ID": 22,
+      "Code": "DEV-I-035",
+      "Désignation": "Stabilité des éléments méthode des 5 secondes"
+   },
+   {
+      "ID": 23,
+      "Code": "DEV-I-038",
+      "Désignation": "Pompes mesure de la longueur des tubes plongeurs"
+   },
+   {
+      "ID": 24,
+      "Code": "DEV-I-039",
+      "Désignation": "Amorçage d'une pompe"
+   },
+   {
+      "ID": 25,
+      "Code": "DEV-I-041",
+      "Désignation": "Test de fonctionnement de pompe"
+   },
+   {
+      "ID": 26,
+      "Code": "DEV-I-042",
+      "Désignation": "Contrôle du collage des emballages carton méthode manuelle"
+   },
+   {
+      "ID": 27,
+      "Code": "DEV-I-044",
+      "Désignation": "Résistance du collage des cartons test de cisaillement"
+   },
+   {
+      "ID": 28,
+      "Code": "DEV-I-045",
+      "Désignation": "Contrôle de tenue des joints non collés"
+   },
+   {
+      "ID": 29,
+      "Code": "DEV-I-047",
+      "Désignation": "Mesure du taux de restitution"
+   },
+   {
+      "ID": 30,
+      "Code": "DEV-I-048",
+      "Désignation": "Verticalité des flacons banc de verticalité"
+   },
+   {
+      "ID": 31,
+      "Code": "DEV-I-051",
+      "Désignation": "Simulation d'usage d'une éponge en utilisation sèche"
+   },
+   {
+      "ID": 32,
+      "Code": "DEV-I-052",
+      "Désignation": "Simulation d'usage d'une éponge en utilisation humide"
+   },
+   {
+      "ID": 33,
+      "Code": "DEV-I-053",
+      "Désignation": "Contrôle du dimensionnel des éponges après usage"
+   },
+   {
+      "ID": 34,
+      "Code": "DEV-I-054",
+      "Désignation": "Contrôle du traitement anti-ions cuivre des éponges"
+   },
+   {
+      "ID": 35,
+      "Code": "DEV-I-055",
+      "Désignation": "Résistance aux chocs mouton pendule"
+   },
+   {
+      "ID": 36,
+      "Code": "DEV-I-056",
+      "Désignation": "Mesure du coefficient de glisse"
+   },
+   {
+      "ID": 37,
+      "Code": "DEV-I-059",
+      "Désignation": "Mise en volume d'une boîte pliante"
+   },
+   {
+      "ID": 38,
+      "Code": "DEV-I-060",
+      "Désignation": "Force de fermeture d'une boîte pliante"
+   },
+   {
+      "ID": 39,
+      "Code": "DEV-I-061",
+      "Désignation": "Mesure de la planéité des boîtes pliantes et ondulés"
+   },
+   {
+      "ID": 40,
+      "Code": "DEV-I-062",
+      "Désignation": "Résistance d'un collage en fonction de la température ambiante"
+   },
+   {
+      "ID": 41,
+      "Code": "DEV-I-063",
+      "Désignation": "Tenue d'un couvercle sur sa base méthode par gravité"
+   },
+   {
+      "ID": 42,
+      "Code": "DEV-I-064",
+      "Désignation": "Détermination du couple de vissage-dévissage"
+   },
+   {
+      "ID": 43,
+      "Code": "DEV-I-071",
+      "Désignation": "Pompe résistance au choc"
+   },
+   {
+      "ID": 44,
+      "Code": "DEV-I-073",
+      "Désignation": "Test de compression casse charnières des boitiers maquillage"
+   },
+   {
+      "ID": 45,
+      "Code": "DEV-I-075",
+      "Désignation": "Résistance en compression verticale"
+   },
+   {
+      "ID": 46,
+      "Code": "DEV-I-077",
+      "Désignation": "Etanchéité pots/obturateurs"
+   },
+   {
+      "ID": 47,
+      "Code": "DEV-I-078",
+      "Désignation": "Tenue du collage d'une étiquette"
+   },
+   {
+      "ID": 48,
+      "Code": "DEV-I-079",
+      "Désignation": "Etanchéité sous pression atmosphérique"
+   },
+   {
+      "ID": 49,
+      "Code": "DEV-I-081",
+      "Désignation": "Mesure de l'inclinaison des bagues pots et flacons"
+   },
+   {
+      "ID": 50,
+      "Code": "DEV-I-083",
+      "Désignation": "Résistance à la chute des produits finis dans leur emballage d'expédition"
+   },
+   {
+      "ID": 51,
+      "Code": "DEV-I-084",
+      "Désignation": "Mesure de la force de fermeture des boîtiers de maquillage"
+   },
+   {
+      "ID": 52,
+      "Code": "DEV-I-085",
+      "Désignation": "Mesure de la force d'ouverture des boîtiers de maquillage"
+   },
+   {
+      "ID": 53,
+      "Code": "DEV-I-086",
+      "Désignation": "Résistance mécanique de la charnière d'un boîtier de maquillage < 180°"
+   },
+   {
+      "ID": 54,
+      "Code": "DEV-I-087",
+      "Désignation": "Résistance de conception et collages des objets de sacherie"
+   },
+   {
+      "ID": 55,
+      "Code": "DEV-I-089",
+      "Désignation": "Test d'étanchéité spécifique aux produits dangereux"
+   },
+   {
+      "ID": 56,
+      "Code": "DEV-I-090",
+      "Désignation": "Vieillissement des assemblages par contrainte"
+   },
+   {
+      "ID": 57,
+      "Code": "DEV-I-091",
+      "Désignation": "Test de chute crayon de maquillage "
+   },
+   {
+      "ID": 58,
+      "Code": "DEV-I-094",
+      "Désignation": "Friabilité des billes météorites"
+   },
+   {
+      "ID": 59,
+      "Code": "DEV-I-096",
+      "Désignation": "Validation pratique du volume d'expansion"
+   },
+   {
+      "ID": 60,
+      "Code": "DEV-I-097",
+      "Désignation": "Etanchéité en immersion sous pression réduite"
+   },
+   {
+      "ID": 61,
+      "Code": "DEV-I-100",
+      "Désignation": "Protocole de validation de l'operculage d'un pot"
+   },
+   {
+      "ID": 62,
+      "Code": "DEV-I-101",
+      "Désignation": "Vieillissement des operculages"
+   },
+   {
+      "ID": 63,
+      "Code": "DEV-I-102",
+      "Désignation": "Mesure de la force de désoperculage"
+   }
+]
+
