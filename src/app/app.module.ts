@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { OngoingTestComponent } from './ongoing-test/ongoing-test.component';
 import { NewTestComponent } from './new-test/new-test.component';
+import { HeaderComponent } from './header/header.component';
 
 const ROUTES:Route[] = 
 [
@@ -19,7 +20,8 @@ const ROUTES:Route[] =
     AppComponent,
     SearchComponent,
     OngoingTestComponent,
-    NewTestComponent
+    NewTestComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
