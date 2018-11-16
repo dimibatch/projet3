@@ -1,3 +1,9 @@
 .subtitles-top-container{
     margin-bottom: 50px;
 }
+
+.search-result-wrap{
+    overflow-x: scroll;
+    height: 95vh;
+    width: 100%;
+}
