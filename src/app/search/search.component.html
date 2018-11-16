@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container wrapper">
 
   <!-- Search Bar -->
 
@@ -10,9 +10,8 @@
       <input type="text" class="form-control" name="searchBar" id="searchBar" aria-describedby="helpId" placeholder="SAISISSEZ VOTRE RECHERCHE">
     </div>
 
-    <div class="submit-button">
-      <button class="btn btn-primary" [routerLink]="['/searchPage']" routerLinkActive="router-link-active" >RECHERCHER</button>
-    </div>
+    <button class="btn btn-primary" [routerLink]="['/searchPage']" routerLinkActive="router-link-active">RECHERCHER</button>
+
 
   </form>
 
@@ -67,12 +66,8 @@
         <input type="text" class="form-control" name="test" id="test" aria-describedby="helpId" placeholder="Test">
       </div>
 
-      <div class="submit-button">
-        <button class="btn btn-primary" [routerLink]="['/searchPage']" routerLinkActive="router-link-active" >RECHERCHER</button>
-      </div>
-
+      <button class="btn btn-primary" [routerLink]="['/searchPage']" routerLinkActive="router-link-active">RECHERCHER</button>
 
     </form>
   </div>
 </div>
-

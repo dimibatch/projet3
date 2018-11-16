@@ -6,6 +6,11 @@ form{
     margin-bottom:10px;
 }
 
-.submit-button{
+.button{
     text-align: right
+}
+
+.wrapper{
+    border:1px solid black;
+    padding:50px;
 }

@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
 import { OngoingTestComponent } from './ongoing-test/ongoing-test.component';
 import { NewTestComponent } from './new-test/new-test.component';
+import { HeaderComponent } from './header/header.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 
 const appRoutes:Routes = 
@@ -22,6 +23,7 @@ const appRoutes:Routes =
     SearchComponent,
     OngoingTestComponent,
     NewTestComponent,
+    HeaderComponent,
     SearchPageComponent
   ],
   imports: [

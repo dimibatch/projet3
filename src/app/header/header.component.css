@@ -1,0 +1,44 @@
+#header-image {
+    background-color: rgb(239, 239, 239);
+}
+
+.nav-bar-button,
+.logo-container {
+    border-radius: 0;
+}
+
+.logo-container {
+    max-height: 300px;
+}
+
+.logo-container {
+    border: none;
+}
+
+#menu-bar {
+    height: 50px;
+}
+
+.nav-bar-button {
+    text-align: center;
+    font-weight: bold;
+    border: solid rgb(226, 226, 226) 1px;
+    border-bottom: solid black 2px;
+}
+
+#research-button {
+    background-color: black;
+    color: white;
+}
+
+#ongoing-tests-button,
+#new-test-button {
+    background-color: white;
+    color: black;
+}
+
+#research-button:hover,
+#ongoing-tests-button:hover,
+#new-test-button:hover {
+    cursor: pointer;
+}
