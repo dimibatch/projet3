@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Test } from '../test';
-import { $ } from 'protractor';
 
 @Component({
   selector: 'app-search-result',

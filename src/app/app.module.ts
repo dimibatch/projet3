@@ -17,7 +17,8 @@ const appRoutes:Routes =
   {path:"search", component:SearchComponent},
   {path:"searchPage", component:SearchPageComponent},
   {path:"ongoingtestPage", component:OngoingTestComponent},
-  {path:"newtestPage", component:NewTestComponent}
+  {path:"newtestPage", component:NewTestComponent},
+  {path:"", redirectTo:"search", pathMatch:"full"},
 ]
 
 @NgModule({
