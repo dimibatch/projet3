@@ -1,6 +1,6 @@
 <div class="container-fluid p-0">
   <div class="text-center pt-4 pb-4" id="header-image">
-      <img src="assets/guerlainLogo2.png" >
+    <img src="assets/guerlainLogo2.png">
   </div>
   <!-- <div class="card bg-dark text-white logo-container">
     <img class="card-img" src="https://via.placeholder.com/1300x300">
@@ -8,11 +8,13 @@
 
   <div class="row no-gutters" id="menu-bar">
 
-    <button class="col-4 nav-bar-button text-center button-start-black" id="research-button" (click)="changeResearchColor()">Rechercher
-      des tests</button>
+    <button class="col-4 nav-bar-button text-center button-start-black" id="research-button" (click)="changeResearchColor()"
+      [routerLink]="['/search']" routerLinkActive="router-link-active">Rechercher des tests</button>
 
-    <button class="col-4  nav-bar-button" id="ongoing-tests-button" (click)="changeOngoingTestColor()">Tests en cours</button>
+    <button class="col-4  nav-bar-button" id="ongoing-tests-button" (click)="changeOngoingTestColor()" [routerLink]="['/ongoingtestPage']"
+      routerLinkActive="router-link-active">Tests en cours</button>
 
-    <button class="col-4  nav-bar-button" id="new-test-button" (click)="changeNewTestColor()">Ajout d'un nouveau test</button>
+    <button class="col-4  nav-bar-button" id="new-test-button" (click)="changeNewTestColor()" [routerLink]="['/newtestPage']"
+      routerLinkActive="router-link-active">Ajout d'un nouveau test</button>
   </div>
 </div>

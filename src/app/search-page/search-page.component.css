@@ -1,3 +1,17 @@
 .subtitles-top-container{
     margin-bottom: 50px;
+    padding: 0;
+}
+
+
+.search-result-wrap{
+    overflow-x: scroll;
+    height: 95vh;
+    width: 100%;
+}
+
+.blackBottomLine{
+    border: 2px solid gray;
+    border-bottom: 1px solid black;
+    padding:10px
 }
