@@ -3,10 +3,13 @@
     padding: 0;
 }
 
+.container-fluid{
+    margin-top:50px;
+}
 
 .search-result-wrap{
     overflow-x: scroll;
-    height: 95vh;
+    height: 105vh;
     width: 100%;
 }
 

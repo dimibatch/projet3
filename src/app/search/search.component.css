@@ -14,3 +14,13 @@ form{
     border:1px solid black;
     padding:50px;
 }
+
+.container-fluid{
+    padding:0
+}
+
+.blackBottomLine{
+    border: 2px solid gray;
+    border-bottom: 1px solid black;
+    padding:10px
+}

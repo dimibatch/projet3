@@ -1,73 +1,85 @@
-<div class="container wrapper">
+<div class="container-fluid">
 
-  <!-- Search Bar -->
+    <div class="container-fluid text-center subtitles-top-container">
 
-  <form>
-
-    <div class="form-group">
-      <p>RECHERCHE</p>
-      <hr />
-      <input type="text" class="form-control" name="searchBar" id="searchBar" aria-describedby="helpId" placeholder="SAISISSEZ VOTRE RECHERCHE">
+        <div class="col-6 d-inline-block blackBottomLine" id="historicTests" (click)="changeHistoricTestsColor()">HISTORIQUE
+          DES TESTS</div>
+        <div class="col-6 d-inline-block blackBottomLine" id="incompatibilites" (click)="changeIncompatibiliteColor()">INCOMPATIBILITES</div>
+      
+      </div>
+    
+    <div class="container wrapper">
+      
+      <!-- Search Bar -->
+    
+      <form>
+    
+        <div class="form-group">
+          <p>RECHERCHE</p>
+          <hr />
+          <input type="text" class="form-control" name="searchBar" id="searchBar" aria-describedby="helpId" placeholder="SAISISSEZ VOTRE RECHERCHE">
+        </div>
+    
+        <button class="btn btn-primary" [routerLink]="['/searchPage']" routerLinkActive="router-link-active">RECHERCHER</button>
+    
+    
+      </form>
+    
+      <!-- Filters -->
+    
+      <div class="filter-container container ">
+        <p>FILTRES</p>
+        <hr />
+    
+        <form>
+    
+          <div class="form-group">
+            <label for="materiau">Matériau</label>
+            <input type="text" class="form-control" name="materiau" id="materiau" aria-describedby="helpId" placeholder="Matériau">
+          </div>
+    
+          <div class="form-group">
+            <label for="matiere-premiere">Matière première</label>
+            <input type="text" class="form-control" name="matiere-premiere" id="matiere-premiere" aria-describedby="helpId"
+              placeholder="Matière première">
+          </div>
+    
+          <div class="form-group">
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
+              <label class="form-check-label" for="inlineRadio1">CONFORME</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
+              <label class="form-check-label" for="inlineRadio2">NON CONFORME</label>
+            </div>
+          </div>
+    
+    
+          <div class="form-group">
+            <label for="codeG">Code G</label>
+            <input type="text" class="form-control" name="codeG" id="codeG" aria-describedby="helpId" placeholder="Code G">
+          </div>
+    
+          <div class="form-group">
+            <label for="typeDecor">Type de décor</label>
+            <input type="text" class="form-control" name="typeDecor" id="typeDecor" aria-describedby="helpId" placeholder="Type de décor">
+          </div>
+    
+          <div class="form-group">
+            <label for="numeroVrac">Numéro de vrac</label>
+            <input type="text" class="form-control" name="numeroVrac" id="numeroVrac" aria-describedby="helpId" placeholder="Numéro de vrac">
+          </div>
+    
+          <div class="form-group">
+            <label for="test">Test</label>
+            <input type="text" class="form-control" name="test" id="test" aria-describedby="helpId" placeholder="Test">
+          </div>
+    
+          <button class="btn btn-primary" [routerLink]="['/searchPage']" routerLinkActive="router-link-active">RECHERCHER</button>
+    
+        </form>
+      </div>
     </div>
-
-    <button class="btn btn-primary" [routerLink]="['/searchPage']" routerLinkActive="router-link-active">RECHERCHER</button>
-
-
-  </form>
-
-  <!-- Filters -->
-
-  <div class="filter-container ">
-    <p>FILTRES</p>
-    <hr />
-
-    <form>
-
-      <div class="form-group">
-        <label for="materiau">Matériau</label>
-        <input type="text" class="form-control" name="materiau" id="materiau" aria-describedby="helpId" placeholder="Matériau">
-      </div>
-
-      <div class="form-group">
-        <label for="matiere-premiere">Matière première</label>
-        <input type="text" class="form-control" name="matiere-premiere" id="matiere-premiere" aria-describedby="helpId"
-          placeholder="Matière première">
-      </div>
-
-      <div class="form-group">
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-          <label class="form-check-label" for="inlineRadio1">CONFORME</label>
-        </div>
-        <div class="form-check form-check-inline">
-          <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-          <label class="form-check-label" for="inlineRadio2">NON CONFORME</label>
-        </div>
-      </div>
-
-
-      <div class="form-group">
-        <label for="codeG">Code G</label>
-        <input type="text" class="form-control" name="codeG" id="codeG" aria-describedby="helpId" placeholder="Code G">
-      </div>
-
-      <div class="form-group">
-        <label for="typeDecor">Type de décor</label>
-        <input type="text" class="form-control" name="typeDecor" id="typeDecor" aria-describedby="helpId" placeholder="Type de décor">
-      </div>
-
-      <div class="form-group">
-        <label for="numeroVrac">Numéro de vrac</label>
-        <input type="text" class="form-control" name="numeroVrac" id="numeroVrac" aria-describedby="helpId" placeholder="Numéro de vrac">
-      </div>
-
-      <div class="form-group">
-        <label for="test">Test</label>
-        <input type="text" class="form-control" name="test" id="test" aria-describedby="helpId" placeholder="Test">
-      </div>
-
-      <button class="btn btn-primary" [routerLink]="['/searchPage']" routerLinkActive="router-link-active">RECHERCHER</button>
-
-    </form>
-  </div>
+    
 </div>
