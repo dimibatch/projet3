@@ -1,0 +1,5 @@
+.search-result-wrap{
+    overflow-x: scroll;
+    height: 95vh;
+    width: 100%;
+}
