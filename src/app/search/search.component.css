@@ -6,8 +6,9 @@ form{
     margin-bottom:10px;
 }
 
-.button{
-    text-align: right
+#historicTests{
+    background-color: #595959;
+    color:white;
 }
 
 .wrapper{
@@ -20,7 +21,6 @@ form{
 }
 
 .blackBottomLine{
-    border: 2px solid gray;
-    border-bottom: 1px solid black;
+    border: 1px solid black;
     padding:10px
 }

@@ -16,7 +16,7 @@ export class SearchComponent implements OnInit {
    public changeHistoricTestsColor() {
     if (document.getElementById('historicTests').style.color != "white") {
     document.getElementById('historicTests').style.color = "white";
-    document.getElementById('historicTests').style.backgroundColor = "black";
+    document.getElementById('historicTests').style.backgroundColor = "#595959";
     
     document.getElementById('incompatibilites').style.color = "black";
     document.getElementById('incompatibilites').style.backgroundColor = "white";
@@ -28,7 +28,7 @@ export class SearchComponent implements OnInit {
   public changeIncompatibiliteColor() {
     if (document.getElementById('incompatibilites').style.color != "white") {
     document.getElementById('incompatibilites').style.color = "white";
-    document.getElementById('incompatibilites').style.backgroundColor = "black";
+    document.getElementById('incompatibilites').style.backgroundColor = "#595959";
     
     document.getElementById('historicTests').style.color = "black";
     document.getElementById('historicTests').style.backgroundColor = "white";

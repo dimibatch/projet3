@@ -9,8 +9,11 @@
 
 .search-result-wrap{
     overflow-x: scroll;
-    height: 105vh;
-    width: 100%;
+    height: 130vh;
+}
+
+::-webkit-scrollbar {
+    background: transparent;  /* optional: just make scrollbar invisible */
 }
 
 .blackBottomLine{
