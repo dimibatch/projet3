@@ -11,6 +11,9 @@ import { NewTestComponent } from './new-test/new-test.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { DerogationPipe } from './derogation.pipe';
+import { TestFamilyPipe } from './test-family.pipe';
+import { CodeACPipe } from './code-ac.pipe';
 
 
 const appRoutes:Routes = 
@@ -31,6 +34,9 @@ const appRoutes:Routes =
     HeaderComponent,
     SearchPageComponent,
     SearchResultComponent,
+    DerogationPipe,
+    TestFamilyPipe,
+    CodeACPipe,
   ],
   imports: [
     BrowserModule,
