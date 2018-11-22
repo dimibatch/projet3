@@ -25,6 +25,7 @@ export class Test {
     public quantity:number;
     public start:string;
     public result:string;
+    public derogation:boolean;
     public comments:string;
 
 }
