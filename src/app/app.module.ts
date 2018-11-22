@@ -12,6 +12,7 @@ import { HeaderComponent } from './header/header.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 
+
 const appRoutes:Routes = 
 [
   {path:"search", component:SearchComponent},
@@ -29,7 +30,7 @@ const appRoutes:Routes =
     NewTestComponent,
     HeaderComponent,
     SearchPageComponent,
-    SearchResultComponent
+    SearchResultComponent,
   ],
   imports: [
     BrowserModule,
