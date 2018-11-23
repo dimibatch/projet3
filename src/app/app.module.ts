@@ -14,6 +14,7 @@ import { SearchResultComponent } from './search-result/search-result.component';
 import { DerogationPipe } from './derogation.pipe';
 import { TestFamilyPipe } from './test-family.pipe';
 import { CodeACPipe } from './code-ac.pipe';
+import { TypeAcPipe } from './type-ac.pipe';
 
 
 const appRoutes:Routes = 
@@ -37,6 +38,7 @@ const appRoutes:Routes =
     DerogationPipe,
     TestFamilyPipe,
     CodeACPipe,
+    TypeAcPipe,
   ],
   imports: [
     BrowserModule,

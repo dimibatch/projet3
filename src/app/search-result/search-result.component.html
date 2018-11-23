@@ -1,5 +1,5 @@
 <div>
-  <hot-table class="hot" [data]="dataset" [colHeaders]="true">
+  <hot-table class="hot" [data]="dataset | typeAc:'tu'" [colHeaders]="true">
     <hot-column data="typeAC" [readOnly]="true" title="Type d'AC"></hot-column>
     <hot-column data="codeG" [readOnly]="true" title="Code G"></hot-column>
     <hot-column data="productName" [readOnly]="true" title="Nom produit"></hot-column>
