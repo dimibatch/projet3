@@ -11,9 +11,10 @@ import { NewTestComponent } from './new-test/new-test.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { SearchResultComponent } from './search-result/search-result.component';
-import { DerogationPipe } from './derogation.pipe';
-import { TestFamilyPipe } from './test-family.pipe';
-import { CodeACPipe } from './code-ac.pipe';
+import { DerogationPipe } from './pipes/derogation.pipe';
+import { TestFamilyPipe } from './pipes/test-family.pipe';
+import { CodeACPipe } from './pipes/code-ac.pipe';
+import { CodeGPipe } from './pipes/code-g.pipe';
 
 
 const appRoutes:Routes = 
@@ -37,6 +38,7 @@ const appRoutes:Routes =
     DerogationPipe,
     TestFamilyPipe,
     CodeACPipe,
+    CodeGPipe,
   ],
   imports: [
     BrowserModule,
