@@ -15,6 +15,10 @@ import { DerogationPipe } from './pipes/derogation.pipe';
 import { TestFamilyPipe } from './pipes/test-family.pipe';
 import { CodeACPipe } from './pipes/code-ac.pipe';
 import { CodeGPipe } from './pipes/code-g.pipe';
+import { ProductNamePipe } from './pipes/product-name.pipe';
+import { CampaignCodePipe } from './pipes/campaign-code.pipe';
+import { CampaignNamePipe } from './pipes/campaign-name.pipe';
+
 
 
 const appRoutes:Routes = 
@@ -39,6 +43,9 @@ const appRoutes:Routes =
     TestFamilyPipe,
     CodeACPipe,
     CodeGPipe,
+    ProductNamePipe,
+    CampaignCodePipe,
+    CampaignNamePipe,
   ],
   imports: [
     BrowserModule,
