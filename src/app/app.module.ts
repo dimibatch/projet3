@@ -11,7 +11,8 @@ import { NewTestComponent } from './new-test/new-test.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { SearchResultComponent } from './search-result/search-result.component';
-
+import { HttpClientModule } from '@angular/common/http';
+import { BigService } from './big.service';
 
 const appRoutes:Routes = 
 [
@@ -35,6 +36,7 @@ const appRoutes:Routes =
   imports: [
     BrowserModule,
     HotTableModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       {
@@ -42,7 +44,7 @@ const appRoutes:Routes =
       }
       )
   ],
-  providers: [],
+  providers: [BigService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
