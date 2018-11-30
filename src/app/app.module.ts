@@ -30,6 +30,8 @@ import { CampaignCodePipe } from './pipes/campaign-code.pipe';
 import { CampaignNamePipe } from './pipes/campaign-name.pipe';
 
 
+import { HttpClientModule } from '@angular/common/http';
+import { BigService } from './big.service';
 
 const appRoutes:Routes = 
 [
@@ -70,6 +72,7 @@ const appRoutes:Routes =
   imports: [
     BrowserModule,
     HotTableModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       {
@@ -77,7 +80,7 @@ const appRoutes:Routes =
       }
       )
   ],
-  providers: [],
+  providers: [BigService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

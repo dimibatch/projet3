@@ -6,7 +6,7 @@ import { Test } from './test';
 })
 export class VracNumberPipe implements PipeTransform {
 
-  transform(value: Test[], param_vracNumber:number): Test[] {
+  transform(value: Test[], param_vracNumber:string): Test[] {
     let result: Test[] = [];
 
     for (let i = 0; i < value.length; i++) {
