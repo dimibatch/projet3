@@ -15,6 +15,15 @@ import { DerogationPipe } from './derogation.pipe';
 import { TestFamilyPipe } from './test-family.pipe';
 import { CodeACPipe } from './code-ac.pipe';
 import { TypeAcPipe } from './type-ac.pipe';
+import { FranchisePipe } from './franchise.pipe';
+import { CpqcpPipe } from './cpqcp.pipe';
+import { FournisseurPipe } from './fournisseur.pipe';
+import { MateriauPipe } from './materiau.pipe';
+import { DecorTypePipe } from './decor-type.pipe';
+import { PackModelPipe } from './pack-model.pipe';
+import { VracNamePipe } from './vrac-name.pipe';
+import { VracNumberPipe } from './vrac-number.pipe';
+import { TestPipe } from './test.pipe';
 
 
 const appRoutes:Routes = 
@@ -39,6 +48,15 @@ const appRoutes:Routes =
     TestFamilyPipe,
     CodeACPipe,
     TypeAcPipe,
+    FranchisePipe,
+    CpqcpPipe,
+    FournisseurPipe,
+    MateriauPipe,
+    DecorTypePipe,
+    PackModelPipe,
+    VracNamePipe,
+    VracNumberPipe,
+    TestPipe,
   ],
   imports: [
     BrowserModule,
