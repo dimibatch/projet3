@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-search',
@@ -7,9 +7,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class SearchComponent implements OnInit {
 
+  @Input() public searchBarContent: string = "";
+
+  @Output() searchBarContentChange:EventEmitter<string> = new EventEmitter<string>();
+
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit() { }
+
+  public onKeyUp(){
+    this.searchBarContentChange.emit(this.searchBarContent);
   }
   
    //function that changes the "Historique des tests" tab's color when you click on it

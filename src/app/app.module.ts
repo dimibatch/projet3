@@ -1,6 +1,8 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes} from "@angular/router";
+import { FormsModule } from "@angular/forms";
+import { RouterModule, Routes } from "@angular/router";
+import { HttpClientModule } from "@angular/common/http";
 
 import { HotTableModule } from "@handsontable/angular";
 
@@ -11,6 +13,8 @@ import { NewTestComponent } from './new-test/new-test.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { CompatResultComponent } from './compat-result/compat-result.component';
+
 import { TypeAcPipe } from './type-ac.pipe';
 import { FranchisePipe } from './franchise.pipe';
 import { CpqcpPipe } from './cpqcp.pipe';
@@ -28,19 +32,22 @@ import { CodeGPipe } from './pipes/code-g.pipe';
 import { ProductNamePipe } from './pipes/product-name.pipe';
 import { CampaignCodePipe } from './pipes/campaign-code.pipe';
 import { CampaignNamePipe } from './pipes/campaign-name.pipe';
+import { TriCompatPipe } from './tri-compat.pipe';
+import { AscendRiskCompatPipe } from './ascend-risk-compat.pipe';
 
-
-import { HttpClientModule } from '@angular/common/http';
 import { BigService } from './big.service';
+import { CompatService } from "./compat.service";
 
-const appRoutes:Routes = 
-[
-  {path:"search", component:SearchComponent},
-  {path:"searchPage", component:SearchPageComponent},
-  {path:"ongoingtestPage", component:OngoingTestComponent},
-  {path:"newtestPage", component:NewTestComponent},
-  {path:"", redirectTo:"search", pathMatch:"full"},
-]
+
+
+const appRoutes: Routes =
+  [
+    { path: "search", component: SearchComponent },
+    { path: "searchPage", component: SearchPageComponent },
+    { path: "ongoingtestPage", component: OngoingTestComponent },
+    { path: "newtestPage", component: NewTestComponent },
+    { path: "", redirectTo: "search", pathMatch: "full" },
+  ]
 
 @NgModule({
   declarations: [
@@ -68,19 +75,23 @@ const appRoutes:Routes =
     ProductNamePipe,
     CampaignCodePipe,
     CampaignNamePipe,
+    CompatResultComponent,
+    TriCompatPipe,
+    AscendRiskCompatPipe,
   ],
   imports: [
     BrowserModule,
     HotTableModule,
+    FormsModule,
     HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       {
-        enableTracing:true
+        enableTracing: true
       }
-      )
+    )
   ],
-  providers: [BigService],
+  providers: [BigService,CompatService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

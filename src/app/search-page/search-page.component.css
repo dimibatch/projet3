@@ -1,19 +1,18 @@
-.subtitles-top-container{
-    margin-bottom: 50px;
-    padding: 0;
-}
+
 
 .container-fluid{
     margin-top:50px;
 }
 
 .search-result-wrap{
-    overflow-x: scroll;
-    height: 130vh;
+    height: 55vh;
+    width:100%;
 }
 
 ::-webkit-scrollbar {
     background: transparent;  /* optional: just make scrollbar invisible */
+    height: 40vh;
+    width: 100%;
 }
 
 .blackBottomLine{

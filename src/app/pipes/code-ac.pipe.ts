@@ -6,7 +6,7 @@ import { Test } from '../test';
 })
 export class CodeACPipe implements PipeTransform {
 
-  transform(value: Test[], param_codeAC:number): Test[] {
+  transform(value: Test[], param_codeAC:string): Test[] {
     let result: Test[] = [];
 
     for (let i = 0; i < value.length; i++) {

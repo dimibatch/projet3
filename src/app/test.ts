@@ -1,5 +1,6 @@
 export class Test {
     public typeAC:string;
+    public codeAc:string;
     public codeG:string;
     public productName:string;
     public campaignCode:string;
