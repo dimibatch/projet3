@@ -1,0 +1,56 @@
+<div class="container-fluid wrap-all">
+  <div class="line-wrapper row mb-3 align-top" *ngFor="let current of listCompat | triCompat:TriMatName | ascendRiskCompat">
+
+    <div class="line-header d-inline-block col-3 align-top m-0 p-0 text-center">
+      <p class="line-header-title">{{current[0][1]}}</p>
+    </div>
+
+
+    <div class=" row line-result d-inline-block col-9 m-0 p-0 ">
+      <div class="compatibility-block d-inline-block  text-center col-3 " *ngIf="TriMatInteract == '' || current[1][0].toLowerCase().indexOf(TriMatInteract) >= 0"
+        [ngClass]="(current[1][1] == 40) ? 'green': (current[1][1] == 30) ? 'yellow' : (current[1][1] == 20) ? 'orange' : (current[1][1] == 10) ? 'red' : 'nothing'">
+        <p class="block-title">{{current[1][0]}}</p>
+      </div>
+      <div class="compatibility-block d-inline-block  text-center col-3" *ngIf="TriMatInteract == '' || current[2][0].toLowerCase().indexOf(TriMatInteract) >= 0"
+        [ngClass]="(current[2][1] == 40) ? 'green': (current[2][1] == 30) ? 'yellow' : (current[2][1] == 20) ? 'orange' : (current[2][1] == 10) ? 'red' : 'nothing'">
+        <p class="block-title">{{current[2][0]}}</p>
+      </div>
+      <div class="compatibility-block d-inline-block  text-center col-3 " *ngIf="TriMatInteract == '' || current[3][0].toLowerCase().indexOf(TriMatInteract) >= 0"
+        [ngClass]="(current[3][1] == 40) ? 'green': (current[3][1] == 30) ? 'yellow' : (current[3][1] == 20) ? 'orange' : (current[3][1] == 10) ? 'red' : 'nothing'">
+        <p class="block-title">{{current[3][0]}}</p>
+      </div>
+      <div class="compatibility-block d-inline-block  text-center col-3 " *ngIf="TriMatInteract == '' || current[4][0].toLowerCase().indexOf(TriMatInteract) >= 0"
+        [ngClass]="(current[4][1] == 40) ? 'green': (current[4][1] == 30) ? 'yellow' : (current[4][1] == 20) ? 'orange' : (current[4][1] == 10) ? 'red' : 'nothing'">
+        <p class="block-title">{{current[4][0]}}</p>
+      </div>
+      <div class="compatibility-block d-inline-block  text-center  col-3" *ngIf="TriMatInteract == '' || current[5][0].toLowerCase().indexOf(TriMatInteract) >= 0"
+        [ngClass]="(current[5][1] == 40) ? 'green': (current[5][1] == 30) ? 'yellow' : (current[5][1] == 20) ? 'orange' : (current[5][1] == 10) ? 'red' : 'nothing'">
+        <p class="block-title">{{current[5][0]}}</p>
+      </div>
+      <div class="compatibility-block d-inline-block  text-center col-3 " *ngIf="TriMatInteract == '' || current[6][0].toLowerCase().indexOf(TriMatInteract) >= 0"
+        [ngClass]="(current[6][1] == 40) ? 'green': (current[6][1] == 30) ? 'yellow' : (current[6][1] == 20) ? 'orange' : (current[6][1] == 10) ? 'red' : 'nothing'">
+        <p class="block-title">{{current[6][0]}}</p>
+      </div>
+      <div class="compatibility-block d-inline-block  text-center col-3 " *ngIf="TriMatInteract == '' || current[7][0].toLowerCase().indexOf(TriMatInteract) >= 0"
+        [ngClass]="(current[7][1] == 40) ? 'green': (current[7][1] == 30) ? 'yellow' : (current[7][1] == 20) ? 'orange' : (current[7][1] == 10) ? 'red' : 'nothing'">
+        <p class="block-title">{{current[7][0]}}</p>
+      </div>
+      <div class="compatibility-block d-inline-block  text-center col-3" *ngIf="TriMatInteract == '' || current[8][0].toLowerCase().indexOf(TriMatInteract) >= 0"
+        [ngClass]="(current[8][1] == 40) ? 'green': (current[8][1] == 30) ? 'yellow' : (current[8][1] == 20) ? 'orange' : (current[8][1] == 10) ? 'red' : 'nothing'">
+        <p class="block-title">{{current[8][0]}}</p>
+      </div>
+      <div class="compatibility-block d-inline-block  text-center col-3" *ngIf="TriMatInteract == '' || current[9][0].toLowerCase().indexOf(TriMatInteract) >= 0"
+        [ngClass]="(current[9][1] == 40) ? 'green': (current[9][1] == 30) ? 'yellow' : (current[9][1] == 20) ? 'orange' : (current[9][1] == 10) ? 'red' : 'nothing'">
+        <p class="block-title">{{current[9][0]}}</p>
+      </div>
+      <div class="compatibility-block d-inline-block  text-center col-3" *ngIf="TriMatInteract == '' || current[10][0].toLowerCase().indexOf(TriMatInteract) >= 0"
+        [ngClass]="(current[10][1] == 40) ? 'green': (current[10][1] == 30) ? 'yellow' : (current[10][1] == 20) ? 'orange' : (current[10][1] == 10) ? 'red' : 'nothing'">
+        <p class="block-title">{{current[10][0]}}</p>
+      </div>
+    </div>
+  </div>
+
+
+
+
+</div>

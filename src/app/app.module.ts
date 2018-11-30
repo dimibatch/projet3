@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { RouterModule, Routes} from "@angular/router";
+import { RouterModule, Routes } from "@angular/router";
+import { HttpClientModule } from "@angular/common/http";
 
 import { HotTableModule } from "@handsontable/angular";
 
@@ -11,15 +12,21 @@ import { NewTestComponent } from './new-test/new-test.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { SearchResultComponent } from './search-result/search-result.component';
+import { CompatResultComponent } from './compat-result/compat-result.component';
 
-const appRoutes:Routes = 
-[
-  {path:"search", component:SearchComponent},
-  {path:"searchPage", component:SearchPageComponent},
-  {path:"ongoingtestPage", component:OngoingTestComponent},
-  {path:"newtestPage", component:NewTestComponent},
-  {path:"", redirectTo:"search", pathMatch:"full"},
-]
+import { CompatService } from "./compat.service";
+import { TriCompatPipe } from './tri-compat.pipe';
+import { AscendRiskCompatPipe } from './ascend-risk-compat.pipe';
+
+
+const appRoutes: Routes =
+  [
+    { path: "search", component: SearchComponent },
+    { path: "searchPage", component: SearchPageComponent },
+    { path: "ongoingtestPage", component: OngoingTestComponent },
+    { path: "newtestPage", component: NewTestComponent },
+    { path: "", redirectTo: "search", pathMatch: "full" },
+  ]
 
 @NgModule({
   declarations: [
@@ -29,19 +36,23 @@ const appRoutes:Routes =
     NewTestComponent,
     HeaderComponent,
     SearchPageComponent,
-    SearchResultComponent
+    SearchResultComponent,
+    CompatResultComponent,
+    TriCompatPipe,
+    AscendRiskCompatPipe,
   ],
   imports: [
     BrowserModule,
     HotTableModule,
+    HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
       {
-        enableTracing:true
+        enableTracing: true
       }
-      )
+    )
   ],
-  providers: [],
+  providers: [CompatService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
