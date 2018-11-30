@@ -11,9 +11,6 @@ import { NewTestComponent } from './new-test/new-test.component';
 import { HeaderComponent } from './header/header.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { SearchResultComponent } from './search-result/search-result.component';
-import { DerogationPipe } from './derogation.pipe';
-import { TestFamilyPipe } from './test-family.pipe';
-import { CodeACPipe } from './code-ac.pipe';
 import { TypeAcPipe } from './type-ac.pipe';
 import { FranchisePipe } from './franchise.pipe';
 import { CpqcpPipe } from './cpqcp.pipe';
@@ -24,6 +21,14 @@ import { PackModelPipe } from './pack-model.pipe';
 import { VracNamePipe } from './vrac-name.pipe';
 import { VracNumberPipe } from './vrac-number.pipe';
 import { TestPipe } from './test.pipe';
+import { DerogationPipe } from './pipes/derogation.pipe';
+import { TestFamilyPipe } from './pipes/test-family.pipe';
+import { CodeACPipe } from './pipes/code-ac.pipe';
+import { CodeGPipe } from './pipes/code-g.pipe';
+import { ProductNamePipe } from './pipes/product-name.pipe';
+import { CampaignCodePipe } from './pipes/campaign-code.pipe';
+import { CampaignNamePipe } from './pipes/campaign-name.pipe';
+
 
 
 const appRoutes:Routes = 
@@ -57,6 +62,10 @@ const appRoutes:Routes =
     VracNamePipe,
     VracNumberPipe,
     TestPipe,
+    CodeGPipe,
+    ProductNamePipe,
+    CampaignCodePipe,
+    CampaignNamePipe,
   ],
   imports: [
     BrowserModule,

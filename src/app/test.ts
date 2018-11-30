@@ -4,6 +4,7 @@ export class Test {
     public codeG: string;
     public productName: string;
     public campaignCode: string;
+    public campaignName: string;
     public franchise: string;
     public cpDev: string;
     public cpQCP: string;
