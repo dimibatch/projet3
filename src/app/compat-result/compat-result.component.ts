@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CompatService } from '../compat.service';
 import { Observable } from 'rxjs';
 import { Compat } from '../compat';
@@ -13,8 +13,9 @@ export class CompatResultComponent implements OnInit {
 
   private service: CompatService;
   public listCompat: Compat[];
-  public TriMatName: string = 'PP';
-  public TriMatInteract: string = '';
+  @Input() public TriMatName: string;
+  @Input() public TriMatInteract: string = '';
+
 
   constructor(param_compatService: CompatService) {
     this.service = param_compatService;
@@ -30,8 +31,6 @@ export class CompatResultComponent implements OnInit {
       }
     )
   }
-
-
   
 }
 

@@ -30,8 +30,6 @@ export class AscendRiskCompatPipe implements PipeTransform {
 
       results.push(sortedProp);
     }
-
-    console.log(results)
     return (results);
   }
 

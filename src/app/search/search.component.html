@@ -7,7 +7,7 @@
     <div class="form-group">
       <p>RECHERCHE</p>
       <hr />
-      <input type="text" class="form-control" name="searchBar" id="searchBar" aria-describedby="helpId" placeholder="SAISISSEZ VOTRE RECHERCHE">
+      <input type="text" class="form-control" name="searchBar" id="searchBar" aria-describedby="helpId" (keyup)="onKeyUp();" placeholder="SAISISSEZ VOTRE RECHERCHE" [(ngModel)]="searchBarContent">
     </div>
 
     <button class="btn btn-primary" [routerLink]="['/searchPage']" routerLinkActive="router-link-active">RECHERCHER</button>
