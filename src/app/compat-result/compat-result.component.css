@@ -1,0 +1,43 @@
+.wrap-all{
+    overflow-x: scroll;
+    height: 40vh;
+}
+
+.line-result{
+    height:24vh;
+}
+
+/* Block rules  */
+
+.red{
+    background-color: rgb(233, 93, 93);
+}
+
+.orange{
+    background-color: rgb(235, 177, 69);
+}
+
+.yellow{
+    background-color: rgb(230, 230, 109);
+}
+
+.green{
+    background-color: rgb(114, 219, 114);
+}
+
+.line-header, .compatibility-block{
+    border : 1px solid black;
+    height: 8vh;
+    width: 150%;
+    font-size: 1.2em;
+}
+
+.block-title{
+    padding-top: 10%
+}
+
+.line-header-title{
+    padding-top: 5%
+}
+
+
