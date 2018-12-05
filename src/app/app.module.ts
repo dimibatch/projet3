@@ -37,6 +37,7 @@ import { AscendRiskCompatPipe } from './ascend-risk-compat.pipe';
 
 import { BigService } from './big.service';
 import { CompatService } from "./compat.service";
+import { LoginComponent } from './login/login.component';
 
 
 
@@ -46,6 +47,7 @@ const appRoutes: Routes =
     { path: "searchPage", component: SearchPageComponent },
     { path: "ongoingtestPage", component: OngoingTestComponent },
     { path: "newtestPage", component: NewTestComponent },
+    { path: "loginPage", component: LoginComponent },
     { path: "", redirectTo: "search", pathMatch: "full" },
   ]
 
@@ -78,6 +80,7 @@ const appRoutes: Routes =
     CompatResultComponent,
     TriCompatPipe,
     AscendRiskCompatPipe,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -91,7 +94,7 @@ const appRoutes: Routes =
       }
     )
   ],
-  providers: [BigService,CompatService, HttpClientModule],
+  providers: [BigService, CompatService, HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
