@@ -8,8 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class SearchPageComponent implements OnInit {
 
-  @Input() public TriMatNameInsert = "";
-  @Input() public TriMatInteractInsert = "";
+  @Input() public searchBarContent = "";
 
   constructor() { }
 
@@ -17,7 +16,7 @@ export class SearchPageComponent implements OnInit {
   }
 
   public onSearchBarContentChanged(param:string){
-    this.TriMatNameInsert = param;
+    this.searchBarContent = param;
   }
 
 }

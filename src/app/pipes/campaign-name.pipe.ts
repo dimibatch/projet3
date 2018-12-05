@@ -13,12 +13,21 @@ export class CampaignNamePipe implements PipeTransform {
     if (param_campaignName == "" || param_campaignName == undefined) {
       return value;
     } else {
-      for (let i = 0; i < value.length; i++) {
-        if ((value[i].campaignName.toLowerCase()).indexOf(param_campaignName.toLowerCase()) >= 0) {
-          result.push(value[i]);
+      let paramSplit: string[] = param_campaignName.split(" ");
+      for (let j = 0; j < paramSplit.length; j++) {
+        if (paramSplit[j] != "") {
+          for (let i = 0; i < value.length; i++) {
+            if ((value[i].campaignName.toLowerCase()).indexOf(param_campaignName.toLowerCase()) >= 0 && result.indexOf(value[i])<0) {
+              result.push(value[i]);
+            }
+          }
         }
       }
-      return result;
+      if (result.length == 0) {
+        return value;
+      } else {
+        return result;
+      }
     }
   }
 }

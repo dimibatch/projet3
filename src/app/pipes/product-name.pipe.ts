@@ -13,12 +13,22 @@ export class ProductNamePipe implements PipeTransform {
     if (param_productName == "" || param_productName == undefined) {
       return value;
     } else {
-      for (let i = 0; i < value.length; i++) {
-        if ((value[i].productName.toLowerCase()).indexOf(param_productName.toLowerCase()) >= 0) {
-          result.push(value[i]);
+      let paramSplit: string[] = param_productName.split(" ");
+      for (let j = 0; j < paramSplit.length; j++) {
+        if (paramSplit[j] != "") {
+          for (let i = 0; i < value.length; i++) {
+            if ((value[i].productName.toLowerCase()).indexOf(param_productName.toLowerCase()) >= 0 && result.indexOf(value[i])<0) {
+              result.push(value[i]);
+            }
+          }
         }
       }
-      return result;
+
+      if (result.length == 0) {
+        return value;
+      } else {
+        return result;
+      }
     }
   }
 }

@@ -1,3 +1,4 @@
 hot-table{
-    overflow-x: scroll
+    overflow-x: scroll;
+    height:50vh;
 }

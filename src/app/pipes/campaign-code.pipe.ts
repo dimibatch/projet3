@@ -6,17 +6,26 @@ import { Test } from '../test';
 })
 export class CampaignCodePipe implements PipeTransform {
 
-  transform(value: Test[], param_campaignCode:string): Test[] {
+  transform(value: Test[], param_campaignCode: string): Test[] {
     let result: Test[] = [];
-    if (param_campaignCode == undefined || param_campaignCode == ''){
+    if (param_campaignCode == undefined || param_campaignCode == '') {
       return value;
     } else {
-      for (let i = 0; i < value.length; i++) {
-        if (value[i].campaignCode.toLowerCase() == param_campaignCode.toLowerCase()) {
-          result.push(value[i]);
+      let paramSplit: string[] = param_campaignCode.split(" ");
+      for (let j = 0; j < paramSplit.length; j++) {
+        if (paramSplit[j] != "") {
+          for (let i = 0; i < value.length; i++) {
+            if (value[i].campaignCode.toLowerCase() == param_campaignCode.toLowerCase()) {
+              result.push(value[i]);
+            }
+          }
         }
       }
-      return result;
+      if (result.length == 0) {
+        return value;
+      } else {
+        return result;
+      }
     }
   }
 }

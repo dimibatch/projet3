@@ -6,15 +6,29 @@ import { Test } from '../test';
 })
 export class CodeGPipe implements PipeTransform {
 
-  transform(value: Test[], param_codeG:string): Test[] {
+  transform(value: Test[], param_codeG: string): Test[] {
     let result: Test[] = [];
 
-    for (let i = 0; i < value.length; i++) {
-      if (value[i].codeG == param_codeG) {
-        result.push(value[i]);
+    if (param_codeG == "" || param_codeG == undefined) {
+      return value;
+    } else {
+      let paramSplit: string[] = param_codeG.split(" ");
+      for (let j = 0; j < paramSplit.length; j++) {
+        if (paramSplit[j] != "") {
+          for (let i = 0; i < value.length; i++) {
+            if (value[i].codeG.toLowerCase().indexOf(paramSplit[j].toLowerCase()) > -1 && result.indexOf(value[i])<0) {
+              result.push(value[i]);
+            }
+          }
+        }
+      }
+
+      if (result.length == 0) {
+        return value;
+      } else {
+        return result;
       }
     }
-    return result;
   }
 
 }

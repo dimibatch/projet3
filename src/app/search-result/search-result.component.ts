@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { Test } from '../test';
 import { BigService } from '../big.service';
 
@@ -8,6 +8,9 @@ import { BigService } from '../big.service';
   styleUrls: ['./search-result.component.css']
 })
 export class SearchResultComponent implements OnInit {
+
+  @Input() public searchBarContent:string = "";
+
   private bigService:BigService;
   public dataset:Test[];
 
