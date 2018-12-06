@@ -10,11 +10,11 @@ import { BigService } from '../big.service';
 export class SearchResultComponent implements OnInit {
 
   @Input() public searchBarContent:string = "";
+  @Input() public page:number = 0;
 
   private bigService:BigService;
   public dataset:Test[];
 
-//   dataset: Test[] = [
   // dataset: Test[] = [
   //   { typeAC: "Flaconnette", codeG: "G553710", productName: "CORPS DEMO MASC CIL D'ENF EXTRA VOL 2015", campaignCode: "M197", franchise: "Cils d'enfer", cpDev: "", cpQCP: "Clémence GERVREAU", codeAC: 7424128738, provider: "", material: "", decoType: "", teinteMasse: "", packModel: "Démo", submitNumber: "Stock", vracName: "", vracNumber: 6890195852, formuleNumber: "LP41060 du 05/10/2016", testFamily: "Décor", test: "DEV-I-004 : Tenue des décors au produit, en semi immersion confinée", quantity: 10, start: "12/10/2016", result: "C",derogation:true,  comments: "Bon déroulement du processus de test" },
   //   { typeAC: "Flaconnette", codeG: "G553710", productName: "CORPS DEMO MASC CIL D'ENF EXTRA VOL 2015", campaignCode: "M197", franchise: "Cils d'enfer", cpDev: "", cpQCP: "Clémence GERVREAU", codeAC: 7424128738, provider: "", material: "", decoType: "", teinteMasse: "", packModel: "Démo", submitNumber: "Stock", vracName: "", vracNumber: 6890195852, formuleNumber: "LP41060 du 05/10/2016", testFamily: "Décor", test: "DEV-I-004 : Tenue des décors au produit, en semi immersion confinée", quantity: 10, start: "12/10/2016", result: "C",derogation:true,  comments: "Bon déroulement du processus de test" },

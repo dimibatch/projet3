@@ -29,6 +29,10 @@ export class Test {
     // public derogation:boolean;
     public comments:string;
 
+    public testString?:string = null;
+
+    
+
 
 
 

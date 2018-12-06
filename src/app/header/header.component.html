@@ -1,7 +1,11 @@
 <div class="container-fluid p-0">
   <div class="text-center pt-5 pb-5 container-fluid" id="header-image">
     <img src="assets/logoabeille.png" class="col-5 offset-4">
-    <button class="col-1 offset-2 loginBtn align-top" [routerLink]="['/loginPage']" routerLinkActive="router-link-active"  routerLinkActive="router-link-active">Administration</button>
+    <div class="col-2 offset-1 d-inline-block align-top">
+      <button class="col-12 loginBtn align-top" [routerLink]="['/loginPage']" routerLinkActive="router-link-active">Administration</button>
+      <button class="col-12 loginBtn align-top" [routerLink]="['/loginPage']" routerLinkActive="router-link-active">CP QCP</button>
+    </div>
+    
   </div>
 
 

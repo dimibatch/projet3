@@ -2,8 +2,12 @@
   <app-search class="col-3 d-inline-block" (searchBarContentChange)="onSearchBarContentChanged($event)"></app-search>
   <div class="container d-inline-block col-9 align-top mt-0">
     <div class="search-result-wrap  d-inline-block align-top mt-3">
-      <h2 class="pb-2">Résultats des tests</h2>
-      <app-search-result [searchBarContent]=searchBarContent></app-search-result>
+      <div class="row">
+        <h2 class="pb-2">Résultats des tests</h2>
+        <button>Précédent</button>
+        <button>Suivant</button>
+      </div>
+      <app-search-result [searchBarContent]=searchBarContent [page]=page></app-search-result>
     </div>
     <div class="container-fluid d-inline-block mt-3 compat-result">
       <h2 class="pb-2">Incompatiblités matières premières</h2>

@@ -48,7 +48,7 @@ const appRoutes: Routes =
     { path: "ongoingtestPage", component: OngoingTestComponent },
     { path: "newtestPage", component: NewTestComponent },
     { path: "loginPage", component: LoginComponent },
-    { path: "", redirectTo: "search", pathMatch: "full" },
+    { path: "", redirectTo: "loginPage", pathMatch: "full" },
   ]
 
 @NgModule({
