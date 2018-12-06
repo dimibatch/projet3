@@ -18,6 +18,8 @@ import { CodeGPipe } from './pipes/code-g.pipe';
 import { ProductNamePipe } from './pipes/product-name.pipe';
 import { CampaignCodePipe } from './pipes/campaign-code.pipe';
 import { CampaignNamePipe } from './pipes/campaign-name.pipe';
+import { ResultatPipe } from './pipes/resultat.pipe';
+import { DateDebutPipe } from './pipes/date-debut.pipe';
 
 
 
@@ -46,6 +48,8 @@ const appRoutes:Routes =
     ProductNamePipe,
     CampaignCodePipe,
     CampaignNamePipe,
+    ResultatPipe,
+    DateDebutPipe,
   ],
   imports: [
     BrowserModule,
