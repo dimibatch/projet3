@@ -14,6 +14,8 @@ import { HeaderComponent } from './header/header.component';
 import { SearchPageComponent } from './search-page/search-page.component';
 import { SearchResultComponent } from './search-result/search-result.component';
 import { CompatResultComponent } from './compat-result/compat-result.component';
+import { LoginComponent } from './login/login.component';
+import { OnGoingTestArrayComponent } from "./on-going-test-array/on-going-test-array.component";
 
 import { TypeAcPipe } from './type-ac.pipe';
 import { FranchisePipe } from './franchise.pipe';
@@ -37,7 +39,7 @@ import { AscendRiskCompatPipe } from './ascend-risk-compat.pipe';
 
 import { BigService } from './big.service';
 import { CompatService } from "./compat.service";
-import { LoginComponent } from './login/login.component';
+
 
 
 
@@ -81,6 +83,7 @@ const appRoutes: Routes =
     TriCompatPipe,
     AscendRiskCompatPipe,
     LoginComponent,
+    OnGoingTestArrayComponent,
   ],
   imports: [
     BrowserModule,

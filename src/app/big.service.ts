@@ -3,6 +3,7 @@ import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Test } from './test';
+import { OnGoingTest } from './on-going-test';
 
 
 @Injectable({
@@ -15,6 +16,7 @@ export class BigService {
     this.http = http;
   }
 
+  // Retrieve Data from Complete Test Table 
   public getBigData():Observable<Test[]> {
     return this.http.get("assets/TABLE_2.json").pipe(
       map(
@@ -53,4 +55,24 @@ export class BigService {
 
     return str.toLowerCase();
   }
+
+  // Retrieve data from OnGoingTests Table
+
+  public getOnGoingTestData():Observable<OnGoingTest[]> {
+    return this.http.get("assets/TABLE_4.json").pipe(
+      map(
+        (param:any) => {
+          let myData:OnGoingTest[] = param as OnGoingTest[];
+          return myData;
+        }
+      )
+    )
+  }
+
+
+
+
+
+
+
 }
