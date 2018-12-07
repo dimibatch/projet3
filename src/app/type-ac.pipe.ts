@@ -11,8 +11,12 @@ export class TypeAcPipe implements PipeTransform {
     let result: Test[] = [];
 
 
+    const start:number = param_page * 100;
+    const end:number = start + 100;
+
+
     if (searchBarContent == "" || searchBarContent == undefined) {
-      return value;
+      return value.slice( start , end );
     } 
     else {
       let paramSplit: string[] = searchBarContent.toLowerCase().split(" ");
@@ -45,9 +49,6 @@ export class TypeAcPipe implements PipeTransform {
 
       }
 
-      const start:number = param_page * 20;
-      const end:number = start + 20;
-     
       return result.slice( start , end );
       
     }

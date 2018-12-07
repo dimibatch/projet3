@@ -1,11 +1,21 @@
 <div class="container-fluid mt-5">
-  <app-search class="col-3 d-inline-block" (searchBarContentChange)="onSearchBarContentChanged($event)"></app-search>
+  <app-search class="col-3 d-inline-block" (searchBarContentChange)="onSearchBarContentChanged($event)"
+    (backToFirstPage)="onBackToFirstPage($event)"></app-search>
   <div class="container d-inline-block col-9 align-top mt-0">
     <div class="search-result-wrap  d-inline-block align-top mt-3">
       <div class="row">
-        <h2 class="pb-2">Résultats des tests</h2>
-        <button>Précédent</button>
-        <button>Suivant</button>
+        <h2 class="pb-2 col-9">Résultats des tests</h2>
+        <div class="col-3">
+          <div class="col-5 d-inline-block">
+            <button class="btn btn-dark rounded-0" (click)="pageDown()" *ngIf="page>0">Précédent</button>
+          </div>
+          <div class="col-2 d-inline-block">
+            {{page}}
+          </div>
+          <div class="col-5 d-inline-block">
+            <button class="btn btn-dark rounded-0" (click)="pageUp()">Suivant</button>
+          </div>
+        </div>
       </div>
       <app-search-result [searchBarContent]=searchBarContent [page]=page></app-search-result>
     </div>
