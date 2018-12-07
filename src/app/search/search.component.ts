@@ -8,8 +8,20 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class SearchComponent implements OnInit {
 
   @Input() public searchBarContent: string = "";
+  @Input() public material: string = "";
+  @Input() public rawMaterial: string = "";
+  @Input() public codeG: string = "";
+  @Input() public typeDecor: string = "";
+  @Input() public vracNumber: string = "";
+  @Input() public testType: string = "";
 
   @Output() searchBarContentChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() materialChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() rawMaterialChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() codeGChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() typeDecorChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() vracNumberChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() testTypeChange:EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
 
@@ -17,6 +29,30 @@ export class SearchComponent implements OnInit {
 
   public onKeyUp(){
     this.searchBarContentChange.emit(this.searchBarContent);
+  }
+
+  public onKeyUpMaterial() {
+    this.materialChange.emit(this.material);
+  }
+
+  public onKeyUpRawMaterial() {
+    this.rawMaterialChange.emit(this.rawMaterial);
+  }
+
+  public onKeyUpCodeG() {
+    this.codeGChange.emit(this.codeG);
+  }
+
+  public onKeyUpVracNumber() {
+    this.vracNumberChange.emit(this.vracNumber);
+  }
+
+  public onKeyUpDecorType() {
+    this.typeDecorChange.emit(this.typeDecor);
+  }
+
+  public onKeyUpTestType() {
+    this.testTypeChange.emit(this.testType);
   }
   
    //function that changes the "Historique des tests" tab's color when you click on it

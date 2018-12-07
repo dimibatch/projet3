@@ -9,6 +9,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class SearchPageComponent implements OnInit {
 
   @Input() public searchBarContent = "";
+  @Input() public material:string = "";
 
   constructor() { }
 
@@ -17,6 +18,10 @@ export class SearchPageComponent implements OnInit {
 
   public onSearchBarContentChanged(param:string){
     this.searchBarContent = param;
+  }
+
+  public onMaterialChanged(param:string){
+    this.material = param;
   }
 
 }

@@ -16,7 +16,7 @@ export class BigService {
   }
 
   public getBigData():Observable<Test[]> {
-    return this.http.get("assets/TABLE_2.json").pipe(
+    return this.http.get("assets/TABLE_4.json").pipe(
       map(
         (param:any) => {
           let myData:Test[] = param as Test[];

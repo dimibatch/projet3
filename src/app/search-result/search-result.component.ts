@@ -10,7 +10,9 @@ import { BigService } from '../big.service';
 export class SearchResultComponent implements OnInit {
 
   @Input() public searchBarContent:string = "";
+  @Input() public material: string = "";
   @Input() public page:number = 0;
+
 
   private bigService:BigService;
   public dataset:Test[];
@@ -142,9 +144,10 @@ export class SearchResultComponent implements OnInit {
     this.bigService.getBigData().subscribe(
       (param) => {
         this.dataset = param;
-        console.log(this.dataset);
+        
       }
     )
+    
   }
 
 }
