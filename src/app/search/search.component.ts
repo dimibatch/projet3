@@ -1,5 +1,7 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
+
+
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
@@ -28,6 +30,8 @@ export class SearchComponent implements OnInit {
 
   public page: number = 0;
   @Output() backToFirstPage: EventEmitter<number> = new EventEmitter<number>();
+
+  public dictionnary:string[] = ["jupe" , "pp", "copo", "pehd", "tube", "capot", "bpl", "10ml", "12ml","15ml", "30ml","chape", "petite robe noire"]; 
 
   constructor() { }
 

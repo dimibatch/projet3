@@ -8,9 +8,14 @@
       <p class="mt-0">RECHERCHE</p>
       <div class="form-group">
         <hr />
-        <input type="text" class="form-control" name="searchBar" id="searchBar" aria-describedby="helpId" (keyup)="onKeyUp();"
-          placeholder="SAISISSEZ VOTRE RECHERCHE" [(ngModel)]="searchBarContent">
+        <input list="searchBarList" class="form-control" name="searchBar" id="searchBar" aria-describedby="searchBar" (keyup)="onKeyUp();"
+          placeholder="SAISISSEZ VOTRE RECHERCHE" [(ngModel)]="searchBarContent" autocomplete="off">
       </div>
+
+      <datalist id="searchBarList">
+        <option value="{{current}}" *ngFor="let current of dictionnary">
+      </datalist>
+
       <div class="row justify-content-center">
         <button class="btn btn-dark rounded-0" [routerLink]="['/searchPage']" routerLinkActive="router-link-active">RECHERCHER</button>
       </div>
