@@ -16,13 +16,14 @@ export class SearchPageComponent implements OnInit {
   @Input() public vracNumber: string = "";
   @Input() public testType: string = "";
   @Input() public result: string = "";
+  @Input() public page: number = 0;
 
   constructor() { }
 
   ngOnInit() {
   }
 
-  public onSearchBarContentChanged(param:string){
+  public onSearchBarContentChanged(param: string) {
     this.searchBarContent = param;
   }
 
@@ -49,6 +50,23 @@ export class SearchPageComponent implements OnInit {
   public onResultChanged(param:string){
     this.result = param;
   }
+  public onBackToFirstPage(param: number) {
+    this.page = param;
+  }
+
+  public pageUp(): void {
+    this.page++;
+    console.log(this.page);
+  }
+
+  public pageDown(): void {
+    if (this.page > 0) {
+      this.page--
+    }
+    console.log(this.page);
+
+  }
+
 
 }
 
