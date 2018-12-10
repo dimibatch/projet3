@@ -11,6 +11,11 @@ export class SearchResultComponent implements OnInit {
 
   @Input() public searchBarContent:string = "";
   @Input() public material: string = "";
+  @Input() public codeG: string = "";
+  @Input() public typeDecor: string = "";
+  @Input() public vracNumber: string = "";
+  @Input() public testType: string = "";
+  @Input() public result: string = "";
   @Input() public page:number = 0;
 
 

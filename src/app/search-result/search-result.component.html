@@ -1,5 +1,5 @@
 <div>
-  <hot-table class="hot" [data]="dataset | typeAc:searchBarContent:page | materiau:material"
+  <hot-table class="hot" [data]="dataset | typeAc:searchBarContent:page | materiau:material | vracNumber:vracNumber | test:testType | decorType:typeDecor | result:result | codeG:codeG"
     [colHeaders]="true" [fixedColumnsLeft]="1" [colWidths]="200" [rowHeights]="40">
     <hot-column data="result" [readOnly]="true" title="Résultat"></hot-column>
     <hot-column data="typeAC" [readOnly]="true" title="Type d'AC"></hot-column>

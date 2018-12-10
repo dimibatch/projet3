@@ -14,6 +14,7 @@ export class SearchComponent implements OnInit {
   @Input() public typeDecor: string = "";
   @Input() public vracNumber: string = "";
   @Input() public testType: string = "";
+  @Input() public result: string = "";
 
   @Output() searchBarContentChange:EventEmitter<string> = new EventEmitter<string>();
   @Output() materialChange:EventEmitter<string> = new EventEmitter<string>();
@@ -22,6 +23,7 @@ export class SearchComponent implements OnInit {
   @Output() typeDecorChange:EventEmitter<string> = new EventEmitter<string>();
   @Output() vracNumberChange:EventEmitter<string> = new EventEmitter<string>();
   @Output() testTypeChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() resultChange:EventEmitter<string> = new EventEmitter<string>();
 
   constructor() { }
 
@@ -53,6 +55,26 @@ export class SearchComponent implements OnInit {
 
   public onKeyUpTestType() {
     this.testTypeChange.emit(this.testType);
+  }
+
+  public onChangeResult() {
+    this.resultChange.emit(this.result);
+  }
+
+  resultConforme() {
+    this.result = "C";
+  }
+
+  resultNonConforme() {
+    this.result = "NC";
+  }
+
+  resultNoFilter() {
+    this.result = "";
+  }
+
+  resultPTC() {
+    this.result = "PTC";
   }
   
    //function that changes the "Historique des tests" tab's color when you click on it

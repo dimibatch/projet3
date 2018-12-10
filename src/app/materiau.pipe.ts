@@ -13,7 +13,7 @@ export class MateriauPipe implements PipeTransform {
       return value;
     } else {
         for (let i = 0; i < value.length; i++) {
-          if (value[i].material.toLowerCase == param_material.toLowerCase) {
+          if (value[i].material.toLowerCase() == param_material.toLowerCase()) {
             result.push(value[i]);
           }
         }
