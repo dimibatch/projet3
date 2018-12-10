@@ -1,5 +1,5 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Compat } from './compat';
+import { Compat } from '../compat';
 
 @Pipe({
   name: 'triCompat'

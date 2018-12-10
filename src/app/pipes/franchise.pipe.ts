@@ -1,23 +1,22 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Test } from './test';
+import { Test } from '../test';
 
 @Pipe({
-  name: 'cpqcp'
+  name: 'franchise'
 })
-export class CpqcpPipe implements PipeTransform {
+export class FranchisePipe implements PipeTransform {
 
-  transform(value: Test[], param_cpqcp?: string): Test[] {
+  transform(value: Test[], param_franchise?: string): Test[] {
 
     let result: Test[] = [];
-
-    if (param_cpqcp == "" || param_cpqcp == undefined) {
+    if (param_franchise == undefined || param_franchise == '') {
       return value;
     } else {
-      let paramSplit: string[] = param_cpqcp.split(" ");
+      let paramSplit: string[] = param_franchise.split(" ");
       for (let j = 0; j < paramSplit.length; j++) {
         if (paramSplit[j] != "") {
           for (let i = 0; i < value.length; i++) {
-            if ((value[i].cpQCP.toLowerCase()).indexOf(param_cpqcp.toLowerCase()) >= 0 && result.indexOf(value[i])<0) {
+            if (value[i].franchise.toLowerCase() == param_franchise.toLowerCase() && result.indexOf(value[i]) < 0) {
               result.push(value[i]);
             }
           }

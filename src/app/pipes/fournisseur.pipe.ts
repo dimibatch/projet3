@@ -1,22 +1,23 @@
 import { Pipe, PipeTransform } from '@angular/core';
-import { Test } from './test';
+import { Test } from '../test';
 
 @Pipe({
-  name: 'franchise'
+  name: 'fournisseur'
 })
-export class FranchisePipe implements PipeTransform {
+export class FournisseurPipe implements PipeTransform {
 
-  transform(value: Test[], param_franchise?: string): Test[] {
+  transform(value: Test[], param_fournisseur?: string): Test[] {
 
     let result: Test[] = [];
-    if (param_franchise == undefined || param_franchise == '') {
+
+    if (param_fournisseur == "" || param_fournisseur == undefined) {
       return value;
     } else {
-      let paramSplit: string[] = param_franchise.split(" ");
+      let paramSplit: string[] = param_fournisseur.split(" ");
       for (let j = 0; j < paramSplit.length; j++) {
         if (paramSplit[j] != "") {
           for (let i = 0; i < value.length; i++) {
-            if (value[i].franchise.toLowerCase() == param_franchise.toLowerCase() && result.indexOf(value[i]) < 0) {
+            if ((value[i].provider.toLowerCase()).indexOf(param_fournisseur.toLowerCase()) >= 0 && result.indexOf(value[i])<0) {
               result.push(value[i]);
             }
           }
@@ -29,4 +30,5 @@ export class FranchisePipe implements PipeTransform {
       }
     }
   }
+
 }
