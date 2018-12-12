@@ -18,14 +18,12 @@ export class BigService {
     this.http = http;
   }
 
-<<<<<<< HEAD
   // Method to get all data from Test Table.
-  public getBigData(): Observable<Test[]> {
-    return this.http.get(`${this.baseUrl}` + "/test").pipe(
-=======
+  // public getBigData(): Observable<Test[]> {
+    // return this.http.get(`${this.baseUrl}` + "/test").pipe(
+
   public getBigData():Observable<Test[]> {
-    return this.http.get("assets/resultats_recherche_3(1).json").pipe(
->>>>>>> bf5bcec36ca53c6c3c403ae898ef5eac59893b9a
+    return this.http.get('assets/resultats_recherche_3(1).json').pipe(
       map(
         (param: any) => {
           let myData: Test[] = param as Test[];
@@ -59,7 +57,7 @@ export class BigService {
 
   // Method to add a Test
   public addTest(test: Test): Observable<any> {
-    return this.http.get(`${this.baseUrl}/test/create?typeAC=${test.typeAC}&codeAC=${test.codeAC}&codeG=${test.codeG}&productName=${test.productName}&campaignCode=${test.campaignCode}&campaignName=${test.campaignName}&franchise=${test.franchise}&cpDev=${test.cpDev}&cpQCP=${test.cpQCP}&provider=${test.provider}&material=${test.material}&decoType=${test.decoType}&teinteMasse=${test.teinteMasse}&packModel=${test.packModel}&submitNumber=${test.submitNumber}&vracName=${test.vracName}&vracNumber=${test.vracNumber}&formuleNumber=${test.formuleNumber}&testFamily=${test.testFamily}&test=${test.test}&quantity=${test.quantity}&start=${test.start}&result=${test.result}&derogation=${test.derogation}&comments=${test.comments}`);
+    return this.http.get(`${this.baseUrl}/test/create?typeAC=${test.typeAC}&codeAC=${test.codeAC}&codeG=${test.codeG}&productName=${test.productName}&campaignCode=${test.campaignCode}&campaignName=${test.campaignName}&franchise=${test.franchise}&cpDev=${test.cpDev}&cpQCP=${test.cpQCP}&provider=${test.provider}&material=${test.material}&decoType=${test.decoType}&teinteMasse=${test.teinteMasse}&packModel=${test.packModel}&submitNumber=${test.submitNumber}&vracName=${test.vracName}&vracNumber=${test.vracNumber}&formuleNumber=${test.formuleNumber}&testFamily=${test.testFamily}&test=${test.test}&start=${test.start}&result=${test.result}&derogation=${test.derogation}&comments=${test.comments}`);
   }
 
 
