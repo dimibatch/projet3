@@ -26,7 +26,7 @@ export class Test {
     public quantity:string;
     public start:string;
     public result:string;
-    // public derogation:boolean;
+    public derogation:boolean;
     public comments:string;
 
     public testString?:string = null;

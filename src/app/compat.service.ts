@@ -9,6 +9,7 @@ import { Compat } from './compat';
 })
 export class CompatService {
 
+  private baseUrl = 'http://localhost:8080/api';
   private httpService: HttpClient;
 
   constructor(param_http_service: HttpClient) {
@@ -16,7 +17,7 @@ export class CompatService {
   }
 
   public getCompat(): Observable<Compat[]> {
-    return this.httpService.get("assets/compat.json").pipe(
+    return this.httpService.get(`${this.baseUrl}` + "/compat").pipe(
       map(
         (param_my_response) => {
           let obj: any = param_my_response;
