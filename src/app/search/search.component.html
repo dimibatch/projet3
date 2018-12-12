@@ -29,49 +29,59 @@
       <hr />
 
       <form>
+        <div class="form-group">
+            <label>Résultats de test</label><br/>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" (click)="resultConforme(); onChangeResult();">
+            <label class="form-check-label" for="inlineRadio1">C</label>
+          </div>
+          <div class="form-check form-check-inline">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" (click)="resultNonConforme(); onChangeResult();">
+            <label class="form-check-label" for="inlineRadio2">NC</label>
+          </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" (click)="resultPTC(); onChangeResult();">
+              <label class="form-check-label" for="inlineRadio3">PTC</label>
+            </div>
+          <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4" (click)="resultNoFilter(); onChangeResult();">
+              <label class="form-check-label" for="inlineRadio4">Tous les résultats</label>
+            </div>
+        </div>
 
         <div class="form-group">
           <label for="materiau">Matériau</label>
-          <input type="text" class="form-control" name="materiau" id="materiau" aria-describedby="helpId" placeholder="Matériau" autocomplete="off">
+          <input type="text" class="form-control" [(ngModel)]="material" (keyup)="onKeyUpMaterial();" name="materiau" id="materiau" aria-describedby="helpId" placeholder="Matériau">
         </div>
 
         <div class="form-group">
           <label for="matiere-premiere">Matière première</label>
-          <input type="text" class="form-control" name="matiere-premiere" id="matiere-premiere" aria-describedby="helpId"
-            placeholder="Matière première" autocomplete="off">
+          <input type="text" class="form-control" [(ngModel)]="rawMaterial" (keyup)="onKeyUpRawMaterial();" name="matiere-premiere" id="matiere-premiere" aria-describedby="helpId"
+            placeholder="Matière première">
         </div>
 
-        <div class="form-group">
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1">
-            <label class="form-check-label" for="inlineRadio1">CONFORME</label>
-          </div>
-          <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2">
-            <label class="form-check-label" for="inlineRadio2">NON CONFORME</label>
-          </div>
-        </div>
+        
 
 
         <div class="form-group">
           <label for="codeG">Code G</label>
-          <input type="text" class="form-control" name="codeG" id="codeG" aria-describedby="helpId" placeholder="Code G" autocomplete="off">
+          <input type="text" class="form-control" [(ngModel)]="codeG" (keyup)="onKeyUpCodeG();" name="codeG" id="codeG" aria-describedby="helpId" placeholder="Code G">
         </div>
 
         <div class="form-group">
           <label for="typeDecor">Type de décor</label>
-          <input type="text" class="form-control" name="typeDecor" id="typeDecor" aria-describedby="helpId" placeholder="Type de décor" autocomplete="off">
+          <input type="text" class="form-control" [(ngModel)]="typeDecor" (keyup)="onKeyUpDecorType();" name="typeDecor" id="typeDecor" aria-describedby="helpId" placeholder="Type de décor">
         </div>
 
         <div class="form-group">
           <label for="numeroVrac">Numéro de vrac</label>
-          <input type="text" class="form-control" name="numeroVrac" id="numeroVrac" aria-describedby="helpId"
-            placeholder="Numéro de vrac" autocomplete="off">
+          <input type="text" class="form-control" [(ngModel)]="vracNumber" (keyup)="onKeyUpVracNumber();" name="numeroVrac" id="numeroVrac" aria-describedby="helpId"
+            placeholder="Numéro de vrac">
         </div>
 
         <div class="form-group">
           <label for="test">Test</label>
-          <input type="text" class="form-control" name="test" id="test" aria-describedby="helpId" placeholder="Test" autocomplete="off">
+          <input type="text" class="form-control" [(ngModel)]="testType" (keyup)="onKeyUpTestType();" name="test" id="test" aria-describedby="helpId" placeholder="Test">
         </div>
 
         <div class="row justify-content-center">

@@ -38,6 +38,7 @@ import { AscendRiskCompatPipe } from './pipes/ascend-risk-compat.pipe';
 import { BigService } from './big.service';
 import { CompatService } from "./compat.service";
 import { LoginComponent } from './login/login.component';
+import { ResultPipe } from './result.pipe';
 
 
 
@@ -81,6 +82,7 @@ const appRoutes: Routes =
     TriCompatPipe,
     AscendRiskCompatPipe,
     LoginComponent,
+    ResultPipe,
   ],
   imports: [
     BrowserModule,

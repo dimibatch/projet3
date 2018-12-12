@@ -10,13 +10,18 @@ import * as Handsontable from "handsontable";
 })
 export class SearchResultComponent implements OnInit {
 
-  // Variables 
+  @Input() public searchBarContent:string = "";
+  @Input() public material: string = "";
+  @Input() public codeG: string = "";
+  @Input() public typeDecor: string = "";
+  @Input() public vracNumber: string = "";
+  @Input() public testType: string = "";
+  @Input() public result: string = "";
+  @Input() public page:number = 0;
 
-  @Input() public searchBarContent: string = "";
-  @Input() public page: number = 0;
 
-  private bigService: BigService;
-  public dataset: Test[];
+  private bigService:BigService;
+  public dataset:Test[];
 
   // Settings for HandsonTable
 
@@ -44,8 +49,10 @@ export class SearchResultComponent implements OnInit {
     this.bigService.getBigData().subscribe(
       (param) => {
         this.dataset = param;
+        
       }
     )
+    
   }
 }
 

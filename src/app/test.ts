@@ -23,7 +23,7 @@ export class Test {
 
     public testFamily:string;
     public test:string;
-    public quantity:string;
+    //public quantity:string;
     public start:string;
     public result:string;
     public derogation:boolean;

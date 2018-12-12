@@ -10,7 +10,23 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 export class SearchComponent implements OnInit {
 
   @Input() public searchBarContent: string = "";
-  @Output() searchBarContentChange: EventEmitter<string> = new EventEmitter<string>();
+  @Input() public material: string = "";
+  @Input() public rawMaterial: string = "";
+  @Input() public codeG: string = "";
+  @Input() public typeDecor: string = "";
+  @Input() public vracNumber: string = "";
+  @Input() public testType: string = "";
+  @Input() public result: string = "";
+
+  @Output() searchBarContentChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() materialChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() rawMaterialChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() codeGChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() typeDecorChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() vracNumberChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() testTypeChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() resultChange:EventEmitter<string> = new EventEmitter<string>();
+
 
   public page: number = 0;
   @Output() backToFirstPage: EventEmitter<number> = new EventEmitter<number>();
@@ -26,8 +42,52 @@ export class SearchComponent implements OnInit {
     this.backToFirstPage.emit(this.page);
   }
 
-  //function that changes the "Historique des tests" tab's color when you click on it
-  public changeHistoricTestsColor() {
+  public onKeyUpMaterial() {
+    this.materialChange.emit(this.material);
+  }
+
+  public onKeyUpRawMaterial() {
+    this.rawMaterialChange.emit(this.rawMaterial);
+  }
+
+  public onKeyUpCodeG() {
+    this.codeGChange.emit(this.codeG);
+  }
+
+  public onKeyUpVracNumber() {
+    this.vracNumberChange.emit(this.vracNumber);
+  }
+
+  public onKeyUpDecorType() {
+    this.typeDecorChange.emit(this.typeDecor);
+  }
+
+  public onKeyUpTestType() {
+    this.testTypeChange.emit(this.testType);
+  }
+
+  public onChangeResult() {
+    this.resultChange.emit(this.result);
+  }
+
+  resultConforme() {
+    this.result = "C";
+  }
+
+  resultNonConforme() {
+    this.result = "NC";
+  }
+
+  resultNoFilter() {
+    this.result = "";
+  }
+
+  resultPTC() {
+    this.result = "PTC";
+  }
+  
+   //function that changes the "Historique des tests" tab's color when you click on it
+   public changeHistoricTestsColor() {
     if (document.getElementById('historicTests').style.color != "white") {
       document.getElementById('historicTests').style.color = "white";
       document.getElementById('historicTests').style.backgroundColor = "#595959";

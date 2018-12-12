@@ -6,15 +6,18 @@ import { Test } from '../test';
 })
 export class VracNumberPipe implements PipeTransform {
 
-  transform(value: Test[], param_vracNumber:string): Test[] {
+  transform(value: Test[], param_vracNumber?:string): Test[] {
     let result: Test[] = [];
 
-    for (let i = 0; i < value.length; i++) {
-      if (value[i].vracNumber == param_vracNumber) {
-        result.push(value[i]);
-      }
+    if (param_vracNumber == "" || param_vracNumber == undefined) {
+      return value;
+    } else {
+        for (let i = 0; i < value.length; i++) {
+          if (value[i].vracNumber.toLowerCase() == param_vracNumber.toLowerCase()) {
+            result.push(value[i]);
+          }
+        }
+        return result;
     }
-    return result;
   }
-
 }
