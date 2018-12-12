@@ -6,8 +6,16 @@
     border-radius: 2px;
 }
 .btn span.glyphicon {    			
-	opacity: 0;				
+	opacity: 0.5;				
 }
 .btn.active span.glyphicon {				
 	opacity: 1;				
+}
+.btn-outline-warning{
+    color: orange;
+    border-color: orange;
+}
+.btn-outline-warning:hover{
+    background-color: orange;
+    color: white;
 }
