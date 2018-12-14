@@ -47,11 +47,6 @@ export class BigService {
     )
   }
 
-  // Method to add a Test
-  public addTest(test: Test) {
-    
-  }
-
   // Method to delete a Test
   public deleteTestFromDB(testid: number){
     
@@ -59,8 +54,11 @@ export class BigService {
 
   // Method to update a Test
 
-  public updateTestFromDB(testId:number, test: Test){
+  public updateTestFromDB(testId:number, test: Test){}
     
+  // Method to add a Test
+  public addTest(test: Test): Observable<any> {
+    return this.http.get(`${this.baseUrl}/test/create?typeAC=${test.typeAC}&codeAC=${test.codeAC}&codeG=${test.codeG}&productName=${test.productName}&campaignCode=${test.campaignCode}&campaignName=${test.campaignName}&franchise=${test.franchise}&cpDev=${test.cpDev}&cpQCP=${test.cpQCP}&provider=${test.provider}&material=${test.material}&decoType=${test.decoType}&teinteMasse=${test.teinteMasse}&packModel=${test.packModel}&submitNumber=${test.submitNumber}&vracName=${test.vracName}&vracNumber=${test.vracNumber}&formuleNumber=${test.formuleNumber}&testFamily=${test.testFamily}&test=${test.test}&start=${test.start}&result=${test.result}&derogation=${test.derogation}&comments=${test.comments}`);
   }
 
 
