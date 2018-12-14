@@ -1,329 +1,325 @@
 <div class="container-fluid mt-5 pl-4 pr-4">
   <h1 class="text-center mb-5 border-bottom border-dark p-4">Nouveau Test</h1>
 
-  <label class="switch">
-    <input type="checkbox">
-    <span class="slider round" (click)="switchBetweenOnGoingTestAndTest()"></span>
-  </label>
+  <!-- Toggle -->
+  <div class="container">
+    <div class="d-inline-block mr-2">
+      <label class="switch">
+        <input type="checkbox">
+        <span class="slider round" (click)="switchBetweenOnGoingTestAndTest()"></span>
+      </label>
+    </div>
+    <div class="d-inline-block">
+      <span>Ajouter un test à lecture multiple</span>
+    </div>
+  </div>
 
 
-
-  <button class="btn" (click)="DEBUGFUNCTION()">
-    Click to test <span class="badge badge-primary"></span>
-  </button>
 
   <!-- Form for add a One shot Test -->
-  <div class="row justify-content-center mt-4" *ngIf="!onGoingTestState">
-      <div class="col-2 border-right ">
-        <h3 class="mb-4 text-center column-title">Données Projet</h3>
-        <form>
-          <div class="form-group">
-            <label for="typeAC">Type d'AC</label>
-            <input type="text" class="form-control" id="typeAC" name="typeAC" placeholder="" [(ngModel)]="test.typeAC">
-          </div>
-    
-          <div class="form-group">
-            <label for="codeG">Code G</label>
-            <input type="text" class="form-control" id="codeG" name="codeG" placeholder="" [(ngModel)]="test.codeG">
-          </div>
-          <div class="form-group">
-            <label for="productName">Nom Produit</label>
-            <input type="text" class="form-control" id="productName" name="productName" placeholder="" [(ngModel)]="test.productName">
-          </div>
-          <div class="form-group">
-            <label for="campaignCode">Code Campagne</label>
-            <input type="text" class="form-control" id="campaignCode" name="campaignCode" placeholder="" [(ngModel)]="test.campaignCode">
-          </div>
-          <div class="form-group">
-            <label for="campaignName">Nom Campagne</label>
-            <input type="text" class="form-control" id="campaignName" name="campaignName" placeholder="" [(ngModel)]="test.campaignName">
-          </div>
-          <div class="form-group">
-            <label for="franchise">Franchise</label>
-            <input type="text" class="form-control" id="franchise" name="franchise" placeholder="" [(ngModel)]="test.franchise">
-          </div>
-          <div class="form-group">
-            <label for="cpDev">CP Dev</label>
-            <input type="text" class="form-control" id="cpDev" name="cpDev" placeholder="" [(ngModel)]="test.cpDev">
-          </div>
-          <div class="form-group">
-            <label for="cpQCP">CP QCP</label>
-            <input type="text" class="form-control" id="cpQCP" name="cpQCP" placeholder="" [(ngModel)]="test.cpQCP">
-          </div>
-    
-        </form>
-      </div>
-      <div class="col-2 border-right">
-        <h3 class="mb-4 column-title text-center">Données AC</h3>
-        <form>
-          <div class="form-group">
-            <label for="codeAC">Code AC</label>
-            <input type="text" class="form-control" id="codeAC" name="codeAC" placeholder="" [(ngModel)]="test.codeAC">
-          </div>
-          <div class="form-group">
-            <label for="provider">Fournisseur</label>
-            <input type="text" class="form-control" id="provider" name="provider" placeholder="" [(ngModel)]="test.provider">
-          </div>
-          <div class="form-group">
-            <label for="material">Matériau</label>
-            <input type="text" class="form-control" id="material" name="material" placeholder="" [(ngModel)]="test.material">
-          </div>
-          <div class="form-group">
-            <label for="decoType">Type de décor</label>
-            <input type="text" class="form-control" id="decoType" name="decoType" placeholder="" [(ngModel)]="test.decoType">
-          </div>
-          <div class="form-group">
-            <label for="teinteMasse">Teinte masse</label>
-            <input type="text" class="form-control" id="teinteMasse" name="teinteMasse" placeholder="" [(ngModel)]="test.teinteMasse">
-          </div>
-          <div class="form-group">
-            <label for="packModel">Modèle de Pack</label>
-            <input type="text" class="form-control" id="packModel" name="packModel" placeholder="" [(ngModel)]="test.packModel">
-          </div>
-          <div class="form-group">
-            <label for="submitNumber">N° de soumission</label>
-            <input type="text" class="form-control" id="submitNumber" name="submitNumber" placeholder="" [(ngModel)]="test.submitNumber">
-          </div>
-        </form>
-      </div>
-    
-      <div class="col-2 border-right">
-        <h3 class="mb-4 column-title text-center">Données Vrac</h3>
-        <form>
-          <div class="form-group">
-            <label for="vracName">Nom vrac</label>
-            <input type="text" class="form-control" id="vracName" name="vracName" placeholder="" [(ngModel)]="test.vracName">
-          </div>
-          <div class="form-group">
-            <label for="vracNumber">N° vrac</label>
-            <input type="text" class="form-control" id="vracNumber" name="vracNumber" placeholder="" [(ngModel)]="test.vracNumber">
-          </div>
-          <div class="form-group">
-            <label for="formuleNumber">N° formule ou lot</label>
-            <input type="text" class="form-control" id="formuleNumber" name="formuleNumber" placeholder="" [(ngModel)]="test.formuleNumber">
-          </div>
-        </form>
-      </div>
-    
-      <div class="col-2 border-right">
-        <h3 class="mb-4 column-title text-center">Fonctionnalités</h3>
-        <form>
-          <div class="form-group">
-            <label for="testFamily">Famille Test</label>
-            <input type="text" class="form-control" id="testFamily" name="testFamily" placeholder="" [(ngModel)]="test.testFamily">
-          </div>
-          <div class="form-group">
-            <label for="test">Test</label>
-            <input type="text" class="form-control" id="test" name="test" placeholder="" [(ngModel)]="test.test">
-          </div>
-          <div class="form-group">
-            <label for="quantity">Quantité testée</label>
-            <input type="text" class="form-control" id="quantity" name="quantity" placeholder="" [(ngModel)]="test.quantity">
-          </div>
-    
-          <div class="form-group">
-            <label for="result">Compt test(résultat)</label>
-            <!--<input type="" class="form-control" id="exampleInputPassword1" placeholder="">-->
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="C">
-              <label class="form-check-label" for="inlineCheckbox1">Conforme</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="MC">
-              <label class="form-check-label" for="inlineCheckbox2">Moyen-conforme</label>
-            </div>
-            <div class="form-check">
-              <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="NC">
-              <label class="form-check-label" for="inlineCheckbox2">Non-conforme</label>
-            </div>
-          </div>
-    
-    
-          <div class="form-group">
-            <label for="comments">Commentaires</label>
-            <textarea class="form-control" id="comments" name="comments" rows="3" [(ngModel)]="test.comments"></textarea>
-          </div>
-        </form>
-      </div>
-    
+  <div class="row justify-content-center mt-4" *ngIf="onGoingTestState">
+    <div class="col-2 border-right ">
+      <h3 class="mb-4 text-center column-title">Données Projet</h3>
+      <form>
+        <div class="form-group">
+          <label for="typeAC">Type d'AC</label>
+          <input type="text" class="form-control" id="typeAC" name="typeAC" placeholder="" [(ngModel)]="tmpTest.typeAC">
+        </div>
+
+        <div class="form-group">
+          <label for="codeG">Code G</label>
+          <input type="text" class="form-control" id="codeG" name="codeG" placeholder="" [(ngModel)]="tmpTest.codeG">
+        </div>
+        <div class="form-group">
+          <label for="productName">Nom Produit</label>
+          <input type="text" class="form-control" id="productName" name="productName" placeholder="" [(ngModel)]="tmpTest.productName">
+        </div>
+        <div class="form-group">
+          <label for="campaignCode">Code Campagne</label>
+          <input type="text" class="form-control" id="campaignCode" name="campaignCode" placeholder="" [(ngModel)]="tmpTest.campaignCode">
+        </div>
+        <div class="form-group">
+          <label for="campaignName">Nom Campagne</label>
+          <input type="text" class="form-control" id="campaignName" name="campaignName" placeholder="" [(ngModel)]="tmpTest.campaignName">
+        </div>
+        <div class="form-group">
+          <label for="franchise">Franchise</label>
+          <input type="text" class="form-control" id="franchise" name="franchise" placeholder="" [(ngModel)]="tmpTest.franchise">
+        </div>
+        <div class="form-group">
+          <label for="cpDev">CP Dev</label>
+          <input type="text" class="form-control" id="cpDev" name="cpDev" placeholder="" [(ngModel)]="tmpTest.cpDev">
+        </div>
+        <div class="form-group">
+          <label for="cpQCP">CP QCP</label>
+          <input type="text" class="form-control" id="cpQCP" name="cpQCP" placeholder="" [(ngModel)]="tmpTest.cpQCP">
+        </div>
+
+      </form>
+    </div>
+    <div class="col-2 border-right">
+      <h3 class="mb-4 column-title text-center">Données AC</h3>
+      <form>
+        <div class="form-group">
+          <label for="codeAC">Code AC</label>
+          <input type="text" class="form-control" id="codeAC" name="codeAC" placeholder="" [(ngModel)]="tmpTest.codeAC">
+        </div>
+        <div class="form-group">
+          <label for="provider">Fournisseur</label>
+          <input type="text" class="form-control" id="provider" name="provider" placeholder="" [(ngModel)]="tmpTest.provider">
+        </div>
+        <div class="form-group">
+          <label for="material">Matériau</label>
+          <input type="text" class="form-control" id="material" name="material" placeholder="" [(ngModel)]="tmpTest.material">
+        </div>
+        <div class="form-group">
+          <label for="decoType">Type de décor</label>
+          <input type="text" class="form-control" id="decoType" name="decoType" placeholder="" [(ngModel)]="tmpTest.decoType">
+        </div>
+        <div class="form-group">
+          <label for="teinteMasse">Teinte masse</label>
+          <input type="text" class="form-control" id="teinteMasse" name="teinteMasse" placeholder="" [(ngModel)]="tmpTest.teinteMasse">
+        </div>
+        <div class="form-group">
+          <label for="packModel">Modèle de Pack</label>
+          <input type="text" class="form-control" id="packModel" name="packModel" placeholder="" [(ngModel)]="tmpTest.packModel">
+        </div>
+        <div class="form-group">
+          <label for="submitNumber">N° de soumission</label>
+          <input type="text" class="form-control" id="submitNumber" name="submitNumber" placeholder="" [(ngModel)]="tmpTest.submitNumber">
+        </div>
+      </form>
     </div>
 
-
-<!-- Form for add an OnGoingTest -->
-
-<div class="row justify-content-center mt-4" *ngIf="onGoingTestState">
-  <div class="col-2 border-right ">
-    <h3 class="mb-4 text-center column-title">Données Projet</h3>
-    <form>
-      <div class="form-group">
-        <label for="typeAC">Type d'AC</label>
-        <input type="text" class="form-control" id="typeAC" name="typeAC" placeholder="" [(ngModel)]="onGoingTest.typeAC">
-      </div>
-
-      <div class="form-group">
-        <label for="codeG">Code G</label>
-        <input type="text" class="form-control" id="codeG" name="codeG" placeholder="" [(ngModel)]="onGoingTest.codeG">
-      </div>
-      <div class="form-group">
-        <label for="productName">Nom Produit</label>
-        <input type="text" class="form-control" id="productName" name="productName" placeholder="" [(ngModel)]="onGoingTest.productName">
-      </div>
-      <div class="form-group">
-        <label for="campaignCode">Code Campagne</label>
-        <input type="text" class="form-control" id="campaignCode" name="campaignCode" placeholder="" [(ngModel)]="onGoingTest.campaignCode">
-      </div>
-      <div class="form-group">
-        <label for="campaignName">Nom Campagne</label>
-        <input type="text" class="form-control" id="campaignName" name="campaignName" placeholder="" [(ngModel)]="onGoingTest.campaignName">
-      </div>
-      <div class="form-group">
-        <label for="franchise">Franchise</label>
-        <input type="text" class="form-control" id="franchise" name="franchise" placeholder="" [(ngModel)]="onGoingTest.franchise">
-      </div>
-      <div class="form-group">
-        <label for="cpDev">CP Dev</label>
-        <input type="text" class="form-control" id="cpDev" name="cpDev" placeholder="" [(ngModel)]="onGoingTest.cpDev">
-      </div>
-      <div class="form-group">
-        <label for="cpQCP">CP QCP</label>
-        <input type="text" class="form-control" id="cpQCP" name="cpQCP" placeholder="" [(ngModel)]="onGoingTest.cpQCP">
-      </div>
-
-    </form>
-  </div>
-  <div class="col-2 border-right">
-    <h3 class="mb-4 column-title text-center">Données AC</h3>
-    <form>
-      <div class="form-group">
-        <label for="codeAC">Code AC</label>
-        <input type="text" class="form-control" id="codeAC" name="codeAC" placeholder="" [(ngModel)]="onGoingTest.codeAC">
-      </div>
-      <div class="form-group">
-        <label for="provider">Fournisseur</label>
-        <input type="text" class="form-control" id="provider" name="provider" placeholder="" [(ngModel)]="onGoingTest.provider">
-      </div>
-      <div class="form-group">
-        <label for="material">Matériau</label>
-        <input type="text" class="form-control" id="material" name="material" placeholder="" [(ngModel)]="onGoingTest.material">
-      </div>
-      <div class="form-group">
-        <label for="decoType">Type de décor</label>
-        <input type="text" class="form-control" id="decoType" name="decoType" placeholder="" [(ngModel)]="onGoingTest.decoType">
-      </div>
-      <div class="form-group">
-        <label for="teinteMasse">Teinte masse</label>
-        <input type="text" class="form-control" id="teinteMasse" name="teinteMasse" placeholder="" [(ngModel)]="onGoingTest.teinteMasse">
-      </div>
-      <div class="form-group">
-        <label for="packModel">Modèle de Pack</label>
-        <input type="text" class="form-control" id="packModel" name="packModel" placeholder="" [(ngModel)]="onGoingTest.packModel">
-      </div>
-      <div class="form-group">
-        <label for="submitNumber">N° de soumission</label>
-        <input type="text" class="form-control" id="submitNumber" name="submitNumber" placeholder="" [(ngModel)]="onGoingTest.submitNumber">
-      </div>
-    </form>
-  </div>
-
-  <div class="col-2 border-right">
-    <h3 class="mb-4 column-title text-center">Données Vrac</h3>
-    <form>
-      <div class="form-group">
-        <label for="vracName">Nom vrac</label>
-        <input type="text" class="form-control" id="vracName" name="vracName" placeholder="" [(ngModel)]="onGoingTest.vracName">
-      </div>
-      <div class="form-group">
-        <label for="vracNumber">N° vrac</label>
-        <input type="text" class="form-control" id="vracNumber" name="vracNumber" placeholder="" [(ngModel)]="onGoingTest.vracNumber">
-      </div>
-      <div class="form-group">
-        <label for="formuleNumber">N° formule ou lot</label>
-        <input type="text" class="form-control" id="formuleNumber" name="formuleNumber" placeholder="" [(ngModel)]="onGoingTest.formuleNumber">
-      </div>
-    </form>
-  </div>
-
-  <div class="col-2 border-right">
-    <h3 class="mb-4 column-title text-center">Fonctionnalités</h3>
-    <form>
-      <div class="form-group">
-        <label for="testFamily">Famille Test</label>
-        <input type="text" class="form-control" id="testFamily" name="testFamily" placeholder="" [(ngModel)]="onGoingTest.testFamily">
-      </div>
-      <div class="form-group">
-        <label for="test">Test</label>
-        <input type="text" class="form-control" id="test" name="test" placeholder="" [(ngModel)]="onGoingTest.test">
-      </div>
-      <div class="form-group">
-        <label for="quantity">Quantité testée</label>
-        <input type="text" class="form-control" id="quantity" name="quantity" placeholder="" [(ngModel)]="onGoingTest.quantity">
-      </div>
-
-      <div class="form-group">
-        <label for="result">Compt test(résultat)</label>
-        <!--<input type="" class="form-control" id="exampleInputPassword1" placeholder="">-->
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="C">
-          <label class="form-check-label" for="inlineCheckbox1">Conforme</label>
+    <div class="col-2 border-right">
+      <h3 class="mb-4 column-title text-center">Données Vrac</h3>
+      <form>
+        <div class="form-group">
+          <label for="vracName">Nom vrac</label>
+          <input type="text" class="form-control" id="vracName" name="vracName" placeholder="" [(ngModel)]="tmpTest.vracName">
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="MC">
-          <label class="form-check-label" for="inlineCheckbox2">Moyen-conforme</label>
+        <div class="form-group">
+          <label for="vracNumber">N° vrac</label>
+          <input type="text" class="form-control" id="vracNumber" name="vracNumber" placeholder="" [(ngModel)]="tmpTest.vracNumber">
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="NC">
-          <label class="form-check-label" for="inlineCheckbox2">Non-conforme</label>
+        <div class="form-group">
+          <label for="formuleNumber">N° formule ou lot</label>
+          <input type="text" class="form-control" id="formuleNumber" name="formuleNumber" placeholder="" [(ngModel)]="tmpTest.formuleNumber">
         </div>
-      </div>
+      </form>
+    </div>
+
+    <div class="col-2 border-right">
+      <h3 class="mb-4 column-title text-center">Fonctionnalités</h3>
+      <form>
+        <div class="form-group">
+          <label for="testFamily">Famille Test</label>
+          <input type="text" class="form-control" id="testFamily" name="testFamily" placeholder="" [(ngModel)]="tmpTest.testFamily">
+        </div>
+        <div class="form-group">
+          <label for="test">Test</label>
+          <input type="text" class="form-control" id="test" name="test" placeholder="" [(ngModel)]="tmpTest.test">
+        </div>
+
+        <div class="form-group">
+          <label for="result">Compt test(résultat)</label>
+          <!--<input type="" class="form-control" id="exampleInputPassword1" placeholder="">-->
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="C">
+            <label class="form-check-label" for="inlineCheckbox1">Conforme</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="MC">
+            <label class="form-check-label" for="inlineCheckbox2">Moyen-conforme</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="NC">
+            <label class="form-check-label" for="inlineCheckbox2">Non-conforme</label>
+          </div>
+        </div>
 
 
-      <div class="form-group">
-        <label for="comments">Commentaires</label>
-        <textarea class="form-control" id="comments" name="comments" rows="3" [(ngModel)]="onGoingTest.comments"></textarea>
-      </div>
-    </form>
+        <div class="form-group">
+          <label for="comments">Commentaires</label>
+          <textarea class="form-control" id="comments" name="comments" rows="3" [(ngModel)]="tmpTest.comments"></textarea>
+        </div>
+      </form>
+    </div>
+
   </div>
 
-  <div class="col-2">
-    <form>
-      <div class="form-group">
-        <h3 class="mb-4 column-title text-center">Calendrier</h3>
-        <label for="ReceptionVrac">Réception vrac</label>
-        <input type="date" class="form-control" id="ReceptionVrac" name="ReceptionVrac" placeholder="" [(ngModel)]="onGoingTest.ReceptionVrac">
-      </div>
-      <div class="form-group">
-        <label for="ReceptionZAC">Réception ZAC</label>
-        <input type="date" class="form-control" id="ReceptionZAC" name="ReceptionZAC" placeholder="" [(ngModel)]="onGoingTest.ReceptionZAC">
-      </div>
-      <div class="form-group">
-        <label for="DebutReel">Date de début réelle</label>
-        <input type="date" class="form-control" id="DebutReel" name="DebutReel" placeholder="" [(ngModel)]="onGoingTest.DebutReel">
-      </div>
-      <div class="form-group">
 
-        <label for="DebutPrevu">Date de début prévue</label>
-        <input type="date" class="form-control" id="DebutPrevu" name="DebutPrevu" placeholder="" [(ngModel)]="onGoingTest.DebutPrevu">
-      </div>
-      <div class="form-group">
-        <label for="T1Reel">Date T1 réelle</label>
-        <input type="date" class="form-control" id="T1Reel" name="T1Reel" placeholder="" [(ngModel)]="onGoingTest.T1Reel">
-      </div>
-      <div class="form-group">
-        <label for="T2Reel">Date T2 réelle</label>
-        <input type="date" class="form-control" id="T2Reel" name="T2Reel" placeholder="" [(ngModel)]="onGoingTest.T2Reel">
-      </div>
-      <div class="form-group">
-        <label for="T3Reel">Date T3 réelle</label>
-        <input type="date" class="form-control" id="T3Reel" name="T3Reel" placeholder="" [(ngModel)]="onGoingTest.T3Reel">
-      </div>
-    </form>
+  <!-- Form for add an OnGoingTest -->
+
+  <div class="row justify-content-center mt-4" *ngIf="!onGoingTestState">
+    <div class="col-2 border-right ">
+      <h3 class="mb-4 text-center column-title">Données Projet</h3>
+      <form>
+        <div class="form-group">
+          <label for="typeAC">Type d'AC</label>
+          <input type="text" class="form-control" id="typeAC" name="typeAC" placeholder="" [(ngModel)]="onGoingTest.typeAC">
+        </div>
+
+        <div class="form-group">
+          <label for="codeG">Code G</label>
+          <input type="text" class="form-control" id="codeG" name="codeG" placeholder="" [(ngModel)]="onGoingTest.codeG">
+        </div>
+        <div class="form-group">
+          <label for="productName">Nom Produit</label>
+          <input type="text" class="form-control" id="productName" name="productName" placeholder="" [(ngModel)]="onGoingTest.productName">
+        </div>
+        <div class="form-group">
+          <label for="campaignCode">Code Campagne</label>
+          <input type="text" class="form-control" id="campaignCode" name="campaignCode" placeholder="" [(ngModel)]="onGoingTest.campaignCode">
+        </div>
+        <div class="form-group">
+          <label for="campaignName">Nom Campagne</label>
+          <input type="text" class="form-control" id="campaignName" name="campaignName" placeholder="" [(ngModel)]="onGoingTest.campaignName">
+        </div>
+        <div class="form-group">
+          <label for="franchise">Franchise</label>
+          <input type="text" class="form-control" id="franchise" name="franchise" placeholder="" [(ngModel)]="onGoingTest.franchise">
+        </div>
+        <div class="form-group">
+          <label for="cpDev">CP Dev</label>
+          <input type="text" class="form-control" id="cpDev" name="cpDev" placeholder="" [(ngModel)]="onGoingTest.cpDev">
+        </div>
+        <div class="form-group">
+          <label for="cpQCP">CP QCP</label>
+          <input type="text" class="form-control" id="cpQCP" name="cpQCP" placeholder="" [(ngModel)]="onGoingTest.cpQCP">
+        </div>
+
+      </form>
+    </div>
+    <div class="col-2 border-right">
+      <h3 class="mb-4 column-title text-center">Données AC</h3>
+      <form>
+        <div class="form-group">
+          <label for="codeAC">Code AC</label>
+          <input type="text" class="form-control" id="codeAC" name="codeAC" placeholder="" [(ngModel)]="onGoingTest.codeAC">
+        </div>
+        <div class="form-group">
+          <label for="provider">Fournisseur</label>
+          <input type="text" class="form-control" id="provider" name="provider" placeholder="" [(ngModel)]="onGoingTest.provider">
+        </div>
+        <div class="form-group">
+          <label for="material">Matériau</label>
+          <input type="text" class="form-control" id="material" name="material" placeholder="" [(ngModel)]="onGoingTest.material">
+        </div>
+        <div class="form-group">
+          <label for="decoType">Type de décor</label>
+          <input type="text" class="form-control" id="decoType" name="decoType" placeholder="" [(ngModel)]="onGoingTest.decoType">
+        </div>
+        <div class="form-group">
+          <label for="teinteMasse">Teinte masse</label>
+          <input type="text" class="form-control" id="teinteMasse" name="teinteMasse" placeholder="" [(ngModel)]="onGoingTest.teinteMasse">
+        </div>
+        <div class="form-group">
+          <label for="packModel">Modèle de Pack</label>
+          <input type="text" class="form-control" id="packModel" name="packModel" placeholder="" [(ngModel)]="onGoingTest.packModel">
+        </div>
+        <div class="form-group">
+          <label for="submitNumber">N° de soumission</label>
+          <input type="text" class="form-control" id="submitNumber" name="submitNumber" placeholder="" [(ngModel)]="onGoingTest.submitNumber">
+        </div>
+      </form>
+    </div>
+
+    <div class="col-2 border-right">
+      <h3 class="mb-4 column-title text-center">Données Vrac</h3>
+      <form>
+        <div class="form-group">
+          <label for="vracName">Nom vrac</label>
+          <input type="text" class="form-control" id="vracName" name="vracName" placeholder="" [(ngModel)]="onGoingTest.vracName">
+        </div>
+        <div class="form-group">
+          <label for="vracNumber">N° vrac</label>
+          <input type="text" class="form-control" id="vracNumber" name="vracNumber" placeholder="" [(ngModel)]="onGoingTest.vracNumber">
+        </div>
+        <div class="form-group">
+          <label for="formuleNumber">N° formule ou lot</label>
+          <input type="text" class="form-control" id="formuleNumber" name="formuleNumber" placeholder="" [(ngModel)]="onGoingTest.formuleNumber">
+        </div>
+      </form>
+    </div>
+
+    <div class="col-2 border-right">
+      <h3 class="mb-4 column-title text-center">Fonctionnalités</h3>
+      <form>
+        <div class="form-group">
+          <label for="testFamily">Famille Test</label>
+          <input type="text" class="form-control" id="testFamily" name="testFamily" placeholder="" [(ngModel)]="onGoingTest.testFamily">
+        </div>
+        <div class="form-group">
+          <label for="test">Test</label>
+          <input type="text" class="form-control" id="test" name="test" placeholder="" [(ngModel)]="onGoingTest.test">
+        </div>
+
+        <div class="form-group">
+          <label for="result">Compt test(résultat)</label>
+          <!--<input type="" class="form-control" id="exampleInputPassword1" placeholder="">-->
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="C">
+            <label class="form-check-label" for="inlineCheckbox1">Conforme</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="MC">
+            <label class="form-check-label" for="inlineCheckbox2">Moyen-conforme</label>
+          </div>
+          <div class="form-check">
+            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" value="NC">
+            <label class="form-check-label" for="inlineCheckbox2">Non-conforme</label>
+          </div>
+        </div>
+
+
+        <div class="form-group">
+          <label for="comments">Commentaires</label>
+          <textarea class="form-control" id="comments" name="comments" rows="3" [(ngModel)]="onGoingTest.comments"></textarea>
+        </div>
+      </form>
+    </div>
+
+    <div class="col-2">
+      <form>
+        <div class="form-group">
+          <h3 class="mb-4 column-title text-center">Calendrier</h3>
+          <label for="ReceptionVrac">Réception vrac</label>
+          <input type="date" class="form-control" id="ReceptionVrac" name="ReceptionVrac" placeholder="" [(ngModel)]="onGoingTest.ReceptionVrac">
+        </div>
+        <div class="form-group">
+          <label for="ReceptionZAC">Réception ZAC</label>
+          <input type="date" class="form-control" id="ReceptionZAC" name="ReceptionZAC" placeholder="" [(ngModel)]="onGoingTest.ReceptionZAC">
+        </div>
+        <div class="form-group">
+          <label for="DebutReel">Date de début réelle</label>
+          <input type="date" class="form-control" id="DebutReel" name="DebutReel" placeholder="" [(ngModel)]="onGoingTest.DebutReel">
+        </div>
+        <div class="form-group">
+
+          <label for="DebutPrevu">Date de début prévue</label>
+          <input type="date" class="form-control" id="DebutPrevu" name="DebutPrevu" placeholder="" [(ngModel)]="onGoingTest.DebutPrevu">
+        </div>
+        <div class="form-group">
+          <label for="T1Reel">Date T1 réelle</label>
+          <input type="date" class="form-control" id="T1Reel" name="T1Reel" placeholder="" [(ngModel)]="onGoingTest.T1Reel">
+        </div>
+        <div class="form-group">
+          <label for="T2Reel">Date T2 réelle</label>
+          <input type="date" class="form-control" id="T2Reel" name="T2Reel" placeholder="" [(ngModel)]="onGoingTest.T2Reel">
+        </div>
+        <div class="form-group">
+          <label for="T3Reel">Date T3 réelle</label>
+          <input type="date" class="form-control" id="T3Reel" name="T3Reel" placeholder="" [(ngModel)]="onGoingTest.T3Reel">
+        </div>
+      </form>
+    </div>
+
   </div>
 
-</div>
 
 
-
-<div class="row justify-content-center mb-5 mt-5">
-  <button type="button" class="btn btn-dark col-3 font-weight-bold rounded-0 validate-button" (click)="save()">Valider</button>
-</div>
+  <div class="row justify-content-center mb-5 mt-5">
+    <button type="button" class="btn btn-dark col-3 font-weight-bold rounded-0 validate-button" (click)="save()">Valider</button>
+  </div>
 </div>

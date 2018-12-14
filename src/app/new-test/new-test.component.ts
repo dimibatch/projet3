@@ -17,7 +17,7 @@ export class NewTestComponent implements OnInit {
   // Constructors OnGoingTest & Test
 
   public onGoingTest: OnGoingTest = new OnGoingTest();
-  public test: Test = new Test();
+  public tmpTest: Test = new Test();
 
   constructor(private service: BigService) { }
 
@@ -25,22 +25,14 @@ export class NewTestComponent implements OnInit {
     this.onGoingTestState = true;
   }
 
-  public newOnGoingTest(): void {
 
-  }
-
-  public newTest(): void {
-
-  }
 
   // Method to save a Test or OnGoingTest on DB
-  public save(): void {
-    if (this.onGoingTestState) {
-      this.service.addOnGoingTest(this.onGoingTest).subscribe(data => console.log(data), error => console.log(error));
-    } else {
-      this.service.addTest(this.test).subscribe(data => console.log(data), error => console.log(error));  
-    }
-  }
+  // public save(): void {
+  //   if (this.onGoingTestState) {
+  //   } else if (!this.onGoingTestState) {
+  //   }
+  // }
 
   // Method to switch between Add a OnGoingTest & Add a Test
   public switchBetweenOnGoingTestAndTest() {
@@ -50,12 +42,6 @@ export class NewTestComponent implements OnInit {
       this.onGoingTestState = false;
     }
   }
-
-  public DEBUGFUNCTION(){
-    console.log(this.onGoingTest);
-    console.log(this.test);
-  }
-
 }
 
 
