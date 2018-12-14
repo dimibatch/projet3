@@ -1,4 +1,29 @@
 hot-table{
     overflow-x: scroll;
-    height:50vh;
+    height:55vh;
+}
+
+.red{
+    color: red;
+}
+
+.green{
+    color:green;
+}
+
+.test-access-block{
+    float:right;
+}
+
+.row{
+    margin-bottom: 15px;
+}
+
+ng-template{
+    width:1200px;
+}
+
+.bg-dark{
+    color:white;
+    font-weight: bold;
 }

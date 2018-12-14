@@ -5,6 +5,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
 
 import { HotTableModule } from "@handsontable/angular";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap"
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
@@ -92,6 +93,7 @@ const appRoutes: Routes =
     BrowserModule,
     HotTableModule,
     FormsModule,
+    NgbModule,
     HttpClientModule,
     RouterModule.forRoot(
       appRoutes,

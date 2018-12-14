@@ -1,15 +1,8 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Test } from '../test';
 import { BigService } from '../big.service';
-// import { MateriauPipe } from '../pipes/materiau.pipe';
-// import { TypeAcPipe } from '../pipes/type-ac.pipe';
-// import { VracNumberPipe } from '../pipes/vrac-number.pipe';
-// import { TestPipe } from '../pipes/test.pipe';
-// import { DecorTypePipe } from '../pipes/decor-type.pipe';
-// import { ResultPipe } from '../result.pipe';
-// import { CodeGPipe } from '../pipes/code-g.pipe';
-// import { StartDatePipe } from '../pipes/start-date.pipe';
-// import { EndDatePipe } from '../pipes/end-date.pipe';
+import * as Handsontable from "handsontable";
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'app-search-result',
@@ -18,7 +11,8 @@ import { BigService } from '../big.service';
 })
 export class SearchResultComponent implements OnInit {
 
-  @Input() public searchBarContent:string = "";
+  // Variables from filters & searchBar
+  @Input() public searchBarContent: string = "";
   @Input() public material: string = "";
   @Input() public codeG: string = "";
   @Input() public typeDecor: string = "";
@@ -183,7 +177,20 @@ export class SearchResultComponent implements OnInit {
 
 
 
-  constructor(service: BigService) {
+  // constructor(service: BigService) {
+ 
+
+  // Variables for update a test
+
+  public tmpTest = new Test();
+
+  // Variable for calling & displaying the test & modif or delete it 
+  public IdTestToModifOrDelete: number = 0;
+  public testToModifOrDelete: Test;
+
+  closeResult: string;
+
+  constructor(service: BigService, private modalService: NgbModal) {
     this.bigService = service;
   }
 
@@ -193,7 +200,37 @@ export class SearchResultComponent implements OnInit {
         this.dataset = param;
       }
     )
-    
   }
 
+  // CRUD methods 
+
+  public callTestToModifOrDelete(testid: number) {
+    this.bigService.getTest(testid).subscribe((param) => { this.testToModifOrDelete = param })
+  }
+
+  public deleteTest() {
+    // this.bigService.deleteTestFromDB(this.IdTestToModifOrDelete).subscribe();
+    // console.log(`Le test ${this.IdTestToModifOrDelete} a bien été supprimé ! `)
+  }
+
+  public updateTest() {
+    // this.bigService.updateTestFromDB(this.IdTestToModifOrDelete, this.tmpTest).subscribe();
+    // console.log(`Le test ${this.IdTestToModifOrDelete} a bien été updaté ! `)
+    // this.tmpTest = new Test();
+
+  }
+
+
+
+  // Modal Opening Fuction
+
+  openVerticallyCentered(content) {
+    this.modalService.open(content, { centered: true, size: "lg" });
+    console.log(this.IdTestToModifOrDelete);
+  }
 }
+
+
+
+
+
