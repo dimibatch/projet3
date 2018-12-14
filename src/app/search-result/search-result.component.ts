@@ -1,6 +1,15 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Test } from '../test';
 import { BigService } from '../big.service';
+// import { MateriauPipe } from '../pipes/materiau.pipe';
+// import { TypeAcPipe } from '../pipes/type-ac.pipe';
+// import { VracNumberPipe } from '../pipes/vrac-number.pipe';
+// import { TestPipe } from '../pipes/test.pipe';
+// import { DecorTypePipe } from '../pipes/decor-type.pipe';
+// import { ResultPipe } from '../result.pipe';
+// import { CodeGPipe } from '../pipes/code-g.pipe';
+// import { StartDatePipe } from '../pipes/start-date.pipe';
+// import { EndDatePipe } from '../pipes/end-date.pipe';
 
 @Component({
   selector: 'app-search-result',
@@ -16,12 +25,45 @@ export class SearchResultComponent implements OnInit {
   @Input() public vracNumber: string = "";
   @Input() public testType: string = "";
   @Input() public result: string = "";
+  @Input() public startDate: string;
+  @Input() public endDate: string;
   @Input() public page:number = 0;
-
-
+  
+  
   private bigService:BigService;
-  public dataset:Test[];
+  public dataset:Test[] = [];
+  
 
+  // private typeAcPipe = new TypeAcPipe();
+  // public pipe1Result:Test[] = this.typeAcPipe.transform(this.dataset, this.searchBarContent, this.page);
+  
+  // private materiauPipe = new MateriauPipe();
+  // public pipe2Result:Test[] = this.materiauPipe.transform(this.pipe1Result, this.material);
+  
+  // private vracNumberPipe = new VracNumberPipe();
+  // public pipe3Result:Test[] = this.vracNumberPipe.transform(this.pipe2Result, this.vracNumber);
+
+  // private testPipe = new TestPipe();
+  // public pipe4Result:Test[] = this.testPipe.transform(this.pipe3Result, this.testType);
+
+  // private decorPipe = new DecorTypePipe();
+  // public pipe5Result:Test[] = this.decorPipe.transform(this.pipe4Result, this.typeDecor);
+
+  // private resultPipe = new ResultPipe();
+  // public pipe6Result:Test[] = this.resultPipe.transform(this.pipe5Result, this.result);
+
+  // private codeGPipe = new CodeGPipe();
+  // public pipe7Result:Test[] = this.codeGPipe.transform(this.pipe6Result, this.codeG);
+
+  // private startDatePipe = new StartDatePipe();
+  // public pipe8Result:Test[] = this.startDatePipe.transform(this.pipe7Result, this.startDate);
+
+  // private endDatePipe = new EndDatePipe();
+  // public pipe9Result:Test[] = this.endDatePipe.transform(this.pipe8Result, this.endDate);
+
+  // public dataLength = this.pipe1Result.length;
+
+  
   // dataset: Test[] = [
   //   { typeAC: "Flaconnette", codeG: "G553710", productName: "CORPS DEMO MASC CIL D'ENF EXTRA VOL 2015", campaignCode: "M197", franchise: "Cils d'enfer", cpDev: "", cpQCP: "Clémence GERVREAU", codeAC: 7424128738, provider: "", material: "", decoType: "", teinteMasse: "", packModel: "Démo", submitNumber: "Stock", vracName: "", vracNumber: 6890195852, formuleNumber: "LP41060 du 05/10/2016", testFamily: "Décor", test: "DEV-I-004 : Tenue des décors au produit, en semi immersion confinée", quantity: 10, start: "12/10/2016", result: "C",derogation:true,  comments: "Bon déroulement du processus de test" },
   //   { typeAC: "Flaconnette", codeG: "G553710", productName: "CORPS DEMO MASC CIL D'ENF EXTRA VOL 2015", campaignCode: "M197", franchise: "Cils d'enfer", cpDev: "", cpQCP: "Clémence GERVREAU", codeAC: 7424128738, provider: "", material: "", decoType: "", teinteMasse: "", packModel: "Démo", submitNumber: "Stock", vracName: "", vracNumber: 6890195852, formuleNumber: "LP41060 du 05/10/2016", testFamily: "Décor", test: "DEV-I-004 : Tenue des décors au produit, en semi immersion confinée", quantity: 10, start: "12/10/2016", result: "C",derogation:true,  comments: "Bon déroulement du processus de test" },
@@ -149,7 +191,6 @@ export class SearchResultComponent implements OnInit {
     this.bigService.getBigData().subscribe(
       (param) => {
         this.dataset = param;
-        
       }
     )
     

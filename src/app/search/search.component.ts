@@ -17,6 +17,8 @@ export class SearchComponent implements OnInit {
   @Input() public vracNumber: string = "";
   @Input() public testType: string = "";
   @Input() public result: string = "";
+  @Input() public startDate: string = "";
+  @Input() public endDate: string;
 
   @Output() searchBarContentChange:EventEmitter<string> = new EventEmitter<string>();
   @Output() materialChange:EventEmitter<string> = new EventEmitter<string>();
@@ -26,6 +28,8 @@ export class SearchComponent implements OnInit {
   @Output() vracNumberChange:EventEmitter<string> = new EventEmitter<string>();
   @Output() testTypeChange:EventEmitter<string> = new EventEmitter<string>();
   @Output() resultChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() startDateChange:EventEmitter<string> = new EventEmitter<string>();
+  @Output() endDateChange:EventEmitter<string> = new EventEmitter<string>();
 
 
   public page: number = 0;
@@ -64,6 +68,14 @@ export class SearchComponent implements OnInit {
 
   public onKeyUpTestType() {
     this.testTypeChange.emit(this.testType);
+  }
+
+  public onChangeStartDate() {
+    this.startDateChange.emit(this.startDate);
+  }
+
+  public onChangeEndDate() {
+    this.endDateChange.emit(this.endDate);
   }
 
   public onChangeResult() {

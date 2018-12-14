@@ -39,6 +39,8 @@ import { BigService } from './big.service';
 import { CompatService } from "./compat.service";
 import { LoginComponent } from './login/login.component';
 import { ResultPipe } from './result.pipe';
+import { StartDatePipe } from './pipes/start-date.pipe';
+import { EndDatePipe } from './pipes/end-date.pipe';
 
 
 
@@ -83,6 +85,8 @@ const appRoutes: Routes =
     AscendRiskCompatPipe,
     LoginComponent,
     ResultPipe,
+    StartDatePipe,
+    EndDatePipe,
   ],
   imports: [
     BrowserModule,

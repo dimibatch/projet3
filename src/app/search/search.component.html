@@ -54,11 +54,11 @@
           <input type="text" class="form-control" [(ngModel)]="material" (keyup)="onKeyUpMaterial();" name="materiau" id="materiau" aria-describedby="helpId" placeholder="Matériau">
         </div>
 
-        <div class="form-group">
+        <!-- <div class="form-group">
           <label for="matiere-premiere">Matière première</label>
           <input type="text" class="form-control" [(ngModel)]="rawMaterial" (keyup)="onKeyUpRawMaterial();" name="matiere-premiere" id="matiere-premiere" aria-describedby="helpId"
             placeholder="Matière première">
-        </div>
+        </div> -->
 
         
 
@@ -80,13 +80,25 @@
         </div>
 
         <div class="form-group">
-          <label for="test">Test</label>
+          <label for="test">Nom du test</label>
           <input type="text" class="form-control" [(ngModel)]="testType" (keyup)="onKeyUpTestType();" name="test" id="test" aria-describedby="helpId" placeholder="Test">
         </div>
+
+        <div class="form-group">
+          <label for="datesApres">Tests effectués après le :</label>
+          <input type="date" class="form-control" [(ngModel)]="startDate" (change)="onChangeStartDate();" name="test" id="test" aria-describedby="helpId" placeholder="Test">
+        </div>
+
+        <div class="form-group">
+            <label for="datesApres">Tests effectués avant le :</label>
+            <input type="date" class="form-control" [(ngModel)]="endDate" (change)="onChangeEndDate();" name="test" id="test" aria-describedby="helpId" placeholder="Test">
+          </div>
 
         <div class="row justify-content-center">
           <button class="btn btn-dark rounded-0" [routerLink]="['/searchPage']" routerLinkActive="router-link-active">RECHERCHER</button>
         </div>
+
+        
 
       </form>
     </div>
