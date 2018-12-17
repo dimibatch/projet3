@@ -1,0 +1,64 @@
+<div>
+  <hot-table class="hot" [data]="dataset | typeAc:searchBarContent:page | materiau:material | vracNumber:vracNumber | test:testType | decorType:typeDecor | result:result | codeG:codeG"
+    [colHeaders]="true" [fixedColumnsLeft]="1" [colWidths]="200" [rowHeights]="40">
+
+    <!-- First column stay fixed -->
+    <hot-column data="result" [readOnly]="true" title="Résultat" id="result"></hot-column>
+
+    <!-- Data project -->
+    
+    <hot-column data="donneesProjet" class="htCenter htMiddle"  [readOnly]="true" title="Données projet"></hot-column>
+    <hot-column data="typeAC" class="htcenter"   [readOnly]="true" title="Type d'AC" id="tyAC"></hot-column>
+    <hot-column data="codeG" [readOnly]="true" title="Code G"></hot-column>
+    <hot-column data="productName" [readOnly]="true" title="Nom produit"></hot-column>
+    <hot-column data="campaignCode" [readOnly]="true" title="Code campagne"></hot-column>
+    <hot-column data="campaignName" [readOnly]="true" title="Nom campagne"></hot-column>
+    <hot-column data="franchise" [readOnly]="true" title="Franchise"></hot-column>
+    <hot-column data="cpDev" [readOnly]="true" title="CP Dev"></hot-column>
+    <hot-column data="cpQCP" [readOnly]="true" title="CP QCP"></hot-column>
+
+    <!-- AC Data -->
+    <hot-column data="codeAC" [readOnly]="true" title="Code AC"></hot-column>
+    <hot-column data="provider" [readOnly]="true" title="Fournisseur"></hot-column>
+    <hot-column data="material" [readOnly]="true" title="Matériau"></hot-column>
+    <hot-column data="decoType" [readOnly]="true" title="Type décor"></hot-column>
+    <hot-column data="teinteMasse" [readOnly]="true" title="Teinte masse"></hot-column>
+    <hot-column data="packModel" [readOnly]="true" title="Modèle de pack"></hot-column>
+    <hot-column data="numSoum" [readOnly]="true" title="Numéro de soumission"></hot-column>
+    <hot-column data="typePack" [readOnly]="true" title="Type de pack"></hot-column>
+    <hot-column data="coms" [readOnly]="true" title="Commentaires"></hot-column>
+    
+    <!-- Vrac Data -->
+    <hot-column data="vracName" [readOnly]="true" title="Nom vrac"></hot-column>
+    <hot-column data="vracNumber" [readOnly]="true" title="Numéro vrac"></hot-column>
+    <hot-column data="formuleNumber" [readOnly]="true" title="Numéro de formule ou lot"></hot-column>
+    
+    <!-- Functionalities  -->
+    <!-- <hot-column data="numSoum" [readOnly]="true" title="Numéro de soumission"></hot-column> -->
+    <hot-column data="testFamily" [readOnly]="true" title="Famille de test"></hot-column>
+    <hot-column data="test" [readOnly]="true" title="Test"></hot-column>
+    <hot-column data="qtePieces" [readOnly]="true" title="Quantité de pièces"></hot-column>
+    <hot-column data="compatTest" [readOnly]="true" title="Compatibilité"></hot-column>
+    <hot-column data="coms" [readOnly]="true" title="Commentaires"></hot-column>
+
+    <!-- Scheduling -->
+
+    <hot-column data="startPrev" [readOnly]="true" type="date" value="date" title="Date de début prévue"></hot-column>
+    <hot-column data="startReal" [readOnly]="true" type="date" value="date" title="Date de début réelle"></hot-column>
+    <hot-column data="late" [readOnly]="true" type="date" value="date" title="Retard (en J.O.)"></hot-column>
+    <hot-column data="react" [readOnly]="true" type="date" value="date" title="Réactivité (en J.O.)"></hot-column>
+    <hot-column data="t1DatePrev" [readOnly]="true" type="date" value="date" title="Date T1 prévue"></hot-column>
+    <hot-column data="t1DateReal" [readOnly]="false" type="date" value="date" title="Date T1 réelle"></hot-column>
+    <hot-column data="t2DatePrev" [readOnly]="true" type="date" value="date" title="Date T2 prévue"></hot-column>
+    <hot-column data="t2DateReal" [readOnly]="false" type="date" value="date" title="Date T2 réelle"></hot-column>
+    <hot-column data="t3DatePrev" [readOnly]="true" type="date" value="date" title="Date T3 prévue"></hot-column>
+    <hot-column data="t3DateReal" [readOnly]="false" type="date" value="date" title="Date T3 réelle"></hot-column>
+    <hot-column data="start" [readOnly]="true" type="date" value="date" title="Date de début"></hot-column>
+
+    
+    <hot-column data="derogation" [readOnly]="true" title="Dérogation"></hot-column>
+    
+  </hot-table>
+</div>
+
+
