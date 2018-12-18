@@ -16,7 +16,8 @@ export class TypeAcPipe implements PipeTransform {
 
 
     if (searchBarContent == "" || searchBarContent == undefined) {
-      return value.slice( start , end );
+      //return value.slice( start , end );
+      return value;
     } 
     else {
       let paramSplit: string[] = searchBarContent.toLowerCase().split(" ");
@@ -48,8 +49,8 @@ export class TypeAcPipe implements PipeTransform {
         }
 
       }
-
-      return result.slice( start , end );
+      return result;
+      //return result.slice( start , end );
       
     }
   }

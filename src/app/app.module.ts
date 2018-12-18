@@ -4,7 +4,12 @@ import { FormsModule } from "@angular/forms";
 import { RouterModule, Routes } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
 
+<<<<<<< HEAD
 import { HotTableModule } from "@handsontable-pro/angular";
+=======
+import { HotTableModule } from "@handsontable/angular";
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap"
+>>>>>>> 4d73d05eedd8a49744799763d9ee0a958db39179
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
@@ -39,7 +44,12 @@ import { BigService } from './big.service';
 import { CompatService } from "./compat.service";
 import { LoginComponent } from './login/login.component';
 import { ResultPipe } from './result.pipe';
+<<<<<<< HEAD
 import { OngoingtestresultComponent } from './ongoingtestresult/ongoingtestresult.component';
+=======
+import { StartDatePipe } from './pipes/start-date.pipe';
+import { EndDatePipe } from './pipes/end-date.pipe';
+>>>>>>> 4d73d05eedd8a49744799763d9ee0a958db39179
 
 
 
@@ -84,12 +94,18 @@ const appRoutes: Routes =
     AscendRiskCompatPipe,
     LoginComponent,
     ResultPipe,
+<<<<<<< HEAD
     OngoingtestresultComponent,
+=======
+    StartDatePipe,
+    EndDatePipe,
+>>>>>>> 4d73d05eedd8a49744799763d9ee0a958db39179
   ],
   imports: [
     BrowserModule,
     HotTableModule,
     FormsModule,
+    NgbModule,
     HttpClientModule,
     RouterModule.forRoot(
       appRoutes,
