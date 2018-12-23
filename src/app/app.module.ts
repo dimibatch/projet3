@@ -42,6 +42,7 @@ import { LoginComponent } from './login/login.component';
 import { ResultPipe } from './result.pipe';
 import { StartDatePipe } from './pipes/start-date.pipe';
 import { EndDatePipe } from './pipes/end-date.pipe';
+import { ColorMatPremPipe } from './pipes/color-mat-prem.pipe';
 
 
 
@@ -88,6 +89,7 @@ const appRoutes: Routes =
     ResultPipe,
     StartDatePipe,
     EndDatePipe,
+    ColorMatPremPipe,
   ],
   imports: [
     BrowserModule,
