@@ -1,5 +1,18 @@
 .search-result-wrap{
     overflow-x: scroll;
-    height: 95vh;
+    height: 90vh;
     width: 100%;
+}
+
+.row{
+    margin-bottom: 15px;
+}
+
+ng-template{
+    width:1200px;
+}
+
+.bg-dark{
+    color:white;
+    font-weight: bold;
 }

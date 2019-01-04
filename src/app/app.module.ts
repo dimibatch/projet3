@@ -5,7 +5,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
 
 import { HotTableModule } from "@handsontable/angular";
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap"
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
@@ -40,6 +40,7 @@ import { BigService } from './big.service';
 import { CompatService } from "./compat.service";
 import { LoginComponent } from './login/login.component';
 import { ResultPipe } from './result.pipe';
+import { OngoingtestresultComponent } from './ongoingtestresult/ongoingtestresult.component';
 import { StartDatePipe } from './pipes/start-date.pipe';
 import { EndDatePipe } from './pipes/end-date.pipe';
 import { ColorMatPremPipe } from './pipes/color-mat-prem.pipe';
@@ -49,7 +50,6 @@ import { RealTypeAcPipe } from './pipes/real-type-ac.pipe';
 
 const appRoutes: Routes =
   [
-    { path: "search", component: SearchComponent },
     { path: "searchPage", component: SearchPageComponent },
     { path: "ongoingtestPage", component: OngoingTestComponent },
     { path: "newtestPage", component: NewTestComponent },
@@ -88,6 +88,7 @@ const appRoutes: Routes =
     AscendRiskCompatPipe,
     LoginComponent,
     ResultPipe,
+    OngoingtestresultComponent,
     StartDatePipe,
     EndDatePipe,
     ColorMatPremPipe,
