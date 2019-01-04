@@ -43,6 +43,7 @@ import { ResultPipe } from './result.pipe';
 import { StartDatePipe } from './pipes/start-date.pipe';
 import { EndDatePipe } from './pipes/end-date.pipe';
 import { ColorMatPremPipe } from './pipes/color-mat-prem.pipe';
+import { RealTypeAcPipe } from './pipes/real-type-ac.pipe';
 
 
 
@@ -90,6 +91,7 @@ const appRoutes: Routes =
     StartDatePipe,
     EndDatePipe,
     ColorMatPremPipe,
+    RealTypeAcPipe,
   ],
   imports: [
     BrowserModule,

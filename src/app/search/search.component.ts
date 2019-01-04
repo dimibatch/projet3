@@ -19,6 +19,17 @@ export class SearchComponent implements OnInit {
   @Input() public result: string = "";
   @Input() public startDate: string = "";
   @Input() public endDate: string;
+  public typeAC: string = "";
+  public productName: string = "";
+  public campaignCode: string = "";
+  public campaignName: string = "";
+  public franchise: string = "";
+  public cpQCP: string = "";
+  public codeAc: string = "";
+  public provider: string = "";
+  public packModel: string = "";
+  public vracName: string = "";
+  public testFamily: string = "";
 
   @Output() searchBarContentChange:EventEmitter<string> = new EventEmitter<string>();
   @Output() materialChange:EventEmitter<string> = new EventEmitter<string>();
@@ -30,8 +41,18 @@ export class SearchComponent implements OnInit {
   @Output() resultChange:EventEmitter<string> = new EventEmitter<string>();
   @Output() startDateChange:EventEmitter<string> = new EventEmitter<string>();
   @Output() endDateChange:EventEmitter<string> = new EventEmitter<string>();
-
-
+  @Output() typeACEmitter:EventEmitter<string> = new EventEmitter<string>();
+  @Output() productNameEmitter:EventEmitter<string> = new EventEmitter<string>();
+  @Output() campaignCodeEmitter:EventEmitter<string> = new EventEmitter<string>();
+  @Output() campaignNameEmitter:EventEmitter<string> = new EventEmitter<string>();
+  @Output() franchiseEmitter:EventEmitter<string> = new EventEmitter<string>();
+  @Output() cpQCPEmitter:EventEmitter<string> = new EventEmitter<string>();
+  @Output() codeAcEmitter:EventEmitter<string> = new EventEmitter<string>();
+  @Output() providerEmitter:EventEmitter<string> = new EventEmitter<string>();
+  @Output() packModelEmitter:EventEmitter<string> = new EventEmitter<string>();
+  @Output() vracNameEmitter:EventEmitter<string> = new EventEmitter<string>();
+  @Output() testFamilyEmitter:EventEmitter<string> = new EventEmitter<string>();
+  
   public page: number = 0;
   @Output() backToFirstPage: EventEmitter<number> = new EventEmitter<number>();
 
@@ -95,7 +116,51 @@ export class SearchComponent implements OnInit {
   }
 
   resultPTC() {
-    this.result = "PTC";
+    this.result = "MC";
+  }
+
+  public typeAcEmission() {
+    this.typeACEmitter.emit(this.typeAC);
+  }
+
+  public productNameEmission() {
+    this.productNameEmitter.emit(this.productName);
+  }
+
+  public campaignCodeEmission() {
+    this.campaignCodeEmitter.emit(this.campaignCode);
+  }
+
+  public campaignNameEmission() {
+    this.campaignNameEmitter.emit(this.campaignName);
+  }
+
+  public franchiseEmission() {
+    this.franchiseEmitter.emit(this.franchise);
+  }
+
+  public cpQCPEmission() {
+    this.cpQCPEmitter.emit(this.cpQCP);
+  }
+
+  public codeAcEmission() {
+    this.codeAcEmitter.emit(this.codeAc);
+  }
+
+  public providerEmission() {
+    this.providerEmitter.emit(this.provider);
+  }
+
+  public packModelEmission() {
+    this.packModelEmitter.emit(this.packModel);
+  }
+
+  public vracNameEmission() {
+    this.vracNameEmitter.emit(this.vracName);
+  }
+
+  public testFamilyEmission() {
+    this.testFamilyEmitter.emit(this.testFamily);
   }
   
    //function that changes the "Historique des tests" tab's color when you click on it

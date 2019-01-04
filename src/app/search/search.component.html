@@ -41,17 +41,56 @@
           </div>
           <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" (click)="resultPTC(); onChangeResult();">
-              <label class="form-check-label" for="inlineRadio3">PTC</label>
+              <label class="form-check-label" for="inlineRadio3">MC</label>
             </div>
           <div class="form-check form-check-inline">
               <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4" (click)="resultNoFilter(); onChangeResult();">
               <label class="form-check-label" for="inlineRadio4">Tous les résultats</label>
             </div>
         </div>
-
         <div class="form-group">
-          <label for="materiau">Matériau</label>
-          <input type="text" class="form-control" [(ngModel)]="material" (keyup)="onKeyUpMaterial();" name="materiau" id="materiau" aria-describedby="helpId" placeholder="Matériau">
+          <label for="materiau">Type d'AC</label>
+          <input type="text" class="form-control" [(ngModel)]="typeAC" (keyup)="typeAcEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Type d'AC">
+        </div>
+        <div class="form-group">
+          <label for="materiau">Nom du produit</label>
+          <input type="text" class="form-control" [(ngModel)]="productName" (keyup)="productNameEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Nom du produit">
+        </div>
+        <div class="form-group">
+          <label for="materiau">Code Campagne</label>
+          <input type="text" class="form-control" [(ngModel)]="campaignCode" (keyup)="campaignCodeEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Code campagne">
+        </div>
+        <div class="form-group">
+          <label for="materiau">Nom Campagne</label>
+          <input type="text" class="form-control" [(ngModel)]="campaignName" (keyup)="campaignNameEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Nom campagne">
+        </div>
+        <div class="form-group">
+          <label for="materiau">Franchise</label>
+          <input type="text" class="form-control" [(ngModel)]="franchise" (keyup)="franchiseEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Franchise">
+        </div>
+        <div class="form-group">
+          <label for="materiau">CP QCP</label>
+          <input type="text" class="form-control" [(ngModel)]="cpQCP" (keyup)="cpQCPEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="CP QCP">
+        </div>
+        <div class="form-group">
+          <label for="materiau">Code AC</label>
+          <input type="text" class="form-control" [(ngModel)]="codeAc" (keyup)="codeAcEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Code AC">
+        </div>
+        <div class="form-group">
+          <label for="materiau">Fournisseur</label>
+          <input type="text" class="form-control" [(ngModel)]="provider" (keyup)="providerEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Fournisseur">
+        </div>
+        <div class="form-group">
+          <label for="materiau">Modèle de pack</label>
+          <input type="text" class="form-control" [(ngModel)]="packModel" (keyup)="packModelEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Model de pack">
+        </div>
+        <div class="form-group">
+          <label for="materiau">Nom vrac</label>
+          <input type="text" class="form-control" [(ngModel)]="vracName" (keyup)="vracNameEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Nom vrac">
+        </div>
+        <div class="form-group">
+          <label for="materiau">Famille de test</label>
+          <input type="text" class="form-control" [(ngModel)]="testFamily" (keyup)="testFamilyEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Famille de tests">
         </div>
 
         <!-- <div class="form-group">

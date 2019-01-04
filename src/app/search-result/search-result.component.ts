@@ -22,6 +22,17 @@ export class SearchResultComponent implements OnInit {
   @Input() public startDate: string;
   @Input() public endDate: string;
   @Input() public page:number = 0;
+  @Input() public typeAC:string = "";
+  @Input() public productName:string = "";
+  @Input() public campaignCode: string = "";
+  @Input() public campaignName: string = "";
+  @Input() public franchise: string = "";
+  @Input() public cpQCP: string = "";
+  @Input() public codeAC: string = "";
+  @Input() public provider: string = "";
+  @Input() public packModel: string = "";
+  @Input() public vracName: string = "";
+  @Input() public testFamily: string = "";
   
   
   private bigService:BigService;

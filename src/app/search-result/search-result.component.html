@@ -3,7 +3,9 @@
     [colHeaders]="true" [fixedColumnsLeft]="1" [colWidths]="200" [rowHeights]="40">
     <hot-column data="result" [readOnly]="true" title="Résultat"></hot-column> -->
     
-  <hot-table class="hot" [data]="dataset | typeAc:searchBarContent:page | materiau:material | vracNumber:vracNumber | test:testType | decorType:typeDecor | result:result | codeG:codeG | startDate:startDate | endDate:endDate:page"
+  <hot-table class="hot" [data]="dataset | typeAc:searchBarContent:page | productName:productName | realTypeAc:typeAC | campaignCode:campaignCode | campaignName:campaignName
+  | materiau:material | vracNumber:vracNumber | test:testType | decorType:typeDecor | result:result | codeG:codeG | startDate:startDate 
+  | franchise:franchise | cpqcp:cpQCP | codeAC:codeAC | fournisseur:provider | packModel:packModel | vracName:vracName | testFamily:testFamily | endDate:endDate:page"
     [colHeaders]="true" [fixedColumnsLeft]="1" [colWidths]="150" [rowHeights]="40">
     <hot-column data="result" [readOnly]="true" title="Résultat"></hot-column>
     <hot-column data="id" [readOnly]="true" title="Id"></hot-column>
