@@ -19,9 +19,6 @@ export class BigService {
   }
   // TEST METHODS 
 
-  // public getBigData():Observable<Test[]> {
-  //   return this.http.get("assets/resultats_recherche.json").pipe(
-    
   // Method to get all data from Test Table.
   public getBigData(): Observable<Test[]> {
     return this.http.get(`${this.baseUrl}` + "/test").pipe(
@@ -40,7 +37,7 @@ export class BigService {
 
   // Method to get One test from Test Table
   public getTest(testid: number): Observable<Test> {
-    return this.http.get(`${this.baseUrl}/gettestbyid?testId=${testid}`).pipe(
+    return this.http.get(`${this.baseUrl}/test/${testid}`).pipe(
       map(
         (param: any) => {
           let myData: Test = param as Test;
@@ -50,23 +47,25 @@ export class BigService {
     )
   }
 
-  // Method to delete a Test
-  public deleteTestFromDB(testid: number){
-    
-  }
-
   // Method to update a Test
 
-  public updateTestFromDB(testId:number, test: Test){}
-    
-  // Method to add a Test
-  public addTest(test: Test): Observable<any> {
-    return this.http.get(`${this.baseUrl}/test/create?typeAC=${test.typeAC}&codeAC=${test.codeAC}&codeG=${test.codeG}&productName=${test.productName}&campaignCode=${test.campaignCode}&campaignName=${test.campaignName}&franchise=${test.franchise}&cpDev=${test.cpDev}&cpQCP=${test.cpQCP}&provider=${test.provider}&material=${test.material}&decoType=${test.decoType}&teinteMasse=${test.teinteMasse}&packModel=${test.packModel}&submitNumber=${test.submitNumber}&vracName=${test.vracName}&vracNumber=${test.vracNumber}&formuleNumber=${test.formuleNumber}&testFamily=${test.testFamily}&test=${test.test}&start=${test.start}&result=${test.result}&derogation=${test.derogation}&comments=${test.comments}`);
+  public updateTestFromDB(testid: number, test: Test) {
+    return this.http.put(`${this.baseUrl}/test/${testid}`, test);
   }
 
+  // Method to delete a Test
 
+  public deleteTestFromDB(testid: number) {
+    return this.http.delete(`${this.baseUrl}/test/${testid}`);
+  }
 
+  // Method to add a Test
 
+  public addTest(newTest: Test) {
+    return this.http.post(`${this.baseUrl}/test`, newTest);
+  }
+
+  
   // ONGOINGTEST METHODS 
 
   // Method to get all data from OnGoingTest Table.
@@ -81,8 +80,38 @@ export class BigService {
     )
   }
 
+  // Method to get One OnGoingTest from OnGoingTest Table
+  public getOnGoingTest(testid: number): Observable<OnGoingTest> {
+    return this.http.get(`${this.baseUrl}/ongoingtest/${testid}`).pipe(
+      map(
+        (param: any) => {
+          let myData: OnGoingTest = param as OnGoingTest;
+          return myData;
+        }
+      )
+    )
+  }
+
+  // Method to update a OnGoingTest
+
+  public updateOnGoingTestFromDB(testid: number, test: OnGoingTest) {
+    return this.http.put(`${this.baseUrl}/ongoingtest/${testid}`, test);
+  }
+
+  // Method to delete a Test
+
+  public deleteOnGoingTestFromDB(testid: number) {
+    return this.http.delete(`${this.baseUrl}/ongoingtest/${testid}`);
+  }
+
   // Method to add an OnGoingTest
-  public addOnGoingTest(ongoingtest: OnGoingTest){
+  public addOnGoingTest(test: OnGoingTest) {
+    return this.http.post(`${this.baseUrl}/ongoingtest`, test);
+  }
+
+  // Method to transfer a test from OnGoingTestDB to TestDB
+  public validateTest(testid:number){
+    return this.http.get(`${this.baseUrl}/ongoingtest/validate/${testid}`);
   }
 
 

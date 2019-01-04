@@ -47,7 +47,6 @@ import { EndDatePipe } from './pipes/end-date.pipe';
 
 const appRoutes: Routes =
   [
-    { path: "search", component: SearchComponent },
     { path: "searchPage", component: SearchPageComponent },
     { path: "ongoingtestPage", component: OngoingTestComponent },
     { path: "newtestPage", component: NewTestComponent },
