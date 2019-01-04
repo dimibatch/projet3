@@ -1,47 +1,7 @@
 <div class="container-fluid mt-5 pl-4 pr-4">
   <h1 class="text-center mb-5 border-bottom border-dark p-4">Tests en cours</h1>
   <div class="search-result-wrap col-12 d-inline-block align-top">
-
-    <hot-table class="hot" [data]="dataset" [colHeaders]="true" [fixedColumnsLeft]="1" [colWidths]="150" [rowHeights]="40">
-
-      <hot-column data="id" [readOnly]="true" title="Id"></hot-column>
-      <hot-column data="typeAC" [readOnly]="true" title="Type d'AC"></hot-column>
-      <hot-column data="codeG" [readOnly]="true" title="Code G"></hot-column>
-      <hot-column data="productName" [readOnly]="true" title="Nom produit"></hot-column>
-      <hot-column data="campaignCode" [readOnly]="true" title="Code campagne"></hot-column>
-      <hot-column data="campaignName" [readOnly]="true" title="Nom campagne"></hot-column>
-      <hot-column data="franchise" [readOnly]="true" title="Franchise"></hot-column>
-      <hot-column data="cpDev" [readOnly]="true" title="CP Dev"></hot-column>
-      <hot-column data="cpQCP" [readOnly]="true" title="CP QCP"></hot-column>
-
-      <hot-column data="codeAC" [readOnly]="true" title="Code AC"></hot-column>
-      <hot-column data="provider" [readOnly]="true" title="Fournisseur"></hot-column>
-      <hot-column data="material" [readOnly]="true" title="Matériau"></hot-column>
-      <hot-column data="decoType" [readOnly]="true" title="Type décor"></hot-column>
-      <hot-column data="teinteMasse" [readOnly]="true" title="Teinte masse"></hot-column>
-      <hot-column data="packModel" [readOnly]="true" title="Modèle de pack"></hot-column>
-      <hot-column data="submitNumber" [readOnly]="true" title="Numéro de soumission"></hot-column>
-
-      <hot-column data="vracName" [readOnly]="true" title="Nom vrac"></hot-column>
-      <hot-column data="vracNumber" [readOnly]="true" title="Numéro vrac"></hot-column>
-      <hot-column data="formuleNumber" [readOnly]="true" title="Numéro de formule ou lot"></hot-column>
-
-      <hot-column data="testFamily" [readOnly]="true" title="Famille de test"></hot-column>
-      <hot-column data="test" [readOnly]="true" title="Test"></hot-column>
-      <hot-column data="comments" [readOnly]="true" title="Commentaire"></hot-column>
-
-      <hot-column data="ReceptionVrac" [readOnly]="true" title="Réception vrac"></hot-column>
-      <hot-column data="ReceptionZAC" [readOnly]="true" title="Réception ZAC"></hot-column>
-      <hot-column data="DebutReel" [readOnly]="true" title="Début réel"></hot-column>
-      <hot-column data="DebutPrevu" [readOnly]="true" title="Début prévu"></hot-column>
-      <hot-column data="T1Reel" [readOnly]="true" title="T1 réel"></hot-column>
-      <hot-column data="T1Prevu" [readOnly]="true" title="T1 prévu"></hot-column>
-      <hot-column data="T2Reel" [readOnly]="true" title="T2 réel"></hot-column>
-      <hot-column data="T2Prevu" [readOnly]="true" title="T2 prévu"></hot-column>
-      <hot-column data="T3Reel" [readOnly]="true" title="T3 réel"></hot-column>
-      <hot-column data="T3Prevu" [readOnly]="true" title="T3 prévu"></hot-column>
-
-    </hot-table>
+    <app-ongoingtestresult></app-ongoingtestresult>
   </div>
   <div class="test-access-block mt-2 float-right pt-2 pb-5">
     <div class="d-inline-block mr-2">
