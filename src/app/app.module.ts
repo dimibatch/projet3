@@ -5,7 +5,7 @@ import { RouterModule, Routes } from "@angular/router";
 import { HttpClientModule } from "@angular/common/http";
 
 import { HotTableModule } from "@handsontable/angular";
-import { NgbModule } from "@ng-bootstrap/ng-bootstrap"
+import { NgbModule } from "@ng-bootstrap/ng-bootstrap";
 
 import { AppComponent } from './app.component';
 import { SearchComponent } from './search/search.component';
@@ -48,7 +48,6 @@ import { EndDatePipe } from './pipes/end-date.pipe';
 
 const appRoutes: Routes =
   [
-    { path: "search", component: SearchComponent },
     { path: "searchPage", component: SearchPageComponent },
     { path: "ongoingtestPage", component: OngoingTestComponent },
     { path: "newtestPage", component: NewTestComponent },
