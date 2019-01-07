@@ -126,22 +126,6 @@
           <input type="text" class="form-control" id="start" name="start" placeholder="" [(ngModel)]="tmpTest.start">
         </div>
 
-        <!-- <div class="form-group">
-          
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" (click)="DEBUG()" [(ngModel)]="tmpTest.result" [value]="C">
-            <label class="form-check-label" for="inlineCheckbox1">Conforme</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox2" (click)="DEBUG()" [(ngModel)]="tmpTest.result" value="MC">
-            <label class="form-check-label" for="inlineCheckbox2">Moyen-conforme</label>
-          </div>
-          <div class="form-check">
-            <input class="form-check-input" type="checkbox" id="inlineCheckbox3" (click)="DEBUG()" [(ngModel)]="tmpTest.result" value="NC">
-            <label class="form-check-label" for="inlineCheckbox3">Non-conforme</label>
-          </div>
-        </div> -->
-
         <div class="form-group">
           <label for="result">Compt test(résultat)</label>
           <div *ngFor="let option of options; let i=index">
@@ -330,3 +314,6 @@
     <button type="button" class="btn btn-dark col-3 font-weight-bold rounded-0 validate-button" (click)="save()">Valider</button>
   </div>
 </div>
+
+<button (click)="DEBUG()">DEBUG</button>
+

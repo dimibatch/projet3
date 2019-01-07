@@ -28,16 +28,16 @@ export class OnGoingTest {
     public derogation: boolean = false;
     public comments: string;
 
-    public ReceptionVrac: Date;
-    public ReceptionZAC: Date;
-    public DebutReel: Date;
-    public DebutPrevu: Date;
-    public T1Reel: Date;
-    public T1Prevu: Date;
-    public T2Reel: Date;
-    public T2Prevu: Date;
-    public T3Reel: Date;
-    public T3Prevu: Date;
+    public ReceptionVrac: string;
+    public ReceptionZAC: string;
+    public DebutReel: string;
+    public DebutPrevu: string;
+    public T1Reel: string;
+    public T1Prevu: string;
+    public T2Reel: string;
+    public T2Prevu: string;
+    public T3Reel: string;
+    public T3Prevu: string;
 
 
 }

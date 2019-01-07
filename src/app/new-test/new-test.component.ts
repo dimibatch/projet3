@@ -82,6 +82,10 @@ export class NewTestComponent implements OnInit {
     this.onGoingTest.result = param;
   }
 
+  public DEBUG(){
+    console.log(this.onGoingTest.DebutReel);
+  }
+
 }
 
 
