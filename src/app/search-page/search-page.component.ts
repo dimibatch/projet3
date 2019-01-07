@@ -19,6 +19,17 @@ export class SearchPageComponent implements OnInit {
   @Input() public startDate: string = "";
   @Input() public endDate: string = "";
   @Input() public page: number = 0;
+  @Input() public typeAC: string = "";
+  @Input() public productName: string = "";
+  @Input() public campaignCode: string = "";
+  @Input() public campaignName: string = "";
+  @Input() public franchise: string = "";
+  @Input() public cpQCP: string = "";
+  @Input() public codeAc: string = "";
+  @Input() public provider: string = "";
+  @Input() public packModel: string = "";
+  @Input() public vracName: string = "";
+  @Input() public testFamily: string = "";
 
   constructor() { }
 
@@ -86,6 +97,48 @@ export class SearchPageComponent implements OnInit {
 
   }
 
+  public receiveTypeAc(param:string){
+    this.typeAC = param;
+  }
 
+  public receiveProductName(param:string){
+    this.productName = param;
+  }
+
+  public receiveCampaignCode(param:string){
+    this.campaignCode = param;
+  }
+
+  public receiveCampaignName(param:string){
+    this.campaignName = param;
+  }
+
+  public receiveFranchise(param:string){
+    this.franchise = param;
+  }
+
+  public receiveCpQCP(param:string){
+    this.cpQCP = param;
+  }
+
+  public receiveCodeAc(param:string){
+    this.codeAc = param;
+  }
+
+  public receiveProvider(param:string){
+    this.provider = param;
+  }
+
+  public receivePackModel(param:string){
+    this.packModel = param;
+  }
+
+  public receiveVracName(param:string){
+    this.vracName = param;
+  }
+
+  public receiveTestFamily(param:string){
+    this.testFamily = param;
+  }
 }
 
