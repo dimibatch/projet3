@@ -19,17 +19,17 @@ export class SearchComponent implements OnInit {
   @Input() public result: string = "";
   @Input() public startDate: string = "";
   @Input() public endDate: string;
-  public typeAC: string = "";
-  public productName: string = "";
-  public campaignCode: string = "";
-  public campaignName: string = "";
-  public franchise: string = "";
-  public cpQCP: string = "";
-  public codeAc: string = "";
-  public provider: string = "";
-  public packModel: string = "";
-  public vracName: string = "";
-  public testFamily: string = "";
+  @Input() public typeAC: string = "";
+  @Input() public productName: string = "";
+  @Input() public campaignCode: string = "";
+  @Input() public campaignName: string = "";
+  @Input() public franchise: string = "";
+  @Input() public cpQCP: string = "";
+  @Input() public codeAc: string = "";
+  @Input() public provider: string = "";
+  @Input() public packModel: string = "";
+  @Input() public vracName: string = "";
+  @Input() public testFamily: string = "";
 
   @Output() searchBarContentChange:EventEmitter<string> = new EventEmitter<string>();
   @Output() materialChange:EventEmitter<string> = new EventEmitter<string>();
