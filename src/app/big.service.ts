@@ -21,8 +21,8 @@ export class BigService {
 
   // Method to get all data from Test Table.
   public getBigData(): Observable<Test[]> {
-    return this.http.get(`${this.baseUrl}` + "/test").pipe(
-    //return this.http.get("assets/resultats_recherche.json").pipe(
+    // return this.http.get(`${this.baseUrl}` + "/test").pipe(
+      return this.http.get("assets/TABLE_2.json").pipe(
       map(
         (param: any) => {
           let myData: Test[] = param as Test[];
@@ -66,7 +66,7 @@ export class BigService {
     return this.http.post(`${this.baseUrl}/test`, newTest);
   }
 
-  
+
   // ONGOINGTEST METHODS 
 
   // Method to get all data from OnGoingTest Table.
@@ -107,16 +107,14 @@ export class BigService {
 
   // Method to add an OnGoingTest
   public addOnGoingTest(test: OnGoingTest) {
+    console.log(test);
     return this.http.post(`${this.baseUrl}/ongoingtest`, test);
   }
 
   // Method to transfer a test from OnGoingTestDB to TestDB
-  public validateTest(testid:number){
+  public validateTest(testid: number) {
     return this.http.get(`${this.baseUrl}/ongoingtest/validate/${testid}`);
   }
-
-
-
 
   private getTestString(p_test: Test): string {
     let str: string = p_test.typeAC + " " +

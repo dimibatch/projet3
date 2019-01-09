@@ -66,7 +66,7 @@ export class NewTestComponent implements OnInit {
   public switchBetweenOnGoingTestAndTest() {
     if (this.onGoingTestState == false) {
       this.onGoingTestState = true;
-      console.log("C'est l'autre zone");
+      console.log("Vous vous trouvez sur la zone d'ajout de test à une seule lecture");
     } else {
       this.onGoingTestState = false;
       console.log("Vous vous trouvez sur la zone d'ajout de test à plusieurs lectures");
@@ -83,7 +83,6 @@ export class NewTestComponent implements OnInit {
   }
 
   public DEBUG(){
-    console.log(this.onGoingTest.DebutReel);
   }
 
 }

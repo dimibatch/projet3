@@ -12,10 +12,6 @@
           placeholder="SAISISSEZ VOTRE RECHERCHE" [(ngModel)]="searchBarContent" autocomplete="off">
       </div>
 
-      <datalist id="searchBarList">
-        <option value="{{current}}" *ngFor="let current of dictionnary">
-      </datalist>
-
       <div class="row justify-content-center">
         <button class="btn btn-dark rounded-0" [routerLink]="['/searchPage']" routerLinkActive="router-link-active">RECHERCHER</button>
       </div>

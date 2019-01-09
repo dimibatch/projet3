@@ -1,6 +1,6 @@
 <div>
   <hot-table class="hot" [data]="dataset | typeAc:searchBarContent:page | materiau:material | vracNumber:vracNumber | test:testType | decorType:typeDecor | result:result | codeG:codeG"
-    [colHeaders]="true" [colWidths]="200" [rowHeights]="40">
+    [colHeaders]="true" [colWidths]="200" [fixedColumnsLeft]="1" [rowHeights]="40">
 
     <!-- First column stay fixed -->
 
@@ -37,15 +37,14 @@
 
     <!-- Scheduling -->
 
-    <hot-column data="DebutPrevu" [readOnly]="true"  title="Date de début prévue"></hot-column>
-    <hot-column data="DebutReel" [readOnly]="true"  title="Date de début réelle"></hot-column>
-    <hot-column data="T1Prevu" [readOnly]="true"  title="Date T1 prévue"></hot-column>
-    <hot-column data="T1Reel" [readOnly]="false"  title="Date T1 réelle"></hot-column>
-    <hot-column data="T2Prevu" [readOnly]="true"  title="Date T2 prévue"></hot-column>
-    <hot-column data="T2Reel" [readOnly]="false"  title="Date T2 réelle"></hot-column>
-    <hot-column data="T3Prevu" [readOnly]="true"  title="Date T3 prévue"></hot-column>
-    <hot-column data="T3Reel" [readOnly]="false"  title="Date T3 réelle"></hot-column>
-    <hot-column data="start" [readOnly]="true"  title="Date de début"></hot-column>
+    <hot-column data="debutPrevu" [readOnly]="true"  title="Date de début prévue"></hot-column>
+    <hot-column data="debutReel" [readOnly]="true"  title="Date de début réelle"></hot-column>
+    <hot-column data="t1Prevu" [readOnly]="true"  title="Date T1 prévue"></hot-column>
+    <hot-column data="t1Reel" [readOnly]="false"  title="Date T1 réelle"></hot-column>
+    <hot-column data="t2Prevu" [readOnly]="true"  title="Date T2 prévue"></hot-column>
+    <hot-column data="t2Reel" [readOnly]="false"  title="Date T2 réelle"></hot-column>
+    <hot-column data="t3Prevu" [readOnly]="true"  title="Date T3 prévue"></hot-column>
+    <hot-column data="t3Reel" [readOnly]="false"  title="Date T3 réelle"></hot-column>
 
     <hot-column data="comments" [readOnly]="true" title="Commentaires"></hot-column>
     

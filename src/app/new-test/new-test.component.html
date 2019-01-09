@@ -276,32 +276,32 @@
         <div class="form-group">
           <h3 class="mb-4 column-title text-center">Calendrier</h3>
           <label for="ReceptionVrac">Réception vrac</label>
-          <input type="date" class="form-control" id="ReceptionVrac" name="ReceptionVrac" placeholder="" [(ngModel)]="onGoingTest.ReceptionVrac">
+          <input type="date" class="form-control" id="ReceptionVrac" name="ReceptionVrac" placeholder="" [(ngModel)]="onGoingTest.receptionVrac">
         </div>
         <div class="form-group">
           <label for="ReceptionZAC">Réception ZAC</label>
-          <input type="date" class="form-control" id="ReceptionZAC" name="ReceptionZAC" placeholder="" [(ngModel)]="onGoingTest.ReceptionZAC">
+          <input type="date" class="form-control" id="ReceptionZAC" name="ReceptionZAC" placeholder="" [(ngModel)]="onGoingTest.receptionZAC">
         </div>
         <div class="form-group">
           <label for="DebutReel">Date de début réelle</label>
-          <input type="date" class="form-control" id="DebutReel" name="DebutReel" placeholder="" [(ngModel)]="onGoingTest.DebutReel">
+          <input type="date" class="form-control" id="DebutReel" name="DebutReel" placeholder="" [(ngModel)]="onGoingTest.debutReel">
         </div>
         <div class="form-group">
 
           <label for="DebutPrevu">Date de début prévue</label>
-          <input type="date" class="form-control" id="DebutPrevu" name="DebutPrevu" placeholder="" [(ngModel)]="onGoingTest.DebutPrevu">
+          <input type="date" class="form-control" id="DebutPrevu" name="DebutPrevu" placeholder="" [(ngModel)]="onGoingTest.debutPrevu">
         </div>
         <div class="form-group">
-          <label for="T1Reel">Date T1 réelle</label>
-          <input type="date" class="form-control" id="T1Reel" name="T1Reel" placeholder="" [(ngModel)]="onGoingTest.T1Reel">
+          <label for="T1prevu">Date T1 prévue</label>
+          <input type="date" class="form-control" id="T1prevu" name="T1prevu" placeholder="" [(ngModel)]="onGoingTest.t1Prevu">
         </div>
         <div class="form-group">
-          <label for="T2Reel">Date T2 réelle</label>
-          <input type="date" class="form-control" id="T2Reel" name="T2Reel" placeholder="" [(ngModel)]="onGoingTest.T2Reel">
+          <label for="t2Prevu">Date T2 prévue</label>
+          <input type="date" class="form-control" id="t2Prevu" name="t2Prevu" placeholder="" [(ngModel)]="onGoingTest.t2Prevu">
         </div>
         <div class="form-group">
-          <label for="T3Reel">Date T3 réelle</label>
-          <input type="date" class="form-control" id="T3Reel" name="T3Reel" placeholder="" [(ngModel)]="onGoingTest.T3Reel">
+          <label for="t3Prevu">Date T3 prévue</label>
+          <input type="date" class="form-control" id="t3Prevu" name="t3Prevu" placeholder="" [(ngModel)]="onGoingTest.t3Prevu">
         </div>
       </form>
     </div>
@@ -314,6 +314,3 @@
     <button type="button" class="btn btn-dark col-3 font-weight-bold rounded-0 validate-button" (click)="save()">Valider</button>
   </div>
 </div>
-
-<button (click)="DEBUG()">DEBUG</button>
-
