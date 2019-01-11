@@ -38,7 +38,7 @@
     
     <hot-column data="comments" [readOnly]="true" title="Commentaire"></hot-column>
   </hot-table>
-  <div class="test-access-block mt-2">
+  <div class="test-access-block mt-2" *ngIf="hasAccess == 'true'">
     <div class="d-inline-block mr-2">
       Modifier le test :
     </div>

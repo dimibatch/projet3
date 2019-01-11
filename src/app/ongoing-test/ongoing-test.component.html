@@ -3,7 +3,7 @@
   <div class="search-result-wrap col-12 d-inline-block align-top">
     <app-ongoingtestresult></app-ongoingtestresult>
   </div>
-  <div class="test-access-block mt-2 float-right pt-2 pb-5">
+  <div class="test-access-block mt-2 float-right pt-2 pb-5" *ngIf="hasAccess == 'true'">
     <div class="d-inline-block mr-2">
       Modifier le test :
     </div>

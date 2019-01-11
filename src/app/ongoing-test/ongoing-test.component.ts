@@ -19,6 +19,7 @@ export class OngoingTestComponent implements OnInit {
   public tmpTest = new OnGoingTest();
   public IdTestToModifOrDelete: number = 0;
   public testToModifOrDelete: OnGoingTest;
+  public hasAccess:string;
 
 
   constructor(service: BigService, private modalService: NgbModal) {
@@ -31,6 +32,7 @@ export class OngoingTestComponent implements OnInit {
         this.dataset = param;
       }
     )
+    this.hasAccess = sessionStorage.getItem("hasAccess");
   }
 
   // CRUD methods 
@@ -50,7 +52,7 @@ export class OngoingTestComponent implements OnInit {
     this.tmpTest = new OnGoingTest();
   }
 
-  public validateTest(){
+  public validateTest() {
     this.bigService.validateTest(this.IdTestToModifOrDelete).subscribe();
   }
 

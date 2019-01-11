@@ -4,6 +4,7 @@ import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
 import { Test } from './test';
 import { OnGoingTest } from './on-going-test';
+import { User } from './user';
 
 
 @Injectable({
@@ -21,8 +22,8 @@ export class BigService {
 
   // Method to get all data from Test Table.
   public getBigData(): Observable<Test[]> {
-    // return this.http.get(`${this.baseUrl}` + "/test").pipe(
-      return this.http.get("assets/TABLE_2.json").pipe(
+    return this.http.get(`${this.baseUrl}` + "/test").pipe(
+      // return this.http.get("assets/TABLE_2.json").pipe(
       map(
         (param: any) => {
           let myData: Test[] = param as Test[];
@@ -136,5 +137,9 @@ export class BigService {
       p_test.test;
 
     return str.toLowerCase();
+  }
+
+  public isAllowed(p_user:User){
+    return this.http.post(`${this.baseUrl}/users/login`, p_user);
   }
 }

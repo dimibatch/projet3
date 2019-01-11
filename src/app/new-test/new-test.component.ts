@@ -12,6 +12,8 @@ export class NewTestComponent implements OnInit {
 
 
   private service: BigService;
+  public hasAccess:string;
+
 
   // Var for choosing the result between C, MC & NC 
 
@@ -46,6 +48,7 @@ export class NewTestComponent implements OnInit {
 
   ngOnInit() {
     this.onGoingTestState = true;
+    this.hasAccess = sessionStorage.getItem("hasAccess");
   }
 
 
@@ -74,17 +77,13 @@ export class NewTestComponent implements OnInit {
     }
   }
 
-  public setTestResult(param){
+  public setTestResult(param) {
     this.tmpTest.result = param;
   }
 
-  public setOnGoingTestResult(param){
+  public setOnGoingTestResult(param) {
     this.onGoingTest.result = param;
   }
-
-  public DEBUG(){
-  }
-
 }
 
 
