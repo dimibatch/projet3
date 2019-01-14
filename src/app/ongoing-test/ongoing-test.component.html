@@ -3,7 +3,7 @@
   <div class="search-result-wrap col-12 d-inline-block align-top">
     <app-ongoingtestresult></app-ongoingtestresult>
   </div>
-  <div class="test-access-block mt-2 float-right pt-2 pb-5">
+  <div class="test-access-block mt-2 float-right pt-2 pb-5" *ngIf="hasAccess == 'true'">
     <div class="d-inline-block mr-2">
       Modifier le test :
     </div>
@@ -275,9 +275,9 @@
         Réception Vrac
       </div>
       <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.ReceptionVrac}}
+        {{testToModifOrDelete.receptionVrac}}
       </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.ReceptionVrac">
+      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.receptionVrac">
     </div>
 
     <div class="row">
@@ -285,9 +285,9 @@
         Réception ZAC
       </div>
       <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.ReceptionZAC}}
+        {{testToModifOrDelete.receptionZAC}}
       </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.ReceptionZAC">
+      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.receptionZAC">
     </div>
 
     <div class="row">
@@ -295,9 +295,9 @@
         Début réel
       </div>
       <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.DebutReel}}
+        {{testToModifOrDelete.debutReel}}
       </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.DebutReel">
+      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.debutReel">
     </div>
 
     <div class="row">
@@ -305,9 +305,9 @@
         Debut Prévu
       </div>
       <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.DebutPrevu}}
+        {{testToModifOrDelete.debutPrevu}}
       </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.DebutPrevu">
+      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.debutPrevu">
     </div>
 
     <div class="row">
@@ -315,9 +315,9 @@
         T1 Réel
       </div>
       <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.T1Reel}}
+        {{testToModifOrDelete.t1Reel}}
       </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.T1Reel">
+      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t1Reel">
     </div>
 
     <div class="row">
@@ -325,9 +325,9 @@
         T1 Prévu
       </div>
       <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.T1Prevu}}
+        {{testToModifOrDelete.t1Prevu}}
       </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.T1Prevu">
+      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t1Prevu">
     </div>
 
     <div class="row">
@@ -335,9 +335,9 @@
         T2 Réel
       </div>
       <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.T2Reel}}
+        {{testToModifOrDelete.t2Reel}}
       </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.T2Reel">
+      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t2Reel">
     </div>
 
     <div class="row">
@@ -345,9 +345,9 @@
         T2 Prévu
       </div>
       <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.T2Prevu}}
+        {{testToModifOrDelete.t2Prevu}}
       </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.T2Prevu">
+      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t2Prevu">
     </div>
 
     <div class="row">
@@ -355,9 +355,9 @@
         T3 Réel
       </div>
       <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.T3Reel}}
+        {{testToModifOrDelete.t3Reel}}
       </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.T3Reel">
+      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t3Reel">
     </div>
 
     <div class="row">
@@ -365,9 +365,9 @@
         T3 Prevu
       </div>
       <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.T3Prevu}}
+        {{testToModifOrDelete.t3Prevu}}
       </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.T3Prevu">
+      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t3Prevu">
     </div>
 
 

@@ -10,7 +10,7 @@ export class EndDatePipe implements PipeTransform {
     let result: Test[] = [];
 
     if (param_endDate == "" || param_endDate == undefined) {
-      return value.slice( param_page * 100 , (param_page * 100) + 100 );
+      return value.slice( param_page * 25 , (param_page * 25) + 25 );
     } else {
       let formatedDate = new Date(param_endDate);
         for (let i = 0; i < value.length; i++) {
@@ -19,7 +19,7 @@ export class EndDatePipe implements PipeTransform {
             result.push(value[i]);
           }
         }
-        return result.slice( param_page * 100 , (param_page * 100) + 100 );
+        return result.slice( param_page * 25 , (param_page * 25) + 25 );
     }
   
   }

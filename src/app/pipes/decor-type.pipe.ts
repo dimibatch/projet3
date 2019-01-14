@@ -14,7 +14,7 @@ export class DecorTypePipe implements PipeTransform {
       return value;
     } else {
         for (let i = 0; i < value.length; i++) {
-          if (value[i].decoType.toLowerCase() == param_decorType.toLowerCase()) {
+          if (value[i].decoType.toLowerCase().indexOf(param_decorType.toLowerCase()) > -1) {
             result.push(value[i]);
           }
         }
