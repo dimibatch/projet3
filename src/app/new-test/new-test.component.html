@@ -115,11 +115,27 @@
         <form>
           <div class="form-group">
             <label for="testFamily">Famille Test</label>
-            <input type="text" class="form-control" id="testFamily" name="testFamily" placeholder="" [(ngModel)]="tmpTest.testFamily">
+            <!-- <input type="text" class="form-control" id="testFamily" name="testFamily" placeholder="" [(ngModel)]="tmpTest.testFamily"> -->
+            <select id="familySelect" class="form-control" (change)="changeTestList()">
+                <option selected>Choisissez une famille de test...</option>
+                <option *ngFor="let current of families" value="{{current.family}}">{{current.family}}</option>
+              </select>
           </div>
           <div class="form-group">
             <label for="test">Test</label>
-            <input type="text" class="form-control" id="test" name="test" placeholder="" [(ngModel)]="tmpTest.test">
+            <!-- <input type="text" class="form-control" id="test" name="test" placeholder="" [(ngModel)]="tmpTest.test"> -->
+            <select id="testSelect" class="form-control" (change)="updateTestToSend()">
+              <option selected>Choisissez un test...</option>
+              <ng-container *ngFor="let current of families[0].testType">
+                <option *ngIf="isFirstFamily" value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+              </ng-container>
+              <ng-container *ngFor="let current of families[1].testType">
+                <option *ngIf="isSecondFamily" value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+              </ng-container>
+              <ng-container *ngFor="let current of families[2].testType">
+                <option *ngIf="isThirdFamily" value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+              </ng-container>
+            </select>
           </div>
 
           <div class="form-group">
@@ -247,11 +263,25 @@
         <form>
           <div class="form-group">
             <label for="testFamily">Famille Test</label>
-            <input type="text" class="form-control" id="testFamily" name="testFamily" placeholder="" [(ngModel)]="onGoingTest.testFamily">
+            <select id="onGoingFamilySelect" class="form-control" (change)="changeOngoingTestList()">
+              <option selected>Choisissez une famille de test...</option>
+              <option *ngFor="let current of families" value="{{current.family}}">{{current.family}}</option>
+            </select>
           </div>
           <div class="form-group">
             <label for="test">Test</label>
-            <input type="text" class="form-control" id="test" name="test" placeholder="" [(ngModel)]="onGoingTest.test">
+            <select id="onGoingTestSelect" class="form-control" (change)="updateOngoingTestToSend()">
+              <option selected>Choisissez un test...</option>
+              <ng-container *ngFor="let current of families[0].testType">
+                <option *ngIf="isFirstFamily" value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+              </ng-container>
+              <ng-container *ngFor="let current of families[1].testType">
+                <option *ngIf="isSecondFamily" value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+              </ng-container>
+              <ng-container *ngFor="let current of families[2].testType">
+                <option *ngIf="isThirdFamily" value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+              </ng-container>
+            </select>
           </div>
 
           <div class="form-group">

@@ -49,6 +49,7 @@ import { UserService } from './user.service';
 
 
 
+
 const appRoutes: Routes =
   [
     { path: "searchPage", component: SearchPageComponent },
@@ -93,7 +94,8 @@ const appRoutes: Routes =
     StartDatePipe,
     EndDatePipe,
     ColorMatPremPipe,
-    RealTypeAcPipe,
+    RealTypeAcPipe
+    
   ],
   imports: [
     BrowserModule,
