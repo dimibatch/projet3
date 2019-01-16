@@ -31,4 +31,17 @@ export class LoginComponent implements OnInit {
 
   }
 
+  public changeResearchColor() {
+    if (document.getElementById('research-button').style.color != "white") {
+    document.getElementById('research-button').style.color = "white";
+    document.getElementById('research-button').style.backgroundColor = "black";
+    
+    document.getElementById('ongoing-tests-button').style.color = "black";
+    document.getElementById('ongoing-tests-button').style.backgroundColor = "white";
+    
+    document.getElementById('new-test-button').style.color = "black";
+    document.getElementById('new-test-button').style.backgroundColor = "white";
+    }
+  }
+
 }

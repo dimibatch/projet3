@@ -5,6 +5,7 @@ import { map } from 'rxjs/operators';
 import { Test } from './test';
 import { OnGoingTest } from './on-going-test';
 import { User } from './user';
+import { TestFamily } from './test-family';
 
 
 @Injectable({
@@ -142,4 +143,28 @@ export class BigService {
   public isAllowed(p_user:User){
     return this.http.post(`${this.baseUrl}/users/login`, p_user);
   }
+
+  //method to get all test types and families
+  public getTestFamilies(){
+    return this.http.get(this.baseUrl + "/testFamily").pipe(
+      map(
+        (param:any)=>{
+          let data:TestFamily[] = param as TestFamily[];
+          return data;
+        }
+      )
+    )
+  }
+
+  public getTestTypes(familyId){
+    return this.http.get(this.baseUrl + "/testFamily").pipe(
+      map(
+        (param:any)=>{
+          let data:TestFamily[] = param as TestFamily[];
+          return data[familyId];
+        }
+      )
+    )
+  }
+
 }
