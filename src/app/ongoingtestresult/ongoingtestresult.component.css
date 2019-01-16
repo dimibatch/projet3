@@ -1,1 +1,6 @@
 @import '~handsontable-pro/dist/handsontable.full.css';
+
+hot-table{
+    overflow-x: scroll;
+    height: 90vh;
+}

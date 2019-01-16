@@ -70,9 +70,13 @@ export class NewTestComponent implements OnInit {
     if (this.onGoingTestState) {
       this.service.addTest(this.tmpTest).subscribe();
       this.tmpTest = new Test();
+      alert(`Le test a bien été soumis`);
+      location.reload();
     } else if (!this.onGoingTestState) {
       this.service.addOnGoingTest(this.onGoingTest).subscribe();
       this.onGoingTest = new OnGoingTest();
+      alert(`Le test a bien été soumis`);
+      location.reload();
     }
   }
 

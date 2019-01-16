@@ -1,6 +1,6 @@
 .search-result-wrap {
-  overflow-x: scroll;
-  height: 90vh;
+  /* overflow-x: scroll;
+  height: 90vh; */
   width: 100%;
 }
 

@@ -17,8 +17,8 @@ export class CompatService {
   }
 
   public getCompat(): Observable<Compat[]> {
-    return this.httpService.get(`${this.baseUrl}` + "/compat").pipe(
-      //return this.httpService.get("assets/compat.json").pipe(
+    //return this.httpService.get(`${this.baseUrl}` + "/compat").pipe(
+      return this.httpService.get("assets/compat.json").pipe(
       map(
         (param_my_response) => {
           let obj: any = param_my_response;

@@ -1,6 +1,7 @@
 .wrap-all{
     overflow-x: scroll;
-    height: 40vh;
+    /* height: 40vh; */
+    height: 75vh;
 }
 
 .line-result{
