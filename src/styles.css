@@ -10,5 +10,11 @@ h5,
 h6,
 p,
 button {
-    font-family: 'Helvetica Neue', Helvetica;
+  font-family: 'Helvetica Neue', Helvetica;
+}
+
+
+::ng-deep .my-class .modal-dialog {
+  max-width: 90%;
+  width: 90%;
 }

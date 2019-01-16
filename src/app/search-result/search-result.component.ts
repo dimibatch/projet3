@@ -71,20 +71,22 @@ export class SearchResultComponent implements OnInit {
 
   public deleteTest() {
     this.bigService.deleteTestFromDB(this.IdTestToModifOrDelete).subscribe();
-    console.log(`Le test ${this.IdTestToModifOrDelete} a bien été supprimé ! `)
+    alert(`Le test ${this.IdTestToModifOrDelete} a bien été supprimé`);
+    location.reload();
+
   }
 
   public updateTest() {
     this.bigService.updateTestFromDB(this.IdTestToModifOrDelete, this.tmpTest).subscribe();
-    console.log(`Le test ${this.IdTestToModifOrDelete} a bien été updaté ! `)
-    this.tmpTest = new Test();
+    alert(`Le test ${this.IdTestToModifOrDelete} a bien été updaté`);
+    location.reload();
 
   }
 
   // Modal Opening Fuction
 
   openVerticallyCentered(content) {
-    this.modalService.open(content, { centered: true, size: "lg" });
+    this.modalService.open(content,  {windowClass : "my-class" });
     console.log(this.IdTestToModifOrDelete);
   }
 }
