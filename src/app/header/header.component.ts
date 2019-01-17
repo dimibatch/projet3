@@ -51,9 +51,22 @@ export class HeaderComponent implements OnInit {
     }
   }
   
-  
-  ngOnInit() {
+  public colorButtonBasedOnUrl(){
+    if (window.location.toString().toLowerCase().indexOf("ongoingtestpage")>-1){
+      this.changeOngoingTestColor();
+    } else if (window.location.toString().toLowerCase().indexOf("newtestpage")>-1){
+      this.changeNewTestColor();
+    } else {
+      this.changeResearchColor();
+    }
   }
+  
+
+  ngOnInit() {
+    this.colorButtonBasedOnUrl();
+  }
+
+
 
 
 }
