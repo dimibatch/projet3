@@ -13,9 +13,14 @@ export class VracNumberPipe implements PipeTransform {
       return value;
     } else {
         for (let i = 0; i < value.length; i++) {
-          if (value[i].vracNumber.toLowerCase() == param_vracNumber.toLowerCase()) {
-            result.push(value[i]);
+          if (value[i].vracNumber != null) {
+            if (value[i].vracNumber.toLowerCase() == param_vracNumber.toLowerCase()) {
+              result.push(value[i]);
+            }
+          } else {
+            continue;
           }
+          
         }
         return result;
     }

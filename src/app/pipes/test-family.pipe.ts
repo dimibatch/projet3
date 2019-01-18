@@ -14,9 +14,14 @@ export class TestFamilyPipe implements PipeTransform {
       return value;
     } else {
       for (let i = 0; i < value.length; i++) {
-        if (value[i].testFamily.indexOf(param_testFamily) >= 0) {
-          result.push(value[i]);
+        if (value[i].typeAC != null) {
+          if (value[i].testFamily.indexOf(param_testFamily) >= 0) {
+            result.push(value[i]);
+          }
+        } else {
+          continue;
         }
+        
       }
       return result;
     }

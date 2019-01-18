@@ -14,9 +14,14 @@ export class CodeACPipe implements PipeTransform {
       return value;
     } else {
       for (let i = 0; i < value.length; i++) {
-        if (value[i].codeAC.toLowerCase()==param_vracName.toLowerCase()) {
-          result.push(value[i]);
+        if (value[i].codeAC != null) {
+          if (value[i].codeAC.toLowerCase()==param_vracName.toLowerCase()) {
+            result.push(value[i]);
+          }
+        } else {
+          continue;
         }
+        
       }
       return result;
     }

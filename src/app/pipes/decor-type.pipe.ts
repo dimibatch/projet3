@@ -14,9 +14,14 @@ export class DecorTypePipe implements PipeTransform {
       return value;
     } else {
         for (let i = 0; i < value.length; i++) {
-          if (value[i].decoType.toLowerCase().indexOf(param_decorType.toLowerCase()) > -1) {
-            result.push(value[i]);
+          if (value[i].decoType != null) {
+            if (value[i].decoType.toLowerCase().indexOf(param_decorType.toLowerCase()) > -1) {
+              result.push(value[i]);
+            }
+          } else {
+            continue;
           }
+          
         }
         return result;
     }

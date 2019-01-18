@@ -14,9 +14,14 @@ export class TestPipe implements PipeTransform {
       return value;
     } else {
         for (let i = 0; i < value.length; i++) {
-          if (value[i].test.toLowerCase().indexOf(param_test.toLowerCase()) > -1) {
-            result.push(value[i]);
+          if (value[i].test != null) {
+            if (value[i].test.toLowerCase().indexOf(param_test.toLowerCase()) > -1) {
+              result.push(value[i]);
+            }
+          } else {
+            continue;
           }
+          
         }
         return result;
     }
