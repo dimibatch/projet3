@@ -3,6 +3,7 @@
     <img src="assets/logoabeille.png" class="col-5 offset-3">
     <div class="col-2 offset-1 d-inline-block align-top">
       <button class="col-12 loginBtn align-top" [routerLink]="['/loginPage']" routerLinkActive="router-link-active">Connexion</button>
+      <button class="col-12 loginBtn align-top" (click)="logOut()">Déconnexion</button>
     </div>
     
   </div>

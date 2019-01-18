@@ -60,6 +60,12 @@ export class HeaderComponent implements OnInit {
       this.changeResearchColor();
     }
   }
+
+  public logOut(){
+    sessionStorage.setItem("hasAccess", "false");
+    alert(`Vous avez été déconnecté.`);
+    location.reload();
+  }
   
 
   ngOnInit() {
