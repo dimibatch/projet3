@@ -45,19 +45,19 @@ export class OngoingTestComponent implements OnInit {
 
   public deleteTest() {
     this.bigService.deleteOnGoingTestFromDB(this.IdTestToModifOrDelete).subscribe();
-    alert(`Le test ${this.IdTestToModifOrDelete} a bien été supprimé`);
+    alert(`Le test ${this.IdTestToModifOrDelete} a bien été supprimé.`);
     location.reload();
   }
 
   public updateTest() {
     this.bigService.updateOnGoingTestFromDB(this.IdTestToModifOrDelete, this.tmpTest).subscribe();
-    alert(`Le test ${this.IdTestToModifOrDelete} a bien été updaté`);
+    alert(`Le test ${this.IdTestToModifOrDelete} a bien été mis à jour.`);
     location.reload();
   }
 
   public validateTest() {
     this.bigService.validateTest(this.IdTestToModifOrDelete).subscribe();
-    alert(`Le test ${this.IdTestToModifOrDelete} a bien été validé`);
+    alert(`Le test ${this.IdTestToModifOrDelete} a bien été validé.`);
     location.reload();
   }
 
@@ -66,6 +66,15 @@ export class OngoingTestComponent implements OnInit {
   openVerticallyCentered(content) {
     this.modalService.open(content, { windowClass: "my-class" });
     console.log(this.IdTestToModifOrDelete);
+  }
+
+  //Press Enter to open Modal
+  onEnter(content, testid:number) {
+    if (testid > 0) {
+      this.openVerticallyCentered(content);
+      this.callTestToModifOrDelete(testid);
+    }
+    
   }
 
 }

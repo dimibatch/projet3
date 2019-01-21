@@ -71,14 +71,14 @@ export class SearchResultComponent implements OnInit {
 
   public deleteTest() {
     this.bigService.deleteTestFromDB(this.IdTestToModifOrDelete).subscribe();
-    alert(`Le test ${this.IdTestToModifOrDelete} a bien été supprimé`);
+    alert(`Le test ${this.IdTestToModifOrDelete} a bien été supprimé.`);
     location.reload();
 
   }
 
   public updateTest() {
     this.bigService.updateTestFromDB(this.IdTestToModifOrDelete, this.tmpTest).subscribe();
-    alert(`Le test ${this.IdTestToModifOrDelete} a bien été updaté`);
+    alert(`Le test ${this.IdTestToModifOrDelete} a bien été mis à jour.`);
     location.reload();
 
   }

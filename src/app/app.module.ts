@@ -46,6 +46,8 @@ import { EndDatePipe } from './pipes/end-date.pipe';
 import { ColorMatPremPipe } from './pipes/color-mat-prem.pipe';
 import { RealTypeAcPipe } from './pipes/real-type-ac.pipe';
 import { UserService } from './user.service';
+import { VerticalCompatPipe } from './pipes/vertical-compat.pipe';
+import { RemoveTwinsPipe } from './pipes/remove-twins.pipe';
 
 
 
@@ -94,7 +96,9 @@ const appRoutes: Routes =
     StartDatePipe,
     EndDatePipe,
     ColorMatPremPipe,
-    RealTypeAcPipe
+    RealTypeAcPipe,
+    VerticalCompatPipe,
+    RemoveTwinsPipe
     
   ],
   imports: [
