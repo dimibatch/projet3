@@ -1,0 +1,238 @@
+[{
+    "id40": 
+        [
+            {"PEHD EVOH PEHD":
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "solution_tampon_ph9", "ethanol96", "tricaprat_caprylate", "isododécane", "TMF", "emogreen", "Vegelight-silk_C9_C12"]},
+            {"PEBD":
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "ethanol96", "tricaprat_caprylate", "isododécane", "Vegelight-silk_C9_C12"]},
+            {"PEHD":
+                ["eau_déminéralisée_ph7", "solution_tampon_ph9", "ethanol96", "tricaprat_caprylate", "TMF"]},
+            {"PP COPO":
+                ["solution_tampon_ph5", "TMF", "Vegelight-silk_C9_C12"]},
+            {"PP HOMO":
+                ["TMF"]},
+            {"PMP": 
+                ["Vegelight-silk_C9_C12"]},
+            {"PETg": 
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "solution_tampon_ph9","tricaprat_caprylate", "isododécane", "isohéxadécane", "emogreen"]},
+            {"PCTA": 
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "solution_tampon_ph9", "ethanol96", "isohéxadécane", "emogreen"]},
+            {"PCTG": 
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "solution_tampon_ph9", "ethanol96", "tricaprat_caprylate", "isododécane", "Vegelight-silk_C9_C12"]},
+            {"PBT":
+                ["eau_déminéralisée_ph7", "solution_tampon_ph9", "ethanol96", "tricaprat_caprylate", "isododécane", "TMF", "emogreen", "Vegelight-silk_C9_C12"]},
+            {"PC": 
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "ethanol96", "tricaprat_caprylate", "TMF",  "isohéxadécane", "emogreen", "Vegelight-silk_C9_C12"]},
+            {"PMMA":
+                ["solution_tampon_ph5", "solution_tampon_ph9", "isohéxadécane", "emogreen"]},
+            {"PA":
+                ["Aucune incompatibilité"]},
+            {"MABS":
+                ["tricaprat_caprylate", "isododécane", "TMF",  "isohéxadécane", "emogreen", "Vegelight-silk_C9_C12"]},
+            {"ABS": 
+                ["eau_déminéralisée_ph7", "solution_tampon_ph9", "tricaprat_caprylate"]},
+            {"SAN":
+                ["eau_déminéralisée_ph7", "tricaprat_caprylate", "isododécane", "Vegelight-silk_C9_C12"]},
+            {"PS":
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "ethanol96", "isododécane", "isohéxadécane", "emogreen"]},
+            {"POM low nouveau":
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "solution_tampon_ph9", "tricaprat_caprylate", "TMF", "isohéxadécane", "emogreen", "Vegelight-silk_C9_C12"]},
+            {"POM high ancien":
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "solution_tampon_ph9", "ethanol96", "tricaprat_caprylate", "isododécane", "TMF", "isohéxadécane", "emogreen", "Vegelight-silk_C9_C12"]},
+            {"SURLYN": 
+                ["Aucune incompatibilité niveau vert"]},
+            {"NITRILE A":
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "tricaprat_caprylate", "isododécane", "emogreen", "Vegelight-silk_C9_C12"]},
+            {"BUTYLE B": 
+                ["solution_tampon_ph5", "TMF"]},
+            {"MULTIFLEX C":
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "solution_tampon_ph9"]},
+            {"SANTOPRENE D":
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "solution_tampon_ph9"]},
+            {"THERMOLAST E":
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "solution_tampon_ph9"]},
+            {"HYTREL élastomère thermoplastique":
+                ["solution_tampon_ph5", "solution_tampon_ph9", "TMF", "emogreen"]},
+            {"TRISEAL (mousse PE)": 
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "ethanol96"]}
+        ]
+    },
+
+    {"id30": 
+        [
+            {"PEHD EVOH PEHD":
+                ["isohéxadécane"]},
+            {"PEBD":
+                ["TMF"]},
+            {"PEHD":
+                ["isohéxadécane", "emogreen", "Vegelight-silk_C9_C12"]},
+            {"PP COPO":
+                ["eau_déminéralisée_ph7", "ethanol96", "tricaprat_caprylate"]},
+            {"PP HOMO":
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "ethanol96"]},
+            {"PMP": 
+                ["solution_tampon_ph5"]},
+            {"PETg": 
+                ["ethanol96", "Vegelight-silk_C9_C12"]},
+            {"PCTA": 
+                ["Aucune incompatibilité niveau jaune"]},
+            {"PCTG": 
+                ["Aucune incompatibilité niveau jaune"]},
+            {"PBT":
+                ["solution_tampon_ph5", "isohéxadécane"]},
+            {"PC": 
+                ["Aucune incompatibilité niveau jaune"]},
+            {"PMMA":
+                ["Aucune incompatibilité niveau jaune"]},
+            {"PA":
+                ["Aucune incompatibilité niveau jaune"]},
+            {"MABS":
+                ["solution_tampon_ph9"]},
+            {"ABS": 
+                ["Aucune incompatibilité niveau jaune"]},
+            {"SAN":
+                ["solution_tampon_ph9", "TMF", "emogreen"]},
+            {"PS":
+                ["solution_tampon_ph9"]},
+            {"POM low nouveau":
+                ["ethanol96"]},
+            {"POM high ancien":
+                ["Aucune incompatibilité niveau jaune"]},
+            {"SURLYN": 
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "solution_tampon_ph9", "isododécane"]},
+            {"NITRILE A":
+                ["solution_tampon_ph9", "ethanol96"]},
+            {"BUTYLE B": 
+                ["eau_déminéralisée_ph7", "solution_tampon_ph9", "ethanol96", "tricaprat_caprylate"]},
+            {"MULTIFLEX C":
+                ["Aucune incompatibilité niveau jaune"]},
+            {"SANTOPRENE D":
+                ["Aucune incompatibilité niveau jaune"]},
+            {"THERMOLAST E":
+                ["Aucune incompatibilité niveau jaune"]},
+            {"HYTREL élastomère thermoplastique":
+                ["eau_déminéralisée_ph7", "ethanol96", "tricaprat_caprylate", "isododécane", "isohéxadécane"]},
+            {"TRISEAL (mousse PE)": 
+                ["solution_tampon_ph9", "tricaprat_caprylate", "isododécane"]}
+        ]
+        
+        },
+        {"id20": 
+            [
+                {"PEHD EVOH PEHD":
+                    ["Aucune incompatibilité niveau orange"]},
+                {"PEBD":
+                    ["isohéxadécane"]},
+                {"PEHD":
+                    ["isododécane"]},
+                {"PP COPO":
+                    ["solution_tampon_ph9", "isohéxadécane"]},
+                {"PP HOMO":
+                    ["solution_tampon_ph9", "tricaprat_caprylate", "isododécane", "isohéxadécane", "emogreen", "Vegelight-silk_C9_C12"]},
+                {"PMP": 
+                    ["ethanol96"]},
+                {"PETg": 
+                    ["Aucune incompatibilité niveau orange"]},
+                {"PCTA": 
+                    ["tricaprat_caprylate"]},
+                {"PCTG": 
+                    ["Aucune incompatibilité niveau orange"]},
+                {"PBT":
+                    ["Aucune incompatibilité niveau orange"]},
+                {"PC": 
+                    ["Aucune incompatibilité niveau orange"]},
+                {"PMMA":
+                    ["eau_déminéralisée_ph7"]},
+                {"PA":
+                    ["ethanol96", "tricaprat_caprylate", "emogreen"]},
+                {"MABS":
+                    ["solution_tampon_ph5"]},
+                {"ABS": 
+                    ["ethethanol96", "TMF", "emogreen", "Vegelight-silk_C9_C12"]},
+                {"SAN":
+                    ["solution_tampon_ph5", "ethethanol96", "isohéxadécane"]},
+                {"PS":
+                    ["Aucune incompatibilité niveau orange"]},
+                {"POM low nouveau":
+                    ["Aucune incompatibilité niveau orange"]},
+                {"POM high ancien":
+                    ["Aucune incompatibilité niveau orange"]},
+                {"SURLYN": 
+                    ["isohéxadécane"]},
+                {"NITRILE A":
+                    ["Aucune incompatibilité niveau orange"]},
+                {"BUTYLE B": 
+                    ["Aucune incompatibilité niveau orange"]},
+                {"MULTIFLEX C":
+                    ["Aucune incompatibilité niveau orange"]},
+                {"SANTOPRENE D":
+                    ["Aucune incompatibilité niveau orange"]},
+                {"THERMOLAST E":
+                    ["Aucune incompatibilité niveau orange"]},
+                {"HYTREL élastomère thermoplastique":
+                    ["Aucune incompatibilité niveau orange"]},
+                {"TRISEAL (mousse PE)": 
+                    ["isohéxadécane", "emogreen", "Vegelight-silk_C9_C12"]}
+            
+            ]
+    },
+
+    {"id10": 
+        [
+            {"PEHD EVOH PEHD":
+                ["Aucune incompatibilité niveau rouge"]},
+            {"PEBD":
+                ["solution_tampon_ph9", "emogreen"]},
+            {"PEHD":
+                ["solution_tampon_ph5"]},
+            {"PP COPO":
+                ["isododécane", "emogreen"]},
+            {"PP HOMO":
+                ["Aucune incompatibilité niveau rouge"]},
+            {"PMP": 
+                ["eau_déminéralisée_ph7", "solution_tampon_ph9", "tricaprat_caprylate", "isododécane", "TMF", "isohéxadécane", "emogreen"]},
+            {"PETg": 
+                ["TMF"]},
+            {"PCTA": 
+                ["isododécane", "TMF", "Vegelight-silk_C9_C12"]},
+            {"PCTG": 
+                ["TMF", "isohéxadécane", "emogreen"]},
+            {"PBT":
+                ["Aucune incompatibilité niveau rouge"]},
+            {"PC": 
+                ["solution_tampon_ph9", "isododécane"]},
+            {"PMMA":
+                ["ethethanol96", "tricaprat_caprylate", "isododécane", "TMF", "Vegelight-silk_C9_C12"]},
+            {"PA":
+                ["eau_déminéralisée_ph7", "solution_tampon_ph5", "solution_tampon_ph9", "isododécane", "TMF", "isohéxadécane", "Vegelight-silk_C9_C12"]},
+            {"MABS":
+                ["eau_déminéralisée_ph7", "ethethanol96"]},
+            {"ABS": 
+                ["solution_tampon_ph5", "isododécane", "isohéxadécane"]},
+            {"SAN":
+                ["Aucune incompatibilité niveau rouge"]},
+            {"PS":
+                ["tricaprat_caprylate", "TMF", "Vegelight-silk_C9_C12"]},
+            {"POM low nouveau":
+                ["isododécane"]},
+            {"POM high ancien":
+                ["Aucune incompatibilité niveau rouge"]},
+            {"SURLYN": 
+                ["ethethanol96", "tricaprat_caprylate", "TMF", "emogreen", "Vegelight-silk_C9_C12"]},
+            {"NITRILE A":
+                ["TMF", "isohéxadécane"]},
+            {"BUTYLE B": 
+                ["isododécane", "isohéxadécane", "emogreen", "Vegelight-silk_C9_C12"]},
+            {"MULTIFLEX C":
+                ["ethethanol96", "tricaprat_caprylate", "isododécane","TMF", "isohéxadécane", "emogreen", "Vegelight-silk_C9_C12"]},
+            {"SANTOPRENE D":
+                ["ethethanol96", "tricaprat_caprylate", "isododécane","TMF", "isohéxadécane", "emogreen", "Vegelight-silk_C9_C12"]},
+            {"THERMOLAST E":
+                ["ethethanol96", "tricaprat_caprylate", "isododécane","TMF", "isohéxadécane", "emogreen", "Vegelight-silk_C9_C12"]},
+            {"HYTREL élastomère thermoplastique":
+                ["Vegelight-silk_C9_C12"]},
+            {"TRISEAL (mousse PE)": 
+                ["TMF"]}
+        
+        ]
+}]

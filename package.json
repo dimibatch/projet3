@@ -23,18 +23,18 @@
     "@handsontable-pro/angular": "^2.0.0",
     "@handsontable/angular": "^2.0.0",
     "@ng-bootstrap/ng-bootstrap": "^4.0.1",
-    "core-js": "^2.6.1",
+    "core-js": "^2.6.2",
     "handsontable": "^6.2.2",
     "handsontable-pro": "^6.2.2",
     "jspdf": "^1.5.3",
     "rxjs": "~6.2.0",
-    "zone.js": "~0.8.26"
+    "zone.js": "^0.8.28"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "^0.8.9",
     "@angular/compiler-cli": "^6.1.0",
     "@angular/language-service": "^6.1.0",
-    "@types/jasmine": "^2.8.14",
+    "@types/jasmine": "^2.8.15",
     "@types/jasminewd2": "~2.0.3",
     "@types/jspdf": "^1.2.2",
     "@types/node": "~8.9.4",

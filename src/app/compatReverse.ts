@@ -1,12 +1,14 @@
-export class Compat {
+/*linked with /assets/compat2.json*/
 
-    public id: number;
+export class CompatReverse {
+
+    public id: string;
     public name: string;
     public eau_demineralisee_ph7: number;
     public solution_tampon_ph5: number;
     public solution_tampon_ph9: number;
     public ethanol96: number;
-    public tricaprat: number;
+    public tricaprat_caprylate: number;
     public isododecane: number;
     public tmf: number;
     public isohexadecane: number;
