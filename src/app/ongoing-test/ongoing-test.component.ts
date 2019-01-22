@@ -4,6 +4,7 @@ import { BigService } from '../big.service';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { Route } from '@angular/compiler/src/core';
 import { Router, UrlTree } from '@angular/router';
+import { TestFamily } from '../test-family';
 
 
 @Component({
@@ -22,7 +23,11 @@ export class OngoingTestComponent implements OnInit {
   public IdTestToModifOrDelete: number = 0;
   public testToModifOrDelete: OnGoingTest;
   public hasAccess: string;
-
+  public families:TestFamily[] = [];
+  public familyName: string;
+  public isFirstFamily: boolean = false;
+  public isSecondFamily: boolean = false;
+  public isThirdFamily: boolean = false;
 
   constructor(service: BigService, private modalService: NgbModal) {
     this.bigService = service;
@@ -35,6 +40,11 @@ export class OngoingTestComponent implements OnInit {
       }
     )
     this.hasAccess = sessionStorage.getItem("hasAccess");
+    this.bigService.getTestFamilies().subscribe(
+      (param:any)=>{
+        this.families = param as TestFamily[];
+      }
+    )
   }
 
   // CRUD methods 
@@ -75,6 +85,28 @@ export class OngoingTestComponent implements OnInit {
       this.callTestToModifOrDelete(testid);
     }
     
+  }
+
+  //Methods to update the list of test types
+  public changeOngoingTestList(){
+    let select = document.getElementById("familySelectOngoingModal") as HTMLSelectElement;
+    this.familyName = select.value;
+    this.tmpTest.testFamily = select.value;
+    if (this.familyName == 'Compatibilité'){
+      this.isFirstFamily = true;
+      this.isSecondFamily = false;
+      this.isThirdFamily = false;
+    }
+    if (this.familyName == 'Décor'){
+      this.isFirstFamily = false;
+      this.isSecondFamily = true;
+      this.isThirdFamily = false;
+    }
+    if (this.familyName == 'Fonctionnalité'){
+      this.isFirstFamily = false;
+      this.isSecondFamily = false;
+      this.isThirdFamily = true;
+    }
   }
 
 }

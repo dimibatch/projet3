@@ -235,7 +235,11 @@
         <div class="d-inline-block col-4 border offset-1 border-0">
           {{testToModifOrDelete.testFamily}}
         </div>
-        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.testFamily" placeholder="Modifier la valeur">
+        <select id="familySelectOngoingModal" class="form-control d-inline-block col-4 offset-1" (change)="changeOngoingTestList()">
+          <option selected></option>
+          <option *ngFor="let current of families" value="{{current.family}}">{{current.family}}</option>
+        </select>
+        <!-- <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.testFamily" placeholder="Modifier la valeur"> -->
       </div>
       <div class="row">
         <div class="d-inline-block col-2 ">
@@ -244,7 +248,19 @@
         <div class="d-inline-block col-4 border offset-1 border-0">
           {{testToModifOrDelete.test}}
         </div>
-        <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.test" placeholder="Modifier la valeur">
+        <select id="onGoingTestSelect" class="form-control d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.test">
+          <option selected></option>
+          <ng-container *ngFor="let current of families[0].testType">
+            <option *ngIf="isFirstFamily" value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+          </ng-container>
+          <ng-container *ngFor="let current of families[1].testType">
+            <option *ngIf="isSecondFamily" value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+          </ng-container>
+          <ng-container *ngFor="let current of families[2].testType">
+            <option *ngIf="isThirdFamily" value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+          </ng-container>
+        </select>
+        <!-- <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.test" placeholder="Modifier la valeur"> -->
       </div>
       <div class="row">
         <div class="d-inline-block col-2 ">
