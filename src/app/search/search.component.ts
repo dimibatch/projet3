@@ -32,6 +32,7 @@ export class SearchComponent implements OnInit {
   @Input() public packModel: string = "";
   @Input() public vracName: string = "";
   @Input() public testFamily: string = "";
+  @Input() public derogation: boolean;
 
   @Output() searchBarContentChange:EventEmitter<string> = new EventEmitter<string>();
   @Output() materialChange:EventEmitter<string> = new EventEmitter<string>();
@@ -54,6 +55,7 @@ export class SearchComponent implements OnInit {
   @Output() packModelEmitter:EventEmitter<string> = new EventEmitter<string>();
   @Output() vracNameEmitter:EventEmitter<string> = new EventEmitter<string>();
   @Output() testFamilyEmitter:EventEmitter<string> = new EventEmitter<string>();
+  @Output() derogationEmitter:EventEmitter<string> = new EventEmitter<string>();
   
   public page: number = 0;
   @Output() backToFirstPage: EventEmitter<number> = new EventEmitter<number>();
@@ -175,6 +177,14 @@ export class SearchComponent implements OnInit {
 
   public testFamilyEmission() {
     this.testFamilyEmitter.emit(this.testFamily);
+  }
+
+  public derogationEmission(){
+    if (this.derogation == true){
+      this.derogationEmitter.emit("false");
+    } else {
+      this.derogationEmitter.emit("true");
+    }
   }
   
    //function that changes the "Historique des tests" tab's color when you click on it

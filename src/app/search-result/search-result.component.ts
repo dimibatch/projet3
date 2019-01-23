@@ -34,6 +34,7 @@ export class SearchResultComponent implements OnInit {
   @Input() public packModel: string = "";
   @Input() public vracName: string = "";
   @Input() public testFamily: string = "";
+  @Input() public derogation: string = "";
 
 
   private bigService: BigService;
@@ -52,7 +53,7 @@ export class SearchResultComponent implements OnInit {
 
   public IdTestToModifOrDelete: number = 0;
   public testToModifOrDelete: Test;
-  public hasAccess:string;
+  public hasAccess: string;
 
   closeResult: string;
 
@@ -97,7 +98,7 @@ export class SearchResultComponent implements OnInit {
   // Modal Opening Fuction
 
   openVerticallyCentered(content) {
-    this.modalService.open(content,  {windowClass : "my-class" });
+    this.modalService.open(content, { windowClass: "my-class" });
     console.log(this.IdTestToModifOrDelete);
   }
 
