@@ -13,8 +13,8 @@ export class NewTestComponent implements OnInit {
 
 
   private service: BigService;
-  public hasAccess:string;
-  public families:TestFamily[] = [];
+  public hasAccess: string;
+  public families: TestFamily[] = [];
   public familyName: string;
   public isFirstFamily: boolean = false;
   public isSecondFamily: boolean = false;
@@ -56,13 +56,11 @@ export class NewTestComponent implements OnInit {
     this.onGoingTestState = true;
     this.hasAccess = sessionStorage.getItem("hasAccess");
     this.service.getTestFamilies().subscribe(
-      (param:any)=>{
+      (param: any) => {
         this.families = param as TestFamily[];
       }
     )
   }
-
-
 
   // Method to save a Test or OnGoingTest on DB
 
@@ -94,42 +92,42 @@ export class NewTestComponent implements OnInit {
 
 
   //Methods to update the list of test types
-  public changeOngoingTestList(){
+  public changeOngoingTestList() {
     let select = document.getElementById("onGoingFamilySelect") as HTMLSelectElement;
     this.familyName = select.value;
     this.onGoingTest.testFamily = select.value;
-    if (this.familyName == 'Compatibilité'){
+    if (this.familyName == 'Compatibilité') {
       this.isFirstFamily = true;
       this.isSecondFamily = false;
       this.isThirdFamily = false;
     }
-    if (this.familyName == 'Décor'){
+    if (this.familyName == 'Décor') {
       this.isFirstFamily = false;
       this.isSecondFamily = true;
       this.isThirdFamily = false;
     }
-    if (this.familyName == 'Fonctionnalité'){
+    if (this.familyName == 'Fonctionnalité') {
       this.isFirstFamily = false;
       this.isSecondFamily = false;
       this.isThirdFamily = true;
     }
   }
 
-  public changeTestList(){
+  public changeTestList() {
     let select = document.getElementById("familySelect") as HTMLSelectElement;
     this.familyName = select.value;
     this.tmpTest.testFamily = select.value;
-    if (this.familyName == 'Compatibilité'){
+    if (this.familyName == 'Compatibilité') {
       this.isFirstFamily = true;
       this.isSecondFamily = false;
       this.isThirdFamily = false;
     }
-    if (this.familyName == 'Décor'){
+    if (this.familyName == 'Décor') {
       this.isFirstFamily = false;
       this.isSecondFamily = true;
       this.isThirdFamily = false;
     }
-    if (this.familyName == 'Fonctionnalité'){
+    if (this.familyName == 'Fonctionnalité') {
       this.isFirstFamily = false;
       this.isSecondFamily = false;
       this.isThirdFamily = true;
@@ -137,13 +135,13 @@ export class NewTestComponent implements OnInit {
   }
 
   //method to update the onGoingTest attribute 'test'
-  public updateOngoingTestToSend(){
+  public updateOngoingTestToSend() {
     let select = document.getElementById("onGoingTestSelect") as HTMLSelectElement;
     this.onGoingTest.test = select.value;
   }
 
   //method to update the regular test attribute 'test'
-  public updateTestToSend(){
+  public updateTestToSend() {
     let select = document.getElementById("testSelect") as HTMLSelectElement;
     this.tmpTest.test = select.value;
   }

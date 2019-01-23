@@ -3,7 +3,7 @@
     [colHeaders]="true" [fixedColumnsLeft]="1" [colWidths]="200" [rowHeights]="40">
     <hot-column data="result" [readOnly]="true" title="Résultat"></hot-column> -->
 
-  <hot-table class="hot" [data]="dataset | typeAc:searchBarContent:page | productName:productName | realTypeAc:typeAC | campaignCode:campaignCode | campaignName:campaignName
+  <hot-table class="hot" [data]="dataset | derogation:derogation | typeAc:searchBarContent:page | productName:productName | realTypeAc:typeAC | campaignCode:campaignCode | campaignName:campaignName
   | materiau:material | vracNumber:vracNumber | test:testType | decorType:typeDecor | result:result | codeG:codeG | startDate:startDate 
   | franchise:franchise | cpqcp:cpQCP | codeAC:codeAC | fournisseur:provider | packModel:packModel | vracName:vracName | testFamily:testFamily | endDate:endDate:page"
     [colHeaders]="true" [fixedColumnsLeft]="1" [colWidths]="150" [rowHeights]="40">
@@ -235,7 +235,7 @@
         <div class="d-inline-block col-4 border offset-1">
           {{testToModifOrDelete.vracName}}
         </div>
-        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.vracName"placeholder="Modifier la valeur">
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.vracName" placeholder="Modifier la valeur">
       </div>
       <div class="row">
         <div class="d-inline-block col-2 p-0 p-0 ">
@@ -285,7 +285,7 @@
         </div>
         <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.start" placeholder="Modifier la valeur">
       </div>
-      <div class="row">
+      <!-- <div class="row">
         <div class="d-inline-block col-2 p-0 p-0 ">
           Dérogation
         </div>
@@ -293,7 +293,22 @@
           {{testToModifOrDelete.derogation}}
         </div>
         <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.derogation" placeholder="Modifier la valeur">
-      </div>
+      </div> -->
+      <div class="row">
+          <div class="d-inline-block col-2 p-0 p-0 ">
+            Derogation
+          </div>
+          <div class="d-inline-block col-4 border offset-1">
+            {{testToModifOrDelete.derogation}}
+          </div>
+          <div class="form-group d-inline-block col-4 offset-1">
+            <select class="form-control" name="derogation" id="derogation" [(ngModel)]="tmpTest.derogation">
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </div>
+        </div>
+
       <div class="row">
         <div class="d-inline-block col-2 p-0 p-0 ">
           Commentaire

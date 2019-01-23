@@ -6,16 +6,19 @@ import { Test } from '../test';
 })
 export class DerogationPipe implements PipeTransform {
 
-  transform(value: Test[]): Test[] {
+  transform(value: Test[], param_derogation?:string): Test[] {
 
-    // let result: Test[] = [];
-    // for (let i = 0; i < value.length; i++) {
-    //   if (value[i].derogation == true) {
-    //     result.push(value[i]);
-    //   }
-    // }
-    // return result;
-    return value;
+    let result: Test[] = [];
+
+    if(param_derogation == "" || param_derogation == "false" || param_derogation == undefined){
+      return value;
+    }
+    for (let i = 0; i < value.length; i++) {
+      if (value[i].derogation == param_derogation) {
+        result.push(value[i]);
+      }
+    }
+    return result;
   }
 
 }

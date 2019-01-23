@@ -94,8 +94,7 @@ const appRoutes: Routes =
     StartDatePipe,
     EndDatePipe,
     ColorMatPremPipe,
-    RealTypeAcPipe
-    
+    RealTypeAcPipe,
   ],
   imports: [
     BrowserModule,

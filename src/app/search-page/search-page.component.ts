@@ -30,6 +30,7 @@ export class SearchPageComponent implements OnInit {
   @Input() public packModel: string = "";
   @Input() public vracName: string = "";
   @Input() public testFamily: string = "";
+  @Input() public derogation: string = "";
 
   constructor() { }
 
@@ -139,6 +140,10 @@ export class SearchPageComponent implements OnInit {
 
   public receiveTestFamily(param:string){
     this.testFamily = param;
+  }
+
+  public receiveDerogation(param:string){
+    this.derogation = param;
   }
 }
 
