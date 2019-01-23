@@ -48,6 +48,7 @@ import { RealTypeAcPipe } from './pipes/real-type-ac.pipe';
 import { UserService } from './user.service';
 import { VerticalCompatPipe } from './pipes/vertical-compat.pipe';
 import { RemoveTwinsPipe } from './pipes/remove-twins.pipe';
+import { SelectAttributesPipe } from './pipes/select-attributes.pipe';
 
 
 
@@ -98,7 +99,8 @@ const appRoutes: Routes =
     ColorMatPremPipe,
     RealTypeAcPipe,
     VerticalCompatPipe,
-    RemoveTwinsPipe
+    RemoveTwinsPipe,
+    SelectAttributesPipe
     
   ],
   imports: [

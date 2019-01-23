@@ -22,6 +22,7 @@ export class VerticalCompatPipe implements PipeTransform {
     for (let l=0; l<splitParam.length; l++) {
       if ("emogreen l15".indexOf(splitParam[l].toLowerCase()) > -1
       || "emogreen_l15".indexOf(splitParam[l].toLowerCase()) > -1) {
+        k=0;
       while(k<result.length) {
         for (i=0; i<result.length-1; i++) {
           if (result[i].emogreen_l15 > result[i+1].emogreen_l15) {
@@ -36,6 +37,7 @@ export class VerticalCompatPipe implements PipeTransform {
 
       if ("solution tampon ph5".indexOf(splitParam[l].toLowerCase()) > -1
       || "solution_tampon_ph5".indexOf(splitParam[l].toLowerCase()) > -1) {
+        k=0;
       while(k<result.length) {
         for (i=0; i<result.length-1; i++) {
           if (result[i].solution_tampon_ph5 > result[i+1].solution_tampon_ph5) {
@@ -50,6 +52,7 @@ export class VerticalCompatPipe implements PipeTransform {
 
       if ("eau demineralisee ph7".indexOf(splitParam[l].toLowerCase()) > -1
       || "eau_demineralisee_ph7".indexOf(splitParam[l].toLowerCase()) > -1) {
+        k=0;
       while(k<result.length) {
         for (i=0; i<result.length-1; i++) {
           if (result[i].eau_demineralisee_ph7 > result[i+1].eau_demineralisee_ph7) {
@@ -62,8 +65,9 @@ export class VerticalCompatPipe implements PipeTransform {
       }
       }
 
-      if ("solution tampon ph9".indexOf(splitParam[l].toLowerCase()) > -1
+      if ("solution tampon ph9".indexOf(splitParam[l]) > -1
       || "solution_tampon_ph9".indexOf(splitParam[l].toLowerCase()) > -1) {
+        k=0;
       while(k<result.length) {
         for (i=0; i<result.length-1; i++) {
           if (result[i].solution_tampon_ph9 > result[i+1].solution_tampon_ph9) {
@@ -78,6 +82,7 @@ export class VerticalCompatPipe implements PipeTransform {
 
       if ("ethanol96".indexOf(splitParam[l].toLowerCase()) > -1
       || "ethanol 96".indexOf(splitParam[l].toLowerCase()) > -1) {
+        k=0;
       while(k<result.length) {
         for (i=0; i<result.length-1; i++) {
           if (result[i].ethanol96 > result[i+1].ethanol96) {
@@ -91,6 +96,7 @@ export class VerticalCompatPipe implements PipeTransform {
       }
 
       if ("tricaprat".indexOf(splitParam[l].toLowerCase()) > -1) {
+        k=0;
       while(k<result.length) {
         for (i=0; i<result.length-1; i++) {
           if (result[i].tricaprat > result[i+1].tricaprat) {
@@ -104,6 +110,7 @@ export class VerticalCompatPipe implements PipeTransform {
       }
 
       if ("isododecane".indexOf(splitParam[l].toLowerCase()) > -1) {
+        k=0;
       while(k<result.length) {
         for (i=0; i<result.length-1; i++) {
           if (result[i].isododecane > result[i+1].isododecane) {
@@ -117,6 +124,7 @@ export class VerticalCompatPipe implements PipeTransform {
       }
 
       if ("tmf".indexOf(splitParam[l].toLowerCase()) > -1) {
+        k=0;
         while(k<result.length) {
           for (i=0; i<result.length-1; i++) {
             if (result[i].tmf > result[i+1].tmf) {
@@ -130,6 +138,7 @@ export class VerticalCompatPipe implements PipeTransform {
         }
 
         if ("isohexadecane".indexOf(splitParam[l].toLowerCase()) > -1) {
+          k=0;
           while(k<result.length) {
             for (i=0; i<result.length-1; i++) {
               if (result[i].isohexadecane > result[i+1].isohexadecane) {
@@ -144,6 +153,7 @@ export class VerticalCompatPipe implements PipeTransform {
 
           if ("vegelight silk".indexOf(splitParam[l].toLowerCase()) > -1
           || "vegelight_silk".indexOf(splitParam[l].toLowerCase()) > -1) {
+            k=0;
             while(k<result.length) {
               for (i=0; i<result.length-1; i++) {
                 if (result[i].vegelight_silk > result[i+1].vegelight_silk) {
