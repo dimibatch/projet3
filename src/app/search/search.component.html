@@ -98,11 +98,8 @@
           <input type="text" class="form-control" [(ngModel)]="vracName" (keyup)="vracNameEmission();" name="typeAC" id="typeAC"
             aria-describedby="helpId" placeholder="Nom vrac">
         </div>
-        <div class="form-group">
-          <label for="materiau">Famille de test</label>
-          <input type="text" class="form-control" [(ngModel)]="testFamily" (keyup)="testFamilyEmission();" name="typeAC"
-            id="typeAC" aria-describedby="helpId" placeholder="Famille de tests">
-        </div>
+        
+        
 
         <!-- <div class="form-group">
           <label for="matiere-premiere">Matière première</label>
@@ -130,11 +127,30 @@
           <input type="text" class="form-control" [(ngModel)]="vracNumber" (keyup)="onKeyUpVracNumber();" name="numeroVrac"
             id="numeroVrac" aria-describedby="helpId" placeholder="Numéro de vrac">
         </div>
-
+        <div class="form-group">
+          <label for="materiau">Famille de test</label>
+          <select class="form-control" [(ngModel)]="testFamily" (change)="testFamilyEmission();" [ngModelOptions]="{standalone: true}">
+            <option selected></option>
+            <option *ngFor="let current of families" value="{{current.family}}">{{current.family}}</option>
+          </select>
+          
+          <!-- <input type="text" class="form-control" [(ngModel)]="testFamily" (keyup)="testFamilyEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Famille de tests"> -->
+        </div>
         <div class="form-group">
           <label for="test">Nom du test</label>
-          <input type="text" class="form-control" [(ngModel)]="testType" (keyup)="onKeyUpTestType();" name="test" id="test"
-            aria-describedby="helpId" placeholder="Test">
+          <select class="form-control" [(ngModel)]="testType" (change)="onKeyUpTestType()" [ngModelOptions]="{standalone: true}">
+            <option selected></option>
+            <ng-container *ngFor="let current of families[0].testType">
+              <option value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+            </ng-container>
+            <ng-container *ngFor="let current of families[1].testType">
+              <option value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+            </ng-container>
+            <ng-container *ngFor="let current of families[2].testType">
+              <option value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+            </ng-container>
+          </select>
+          <!-- <input type="text" class="form-control" [(ngModel)]="testType" (keyup)="onKeyUpTestType();" name="test" id="test" aria-describedby="helpId" placeholder="Test"> -->
         </div>
 
         <div class="form-group">

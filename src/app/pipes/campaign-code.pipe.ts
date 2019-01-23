@@ -14,9 +14,14 @@ export class CampaignCodePipe implements PipeTransform {
       return value;
     } else {
       for (let i = 0; i < value.length; i++) {
-        if (value[i].campaignCode.toLowerCase()==param_campaignCode.toLowerCase()) {
-          result.push(value[i]);
+        if (value[i].campaignCode != null) {
+          if (value[i].campaignCode.toLowerCase()==param_campaignCode.toLowerCase()) {
+            result.push(value[i]);
+          }
+        } else {
+          continue;
         }
+        
       }
       return result;
     }

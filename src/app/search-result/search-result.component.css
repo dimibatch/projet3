@@ -50,3 +50,7 @@ ng-template {
   height:100px;
   overflow-y: scroll
 }
+
+/* input {
+  border: 1px solid gray;
+} */

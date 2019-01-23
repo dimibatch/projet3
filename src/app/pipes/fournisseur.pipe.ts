@@ -14,9 +14,14 @@ export class FournisseurPipe implements PipeTransform {
       return value;
     } else {
       for (let i = 0; i < value.length; i++) {
-        if (value[i].provider.toLowerCase().indexOf(param_vracName.toLowerCase()) > -1) {
-          result.push(value[i]);
+        if (value[i].provider != null) {
+          if (value[i].provider.toLowerCase().indexOf(param_vracName.toLowerCase()) > -1) {
+            result.push(value[i]);
+          }
+        } else {
+          continue;
         }
+        
       }
       return result;
     }

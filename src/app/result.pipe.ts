@@ -13,9 +13,14 @@ export class ResultPipe implements PipeTransform {
       return value;
     } else {
         for (let i = 0; i < value.length; i++) {
-          if (value[i].result.toLowerCase() == param_result.toLowerCase()) {
-            result.push(value[i]);
+          if (value[i].result != null) {
+            if (value[i].result.toLowerCase() == param_result.toLowerCase()) {
+              result.push(value[i]);
+            }
+          } else {
+            continue;
           }
+          
         }
         return result;
     }

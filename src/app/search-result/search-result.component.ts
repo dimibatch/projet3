@@ -3,6 +3,7 @@ import { Test } from '../test';
 import { BigService } from '../big.service';
 import * as Handsontable from "handsontable";
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { TestFamily } from '../test-family';
 
 @Component({
   selector: 'app-search-result',
@@ -38,6 +39,11 @@ export class SearchResultComponent implements OnInit {
 
   private bigService: BigService;
   public dataset: Test[] = [];
+  public families:TestFamily[] = [];
+  public familyName: string;
+  public isFirstFamily: boolean = false;
+  public isSecondFamily: boolean = false;
+  public isThirdFamily: boolean = false;
 
   // Variables for update a test
 
@@ -62,6 +68,11 @@ export class SearchResultComponent implements OnInit {
       }
     )
     this.hasAccess = sessionStorage.getItem("hasAccess");
+    this.bigService.getTestFamilies().subscribe(
+      (param:any)=>{
+        this.families = param as TestFamily[];
+      }
+    )
   }
 
   // CRUD methods 
@@ -72,14 +83,14 @@ export class SearchResultComponent implements OnInit {
 
   public deleteTest() {
     this.bigService.deleteTestFromDB(this.IdTestToModifOrDelete).subscribe();
-    alert(`Le test ${this.IdTestToModifOrDelete} a bien été supprimé`);
+    alert(`Le test ${this.IdTestToModifOrDelete} a bien été supprimé.`);
     location.reload();
 
   }
 
   public updateTest() {
     this.bigService.updateTestFromDB(this.IdTestToModifOrDelete, this.tmpTest).subscribe();
-    alert(`Le test ${this.IdTestToModifOrDelete} a bien été updaté`);
+    alert(`Le test ${this.IdTestToModifOrDelete} a bien été mis à jour.`);
     location.reload();
 
   }
@@ -90,6 +101,31 @@ export class SearchResultComponent implements OnInit {
     this.modalService.open(content, { windowClass: "my-class" });
     console.log(this.IdTestToModifOrDelete);
   }
+
+  //Methods to update the list of test types
+  public changeOngoingTestList(){
+    let select = document.getElementById("familySelectSearchModal") as HTMLSelectElement;
+    this.familyName = select.value;
+    this.tmpTest.testFamily = select.value;
+    if (this.familyName == 'Compatibilité'){
+      this.isFirstFamily = true;
+      this.isSecondFamily = false;
+      this.isThirdFamily = false;
+    }
+    if (this.familyName == 'Décor'){
+      this.isFirstFamily = false;
+      this.isSecondFamily = true;
+      this.isThirdFamily = false;
+    }
+    if (this.familyName == 'Fonctionnalité'){
+      this.isFirstFamily = false;
+      this.isSecondFamily = false;
+      this.isThirdFamily = true;
+    }
+  }
+
+
+
 }
 
 

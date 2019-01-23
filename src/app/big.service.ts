@@ -24,7 +24,8 @@ export class BigService {
   // Method to get all data from Test Table.
   public getBigData(): Observable<Test[]> {
     return this.http.get(`${this.baseUrl}` + "/test").pipe(
-      // return this.http.get("assets/TABLE_2.json").pipe(
+      //return this.http.get("assets/TABLE_2.json").pipe(
+        //return this.http.get("assets/resultats_recherche.json").pipe(
       map(
         (param: any) => {
           let myData: Test[] = param as Test[];

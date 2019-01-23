@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { BigService } from '../big.service';
+import { TestFamily } from '../test-family';
 
 
 
@@ -58,9 +60,22 @@ export class SearchComponent implements OnInit {
   public page: number = 0;
   @Output() backToFirstPage: EventEmitter<number> = new EventEmitter<number>();
 
-  constructor() { }
+  public dictionnary:string[] = ["jupe" , "pp", "copo", "pehd", "tube", "capot", "bpl", "10ml", "12ml","15ml", "30ml","chape", "petite robe noire"]; 
 
-  ngOnInit() { }
+  private bigService: BigService;
+  public families: TestFamily[] = [];
+
+  constructor(bigService: BigService) {
+    this.bigService = bigService;
+   }
+
+  ngOnInit() {
+    this.bigService.getTestFamilies().subscribe(
+      (param:any)=>{
+        this.families = param as TestFamily[];
+      }
+    )
+  }
 
   public onKeyUp() {
     this.searchBarContentChange.emit(this.searchBarContent);
@@ -89,6 +104,7 @@ export class SearchComponent implements OnInit {
 
   public onKeyUpTestType() {
     this.testTypeChange.emit(this.testType);
+    console.log(this.testType)
   }
 
   public onChangeStartDate() {
