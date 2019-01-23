@@ -13,9 +13,14 @@ export class CodeGPipe implements PipeTransform {
       return value;
     } else {
         for (let i = 0; i < value.length; i++) {
-          if (value[i].codeG.toLowerCase() == param_codeG.toLowerCase()) {
-            result.push(value[i]);
+          if (value[i].codeG != null) {
+            if (value[i].codeG.toLowerCase() == param_codeG.toLowerCase()) {
+              result.push(value[i]);
+            }
+          } else {
+            continue;
           }
+          
         }
         return result;
     }

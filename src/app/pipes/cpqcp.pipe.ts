@@ -14,9 +14,14 @@ export class CpqcpPipe implements PipeTransform {
       return value;
     } else {
       for (let i = 0; i < value.length; i++) {
-        if (value[i].cpQCP.toLowerCase().indexOf(param_cpqcp.toLowerCase()) > -1) {
-          result.push(value[i]);
+        if (value[i].cpQCP != null) {
+          if (value[i].cpQCP.toLowerCase().indexOf(param_cpqcp.toLowerCase()) > -1) {
+            result.push(value[i]);
+          }
+        } else {
+          continue;
         }
+        
       }
       return result;
     }

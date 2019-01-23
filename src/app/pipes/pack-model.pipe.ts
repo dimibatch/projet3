@@ -14,9 +14,14 @@ export class PackModelPipe implements PipeTransform {
       return value;
     } else {
       for (let i = 0; i < value.length; i++) {
-        if (value[i].packModel.toLowerCase().indexOf(param_packModel.toLowerCase()) > -1) {
-          result.push(value[i]);
+        if (value[i].packModel != null) {
+          if (value[i].packModel.toLowerCase().indexOf(param_packModel.toLowerCase()) > -1) {
+            result.push(value[i]);
+          }
+        } else {
+          continue;
         }
+        
       }
       return result;
     }

@@ -7,7 +7,7 @@
     <div class="d-inline-block mr-2">
       Modifier le test :
     </div>
-    <input type="text" class="d-inline-block mr-2" placeholder="ID du test" [(ngModel)]="IdTestToModifOrDelete">
+    <input type="text" (keyup.enter)="onEnter(content, IdTestToModifOrDelete)" class="d-inline-block mr-2" placeholder="ID du test" [(ngModel)]="IdTestToModifOrDelete">
     <button class="btn btn-dark rounded-0 " (click)="openVerticallyCentered(content)" (click)="callTestToModifOrDelete(IdTestToModifOrDelete)"
       *ngIf="IdTestToModifOrDelete > 0">MODIFIER</button>
   </div>
@@ -20,355 +20,383 @@
       <span aria-hidden="true">&times;</span>
     </button>
   </div>
-  <div class="modal-body container-fluid">
+  <div class="modal-body container-fluid text-center">
 
-    <!-- First Part of Dataset -->
-    <div class="row">
-      <div class="d-inline-block col-2 bg-dark">
-        Propriétés
-      </div>
-      <div class="d-inline-block col-4  offset-1 bg-dark">
-        Valeur actuelle
-      </div>
-      <div class="d-inline-block col-4 offset-1 bg-dark">
-        Modification
-      </div>
-    </div>
+    <!-- LEFT COLUMN -->
+    <div class="col-5 d-inline-block align-top height-column">
+      <!-- First Part of Dataset -->
 
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Résultat
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.result}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.result">
-    </div>
 
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Type d'AC
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Résultat
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.result}}
+        </div>
+        <select class="form-control d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.result">
+          <option selected></option>
+          <option value="C">C</option>
+          <option value="NC">NC</option>
+          <option value="MC">MC</option>
+        </select>
+        <!-- <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.result" placeholder="Modifier la valeur"> -->
       </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.typeAC}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.typeAC">
-    </div>
 
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Code G
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Type d'AC
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.typeAC}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.typeAC" placeholder="Modifier la valeur">
       </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.codeG}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.codeG">
-    </div>
 
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Nom produit
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Code G
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.codeG}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.codeG" placeholder="Modifier la valeur">
       </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.productName}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.productName">
-    </div>
 
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Code campagne
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Nom produit
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.productName}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.productName" placeholder="Modifier la valeur">
       </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.campaignCode}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.campaignCode">
-    </div>
 
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Nom campagne
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Code campagne
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.campaignCode}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.campaignCode" placeholder="Modifier la valeur">
       </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.campaignName}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.campaignName">
-    </div>
 
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Franchise
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Nom campagne
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.campaignName}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.campaignName" placeholder="Modifier la valeur" >
       </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.franchise}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.franchise">
-    </div>
 
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        CP Dev
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Franchise
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.franchise}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.franchise" placeholder="Modifier la valeur">
       </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.cpDev}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.cpDev">
-    </div>
 
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        CP QCP
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          CP Dev
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.cpDev}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.cpDev" placeholder="Modifier la valeur">
       </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.cpQCP}}
-      </div>
-      <input type="text" class="d-inlvalidateTestne-block col-4 offset-1" [(ngModel)]="tmpTest.cpQCP">
-    </div>
 
-    <!-- Second Part of DataSet -->
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          CP QCP
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.cpQCP}}
+        </div>
+        <input type="text" class="d-inlvalidateTestne-block col-4 offset-1" [(ngModel)]="tmpTest.cpQCP" placeholder="Modifier la valeur">
+      </div>
 
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Code AC
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.codeAC}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.codeAC">
-    </div>
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Fournisseur
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.provider}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.provider">
-    </div>
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Matériau
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.material}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.material">
-    </div>
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Type décor
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.decoType}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.decoType">
-    </div>
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Teinte masse
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.teinteMasse}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.teinteMasse">
-    </div>
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Modèle de pack
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.packModel}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.packModel">
-    </div>
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Numéro de soumission
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.submitNumber}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.submitNumber">
-    </div>
+      <!-- Second Part of DataSet -->
 
-    <!-- Third Part of DataSet for Modal -->
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Nom vrac
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Code AC
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.codeAC}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.codeAC" placeholder="Modifier la valeur">
       </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.vracName}}
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Fournisseur
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.provider}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.provider" placeholder="Modifier la valeur">
       </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.vracName">
-    </div>
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Numéro vrac
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Matériau
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.material}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.material" placeholder="Modifier la valeur">
       </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.vracNumber}}
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Type décor
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.decoType}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.decoType" placeholder="Modifier la valeur">
       </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.vracNumber">
-    </div>
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Numéro de formule ou lot
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Teinte masse
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.teinteMasse}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.teinteMasse" placeholder="Modifier la valeur">
       </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.formuleNumber}}
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Modèle de pack
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.packModel}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.packModel" placeholder="Modifier la valeur">
       </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.formuleNumber">
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Numéro de soumission
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.submitNumber}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.submitNumber" placeholder="Modifier la valeur">
+      </div>
+
+      <!-- Third Part of DataSet for Modal -->
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Nom vrac
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.vracName}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.vracName" placeholder="Modifier la valeur">
+      </div>
     </div>
 
-    <!-- Fourth part of Dataset for Modal -->
-
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Famille de test
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.testFamily}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.testFamily">
-    </div>
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Test
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.test}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.test">
-    </div>
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Date de début
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.start}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.start">
-    </div>
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Dérogation
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.derogation}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.derogation">
-    </div>
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Commentaire
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.comments}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.comments">
+    <!-- CENTRAL COLUMN -->
+    <div class="col-1 d-inline-block height-column pinky align-top">
     </div>
 
-    <!-- Date properties -->
+    <!-- RIGHT COLUMN -->
+    <div class="col-5 d-inline-block align-top height-column">
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Numéro vrac
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.vracNumber}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.vracNumber" placeholder="Modifier la valeur">
+      </div>
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Numéro de formule ou lot
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.formuleNumber}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.formuleNumber" placeholder="Modifier la valeur">
+      </div>
 
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Réception Vrac
+      <!-- Fourth part of Dataset for Modal -->
+
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Famille de test
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.testFamily}}
+        </div>
+        <select id="familySelectOngoingModal" class="form-control d-inline-block col-4 offset-1" (change)="changeOngoingTestList()">
+          <option selected></option>
+          <option *ngFor="let current of families" value="{{current.family}}">{{current.family}}</option>
+        </select>
+        <!-- <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.testFamily" placeholder="Modifier la valeur"> -->
       </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.receptionVrac}}
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Test
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.test}}
+        </div>
+        <select id="onGoingTestSelect" class="form-control d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.test">
+          <option selected></option>
+          <ng-container *ngFor="let current of families[0].testType">
+            <option *ngIf="isFirstFamily" value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+          </ng-container>
+          <ng-container *ngFor="let current of families[1].testType">
+            <option *ngIf="isSecondFamily" value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+          </ng-container>
+          <ng-container *ngFor="let current of families[2].testType">
+            <option *ngIf="isThirdFamily" value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+          </ng-container>
+        </select>
+        <!-- <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.test" placeholder="Modifier la valeur"> -->
       </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.receptionVrac">
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Date de début
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.start}}
+        </div>
+        <input type="date" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.start" placeholder="Modifier la valeur">
+      </div>
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Dérogation
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.derogation}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.derogation" placeholder="Modifier la valeur">
+      </div>
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Commentaire
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.comments}}
+        </div>
+        <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.comments" placeholder="Modifier la valeur">
+      </div>
+
+      <!-- Date properties -->
+
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Réception Vrac
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.receptionVrac}}
+        </div>
+        <input type="date" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.receptionVrac" placeholder="Modifier la valeur">
+      </div>
+
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Réception ZAC
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.receptionZAC}}
+        </div>
+        <input type="date" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.receptionZAC" placeholder="Modifier la valeur">
+      </div>
+
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Début réel
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.debutReel}}
+        </div>
+        <input type="date" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.debutReel" placeholder="Modifier la valeur">
+      </div>
+
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          Debut Prévu
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.debutPrevu}}
+        </div>
+        <input type="date" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.debutPrevu" placeholder="Modifier la valeur">
+      </div>
+
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          T1 Réel
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.t1Reel}}
+        </div>
+        <input type="date" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t1Reel" placeholder="Modifier la valeur">
+      </div>
+
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          T1 Prévu
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.t1Prevu}}
+        </div>
+        <input type="date" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t1Prevu" placeholder="Modifier la valeur">
+      </div>
+
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          T2 Réel
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.t2Reel}}
+        </div>
+        <input type="date" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t2Reel" placeholder="Modifier la valeur">
+      </div>
+
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          T2 Prévu
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.t2Prevu}}
+        </div>
+        <input type="date" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t2Prevu" placeholder="Modifier la valeur">
+      </div>
+
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          T3 Réel
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.t3Reel}}
+        </div>
+        <input type="date" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t3Reel" placeholder="Modifier la valeur">
+      </div>
+
+      <div class="row">
+        <div class="d-inline-block col-2 ">
+          T3 Prévu
+        </div>
+        <div class="d-inline-block col-4 border offset-1 border-0">
+          {{testToModifOrDelete.t3Prevu}}
+        </div>
+        <input type="date" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t3Prevu" placeholder="Modifier la valeur">
+      </div>
+
+
+
     </div>
 
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Réception ZAC
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.receptionZAC}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.receptionZAC">
-    </div>
 
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Début réel
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.debutReel}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.debutReel">
-    </div>
-
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        Debut Prévu
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.debutPrevu}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.debutPrevu">
-    </div>
-
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        T1 Réel
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.t1Reel}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t1Reel">
-    </div>
-
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        T1 Prévu
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.t1Prevu}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t1Prevu">
-    </div>
-
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        T2 Réel
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.t2Reel}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t2Reel">
-    </div>
-
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        T2 Prévu
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.t2Prevu}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t2Prevu">
-    </div>
-
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        T3 Réel
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.t3Reel}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t3Reel">
-    </div>
-
-    <div class="row">
-      <div class="d-inline-block col-2 ">
-        T3 Prevu
-      </div>
-      <div class="d-inline-block col-4 border offset-1">
-        {{testToModifOrDelete.t3Prevu}}
-      </div>
-      <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.t3Prevu">
-    </div>
 
 
 
@@ -376,7 +404,8 @@
 
   </div>
   <div class="modal-footer">
-    <button type="button" class="btn btn-success" (click)="validateTest()" (click)="modal.close('Close click')">Valider ce test (Irreversible)</button>
+    <button type="button" class="btn btn-success" (click)="validateTest()" (click)="modal.close('Close click')">Valider
+      ce test (Irreversible)</button>
     <button type="button" class="btn btn-warning" (click)="updateTest()" (click)="modal.close('Close click')">Modifier
       ce test (Irreversible)</button>
     <button type="button" class="btn btn-danger" (click)="deleteTest()" (click)="modal.close('Close click')">Effacer ce

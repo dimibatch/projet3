@@ -23,7 +23,7 @@ export class LoginComponent implements OnInit {
 
   public loginCheck() {
     // Résultat de la demande de vérif dans la base de données
-    if (this.userLog.identifiant == "guerlainhomolog" && this.userLog.password == "xgffapoldv") {
+    if (this.userLog.identifiant == "guerlainhomolog" && this.userLog.password == "jetravaillechezguerlain") {
       sessionStorage.setItem("hasAccess", "true");
     } else {
       sessionStorage.setItem("hasAccess", "false");

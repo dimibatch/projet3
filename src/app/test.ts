@@ -25,7 +25,7 @@ export class Test {
     public test:string = "";
     public start:string = "";
     public result:string = "";
-    public derogation:boolean = false;
+    public derogation:string = "";
     public comments:string = "";
     public ingredients;
     

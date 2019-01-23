@@ -14,9 +14,14 @@ export class FranchisePipe implements PipeTransform {
       return value;
     } else {
       for (let i = 0; i < value.length; i++) {
-        if (value[i].franchise.toLowerCase().indexOf(param_vracName.toLowerCase()) > -1) {
-          result.push(value[i]);
+        if (value[i].franchise != null) {
+          if (value[i].franchise.toLowerCase().indexOf(param_vracName.toLowerCase()) > -1) {
+            result.push(value[i]);
+          }
+        } else {
+          continue;
         }
+        
       }
       return result;
     }

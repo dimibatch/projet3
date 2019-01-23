@@ -1,4 +1,6 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { BigService } from '../big.service';
+import { TestFamily } from '../test-family';
 
 
 
@@ -30,6 +32,7 @@ export class SearchComponent implements OnInit {
   @Input() public packModel: string = "";
   @Input() public vracName: string = "";
   @Input() public testFamily: string = "";
+  @Input() public derogation: boolean;
 
   @Output() searchBarContentChange:EventEmitter<string> = new EventEmitter<string>();
   @Output() materialChange:EventEmitter<string> = new EventEmitter<string>();
@@ -52,15 +55,27 @@ export class SearchComponent implements OnInit {
   @Output() packModelEmitter:EventEmitter<string> = new EventEmitter<string>();
   @Output() vracNameEmitter:EventEmitter<string> = new EventEmitter<string>();
   @Output() testFamilyEmitter:EventEmitter<string> = new EventEmitter<string>();
+  @Output() derogationEmitter:EventEmitter<string> = new EventEmitter<string>();
   
   public page: number = 0;
   @Output() backToFirstPage: EventEmitter<number> = new EventEmitter<number>();
 
   public dictionnary:string[] = ["jupe" , "pp", "copo", "pehd", "tube", "capot", "bpl", "10ml", "12ml","15ml", "30ml","chape", "petite robe noire"]; 
 
-  constructor() { }
+  private bigService: BigService;
+  public families: TestFamily[] = [];
 
-  ngOnInit() { }
+  constructor(bigService: BigService) {
+    this.bigService = bigService;
+   }
+
+  ngOnInit() {
+    this.bigService.getTestFamilies().subscribe(
+      (param:any)=>{
+        this.families = param as TestFamily[];
+      }
+    )
+  }
 
   public onKeyUp() {
     this.searchBarContentChange.emit(this.searchBarContent);
@@ -89,6 +104,7 @@ export class SearchComponent implements OnInit {
 
   public onKeyUpTestType() {
     this.testTypeChange.emit(this.testType);
+    console.log(this.testType)
   }
 
   public onChangeStartDate() {
@@ -161,6 +177,14 @@ export class SearchComponent implements OnInit {
 
   public testFamilyEmission() {
     this.testFamilyEmitter.emit(this.testFamily);
+  }
+
+  public derogationEmission(){
+    if (this.derogation == true){
+      this.derogationEmitter.emit("false");
+    } else {
+      this.derogationEmitter.emit("true");
+    }
   }
   
    //function that changes the "Historique des tests" tab's color when you click on it

@@ -1,29 +1,56 @@
-hot-table{
-    overflow-x: scroll;
-    height:55vh;
+hot-table {
+  overflow-x: scroll;
+  height: 55vh;
+  /* height: 70vh; */
 }
 
-.red{
-    color: red;
+.red {
+  color: red;
 }
 
-.green{
-    color:green;
+.green {
+  color: green;
 }
 
-.test-access-block{
-    float:right;
+.test-access-block {
+  float: right;
 }
 
-.row{
-    margin-bottom: 15px;
+.row {
+  margin-bottom: 15px;
 }
 
-ng-template{
-    width:1200px;
+ng-template {
+  width: 1200px;
 }
 
-.bg-dark{
-    color:white;
-    font-weight: bold;
+.bg-dark {
+  color: white;
+  font-weight: bold;
 }
+
+::ng-deep .my-class .modal-dialog {
+  max-width: 90%;
+  width: 90%;
+  height: 90%;
+}
+
+.height-column {
+  height: 700px;
+  margin-right:20px;
+  /* overflow: scroll */
+}
+
+.pinky {
+  background-color: gray;
+  width: 1px;
+}
+
+.comments-row{
+  height:100px;
+  overflow-y: scroll
+}
+
+/* input {
+  border: 1px solid gray;
+} */

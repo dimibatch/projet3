@@ -8,7 +8,7 @@
       <p class="mt-0">RECHERCHE</p>
       <div class="form-group">
         <hr />
-        <input list="searchBarList" class="form-control" name="searchBar" id="searchBar" aria-describedby="searchBar" (keyup)="onKeyUp();"
+        <input class="form-control" name="searchBar" id="searchBar" aria-describedby="searchBar" (keyup)="onKeyUp();"
           placeholder="Saisissez votre recherche" [(ngModel)]="searchBarContent" autocomplete="off">
       </div>
     </form>
@@ -21,68 +21,85 @@
 
       <form>
         <div class="form-group">
-            <label>Résultats de test</label><br/>
+          <label>Résultats de test</label><br />
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1" (click)="resultConforme(); onChangeResult();">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="option1"
+              (click)="resultConforme(); onChangeResult();">
             <label class="form-check-label" for="inlineRadio1">C</label>
           </div>
           <div class="form-check form-check-inline">
-            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2" (click)="resultNonConforme(); onChangeResult();">
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="option2"
+              (click)="resultNonConforme(); onChangeResult();">
             <label class="form-check-label" for="inlineRadio2">NC</label>
           </div>
           <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3" (click)="resultPTC(); onChangeResult();">
-              <label class="form-check-label" for="inlineRadio3">MC</label>
-            </div>
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="option3"
+              (click)="resultPTC(); onChangeResult();">
+            <label class="form-check-label" for="inlineRadio3">MC</label>
+          </div>
           <div class="form-check form-check-inline">
-              <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4" (click)="resultNoFilter(); onChangeResult();">
-              <label class="form-check-label" for="inlineRadio4">Tous les résultats</label>
-            </div>
+            <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio4" value="option4"
+              (click)="resultNoFilter(); onChangeResult();">
+            <label class="form-check-label" for="inlineRadio4">Tous les résultats</label>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="derogation">Dérogation</label>
+          <input type="checkbox" class="form-control" [(ngModel)]="derogation" (click)="derogationEmission()" name="derogation"
+            id="derogation" value="true" aria-describedby="helpId" placeholder="Dérogation">
         </div>
         <div class="form-group">
           <label for="materiau">Type d'AC</label>
-          <input type="text" class="form-control" [(ngModel)]="typeAC" (keyup)="typeAcEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Type d'AC">
+          <input type="text" class="form-control" [(ngModel)]="typeAC" (keyup)="typeAcEmission();" name="typeAC" id="typeAC"
+            aria-describedby="helpId" placeholder="Type d'AC">
         </div>
         <div class="form-group">
           <label for="materiau">Nom du produit</label>
-          <input type="text" class="form-control" [(ngModel)]="productName" (keyup)="productNameEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Nom du produit">
+          <input type="text" class="form-control" [(ngModel)]="productName" (keyup)="productNameEmission();" name="typeAC"
+            id="typeAC" aria-describedby="helpId" placeholder="Nom du produit">
         </div>
         <div class="form-group">
           <label for="materiau">Code Campagne</label>
-          <input type="text" class="form-control" [(ngModel)]="campaignCode" (keyup)="campaignCodeEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Code campagne">
+          <input type="text" class="form-control" [(ngModel)]="campaignCode" (keyup)="campaignCodeEmission();" name="typeAC"
+            id="typeAC" aria-describedby="helpId" placeholder="Code campagne">
         </div>
         <div class="form-group">
           <label for="materiau">Nom Campagne</label>
-          <input type="text" class="form-control" [(ngModel)]="campaignName" (keyup)="campaignNameEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Nom campagne">
+          <input type="text" class="form-control" [(ngModel)]="campaignName" (keyup)="campaignNameEmission();" name="typeAC"
+            id="typeAC" aria-describedby="helpId" placeholder="Nom campagne">
         </div>
         <div class="form-group">
           <label for="materiau">Franchise</label>
-          <input type="text" class="form-control" [(ngModel)]="franchise" (keyup)="franchiseEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Franchise">
+          <input type="text" class="form-control" [(ngModel)]="franchise" (keyup)="franchiseEmission();" name="typeAC"
+            id="typeAC" aria-describedby="helpId" placeholder="Franchise">
         </div>
         <div class="form-group">
           <label for="materiau">CP QCP</label>
-          <input type="text" class="form-control" [(ngModel)]="cpQCP" (keyup)="cpQCPEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="CP QCP">
+          <input type="text" class="form-control" [(ngModel)]="cpQCP" (keyup)="cpQCPEmission();" name="typeAC" id="typeAC"
+            aria-describedby="helpId" placeholder="CP QCP">
         </div>
         <div class="form-group">
           <label for="materiau">Code AC</label>
-          <input type="text" class="form-control" [(ngModel)]="codeAc" (keyup)="codeAcEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Code AC">
+          <input type="text" class="form-control" [(ngModel)]="codeAc" (keyup)="codeAcEmission();" name="typeAC" id="typeAC"
+            aria-describedby="helpId" placeholder="Code AC">
         </div>
         <div class="form-group">
           <label for="materiau">Fournisseur</label>
-          <input type="text" class="form-control" [(ngModel)]="provider" (keyup)="providerEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Fournisseur">
+          <input type="text" class="form-control" [(ngModel)]="provider" (keyup)="providerEmission();" name="typeAC" id="typeAC"
+            aria-describedby="helpId" placeholder="Fournisseur">
         </div>
         <div class="form-group">
           <label for="materiau">Modèle de pack</label>
-          <input type="text" class="form-control" [(ngModel)]="packModel" (keyup)="packModelEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Model de pack">
+          <input type="text" class="form-control" [(ngModel)]="packModel" (keyup)="packModelEmission();" name="typeAC"
+            id="typeAC" aria-describedby="helpId" placeholder="Model de pack">
         </div>
         <div class="form-group">
           <label for="materiau">Nom vrac</label>
-          <input type="text" class="form-control" [(ngModel)]="vracName" (keyup)="vracNameEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Nom vrac">
+          <input type="text" class="form-control" [(ngModel)]="vracName" (keyup)="vracNameEmission();" name="typeAC" id="typeAC"
+            aria-describedby="helpId" placeholder="Nom vrac">
         </div>
-        <div class="form-group">
-          <label for="materiau">Famille de test</label>
-          <input type="text" class="form-control" [(ngModel)]="testFamily" (keyup)="testFamilyEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Famille de tests">
-        </div>
+        
+        
 
         <!-- <div class="form-group">
           <label for="matiere-premiere">Matière première</label>
@@ -90,39 +107,63 @@
             placeholder="Matière première">
         </div> -->
 
-        
+
 
 
         <div class="form-group">
           <label for="codeG">Code G</label>
-          <input type="text" class="form-control" [(ngModel)]="codeG" (keyup)="onKeyUpCodeG();" name="codeG" id="codeG" aria-describedby="helpId" placeholder="Code G">
+          <input type="text" class="form-control" [(ngModel)]="codeG" (keyup)="onKeyUpCodeG();" name="codeG" id="codeG"
+            aria-describedby="helpId" placeholder="Code G">
         </div>
 
         <div class="form-group">
           <label for="typeDecor">Type de décor</label>
-          <input type="text" class="form-control" [(ngModel)]="typeDecor" (keyup)="onKeyUpDecorType();" name="typeDecor" id="typeDecor" aria-describedby="helpId" placeholder="Type de décor">
+          <input type="text" class="form-control" [(ngModel)]="typeDecor" (keyup)="onKeyUpDecorType();" name="typeDecor"
+            id="typeDecor" aria-describedby="helpId" placeholder="Type de décor">
         </div>
 
         <div class="form-group">
           <label for="numeroVrac">Numéro de vrac</label>
-          <input type="text" class="form-control" [(ngModel)]="vracNumber" (keyup)="onKeyUpVracNumber();" name="numeroVrac" id="numeroVrac" aria-describedby="helpId"
-            placeholder="Numéro de vrac">
+          <input type="text" class="form-control" [(ngModel)]="vracNumber" (keyup)="onKeyUpVracNumber();" name="numeroVrac"
+            id="numeroVrac" aria-describedby="helpId" placeholder="Numéro de vrac">
         </div>
-
+        <div class="form-group">
+          <label for="materiau">Famille de test</label>
+          <select class="form-control" [(ngModel)]="testFamily" (change)="testFamilyEmission();" [ngModelOptions]="{standalone: true}">
+            <option selected></option>
+            <option *ngFor="let current of families" value="{{current.family}}">{{current.family}}</option>
+          </select>
+          
+          <!-- <input type="text" class="form-control" [(ngModel)]="testFamily" (keyup)="testFamilyEmission();" name="typeAC" id="typeAC" aria-describedby="helpId" placeholder="Famille de tests"> -->
+        </div>
         <div class="form-group">
           <label for="test">Nom du test</label>
-          <input type="text" class="form-control" [(ngModel)]="testType" (keyup)="onKeyUpTestType();" name="test" id="test" aria-describedby="helpId" placeholder="Test">
+          <select class="form-control" [(ngModel)]="testType" (change)="onKeyUpTestType()" [ngModelOptions]="{standalone: true}">
+            <option selected></option>
+            <ng-container *ngFor="let current of families[0].testType">
+              <option value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+            </ng-container>
+            <ng-container *ngFor="let current of families[1].testType">
+              <option value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+            </ng-container>
+            <ng-container *ngFor="let current of families[2].testType">
+              <option value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
+            </ng-container>
+          </select>
+          <!-- <input type="text" class="form-control" [(ngModel)]="testType" (keyup)="onKeyUpTestType();" name="test" id="test" aria-describedby="helpId" placeholder="Test"> -->
         </div>
 
         <div class="form-group">
           <label for="datesApres">Tests effectués après le :</label>
-          <input type="date" class="form-control" [(ngModel)]="startDate" (change)="onChangeStartDate();" name="test" id="test" aria-describedby="helpId" placeholder="Test">
+          <input type="date" class="form-control" [(ngModel)]="startDate" (change)="onChangeStartDate();" name="test"
+            id="test" aria-describedby="helpId" placeholder="Test">
         </div>
 
         <div class="form-group">
-            <label for="datesApres">Tests effectués avant le :</label>
-            <input type="date" class="form-control" [(ngModel)]="endDate" (change)="onChangeEndDate();" name="test" id="test" aria-describedby="helpId" placeholder="Test">
-          </div>     
+          <label for="datesApres">Tests effectués avant le :</label>
+          <input type="date" class="form-control" [(ngModel)]="endDate" (change)="onChangeEndDate();" name="test" id="test"
+            aria-describedby="helpId" placeholder="Test">
+        </div>
 
       </form>
     </div>

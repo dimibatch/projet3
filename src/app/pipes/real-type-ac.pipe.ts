@@ -14,9 +14,14 @@ export class RealTypeAcPipe implements PipeTransform {
       return value;
     } else {
       for (let i = 0; i < value.length; i++) {
-        if (value[i].typeAC.toLowerCase().indexOf(param_typeAc.toLowerCase()) > -1) {
-          result.push(value[i]);
+        if (value[i].typeAC != null) {
+          if (value[i].typeAC.toLowerCase().indexOf(param_typeAc.toLowerCase()) > -1) {
+            result.push(value[i]);
+          }
+        } else {
+          continue;
         }
+        
       }
       return result;
     }
