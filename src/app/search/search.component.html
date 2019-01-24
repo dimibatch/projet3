@@ -4,11 +4,11 @@
 
     <!-- Search Bar -->
 
-    <form>
-      <p class="mt-0">RECHERCHE</p>
+    <form class="becomeSticky">
+      <p class="mt-0 bold">RECHERCHE</p>
       <div class="form-group">
-        <hr />
-        <input class="form-control" name="searchBar" id="searchBar" aria-describedby="searchBar" (keyup)="onKeyUp();"
+        <hr/>
+        <input class="form-control gray" name="searchBar" id="searchBar" aria-describedby="searchBar" (keyup)="onKeyUp();"
           placeholder="Saisissez votre recherche" [(ngModel)]="searchBarContent" autocomplete="off">
       </div>
     </form>
