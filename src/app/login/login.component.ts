@@ -9,26 +9,40 @@ import { User } from '../user';
 })
 export class LoginComponent implements OnInit {
 
-  private bigService: BigService;
   public userLog: User = new User();
   public tmpUser: User;
+  public dislayWrongConnectionMessage: boolean = false;
+  public displaySuccessConnectionMessage:boolean = false;
 
-  constructor(service: BigService) {
-    this.bigService = service;
+  constructor() {
   }
 
   ngOnInit() {
+    if(sessionStorage.getItem("hasAccess") == "true"){
+      this.displaySuccessConnectionMessage = true;
+      setTimeout(() => {
+        this.displaySuccessConnectionMessage = false;
+      }, 3000);
+    }
   }
 
 
   public loginCheck() {
-    // Résultat de la demande de vérif dans la base de données
     if (this.userLog.identifiant == "guerlainhomolog" && this.userLog.password == "jetravaillechezguerlain") {
       sessionStorage.setItem("hasAccess", "true");
     } else {
       sessionStorage.setItem("hasAccess", "false");
+      this.dislayWrongConnectionMessage = true;
+      setTimeout(() => {
+        this.dislayWrongConnectionMessage = false;
+      }, 3000);
     }
 
+    if(sessionStorage.getItem("hasAccess") == "true"){
+      location.reload();
+      
+    }
+    
   }
 
   public changeResearchColor() {
@@ -43,5 +57,6 @@ export class LoginComponent implements OnInit {
     document.getElementById('new-test-button').style.backgroundColor = "white";
     }
   }
+
 
 }

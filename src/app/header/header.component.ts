@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
 
+  public isConnected:string = "" ;
+
   constructor() { }
 
   //function that changes the "Rechercher" tab's color when you click on it
@@ -70,6 +72,7 @@ export class HeaderComponent implements OnInit {
 
   ngOnInit() {
     this.colorButtonBasedOnUrl();
+    this.isConnected = sessionStorage.getItem("hasAccess");
   }
 
 
