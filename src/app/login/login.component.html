@@ -10,7 +10,15 @@
     <input type="password" class="form-control" name="password" id="password" aria-describedby="helpId" placeholder="" [(ngModel)]="userLog.password" required>
   </div>
 
-  <button type="button" class="btn mt-5" (click)="loginCheck(); changeResearchColor()" [routerLink]="['/searchPage']" routerLinkActive="router-link-active" >Valider</button>
+  <button type="button" class="btn mt-5" (click)="loginCheck(); changeResearchColor()" (document:keyup.enter)="loginCheck()" >Valider</button>
+
+  <div class="alert alert-danger mt-3 col-2 offset-5" role="alert" *ngIf="dislayWrongConnectionMessage">
+    Mauvais identifiant et/ou mot de passe
+  </div>
+
+  <div class="alert alert-success mt-3 col-2 offset-5" role="success" *ngIf="displaySuccessConnectionMessage">
+    Vous êtes bien connecté.
+  </div>
 
 
 </div>

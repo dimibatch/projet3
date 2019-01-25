@@ -2,8 +2,8 @@
   <div class="text-center pt-5 pb-5 container-fluid" id="header-image">
     <img src="assets/logoabeille.png" class="col-5 offset-3">
     <div class="col-2 offset-1 d-inline-block align-top">
-      <button class="col-12 loginBtn align-top" [routerLink]="['/loginPage']" routerLinkActive="router-link-active">Connexion</button>
-      <button class="col-12 loginBtn align-top" (click)="logOut()">Déconnexion</button>
+      <button class="col-12 loginBtn align-top" [routerLink]="['/loginPage']" routerLinkActive="router-link-active" *ngIf="isConnected != 'true' ">Connexion</button>
+      <button class="col-12 loginBtn align-top" (click)="logOut()" *ngIf="isConnected == 'true'">Déconnexion</button>
     </div>
     
   </div>
@@ -19,4 +19,5 @@
     <button class="col-4  nav-bar-button" id="new-test-button" (click)="changeNewTestColor()" [routerLink]="['/newtestPage']"
       routerLinkActive="router-link-active">AJOUT D'UN NOUVEAU TEST</button>
   </div>
+
 </div>
