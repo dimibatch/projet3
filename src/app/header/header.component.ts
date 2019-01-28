@@ -52,16 +52,30 @@ export class HeaderComponent implements OnInit {
     document.getElementById('research-button').style.backgroundColor = "white";
     }
   }
+
+  public changeLoginColor() {
+    document.getElementById('new-test-button').style.color = "black";
+    document.getElementById('new-test-button').style.backgroundColor = "white";
+    
+    document.getElementById('ongoing-tests-button').style.color = "black";
+    document.getElementById('ongoing-tests-button').style.backgroundColor = "white";
+    
+    document.getElementById('research-button').style.color = "black";
+    document.getElementById('research-button').style.backgroundColor = "white";
+  }
   
   public colorButtonBasedOnUrl(){
     if (window.location.toString().toLowerCase().indexOf("ongoingtestpage")>-1){
       this.changeOngoingTestColor();
     } else if (window.location.toString().toLowerCase().indexOf("newtestpage")>-1){
       this.changeNewTestColor();
+    } else if (window.location.toString().toLowerCase().indexOf("loginpage")>-1){
+      this.changeLoginColor();
     } else {
       this.changeResearchColor();
     }
   }
+
 
   public logOut(){
     sessionStorage.setItem("hasAccess", "false");
