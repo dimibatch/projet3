@@ -47,10 +47,10 @@
         <div class="d-inline-block col-2 ">
           Type d'AC
         </div>
-        <div class="d-inline-block col-4 border offset-1 border-0">
+        <div class="d-inline-block col-4 border offset-1 border-0 height-limit">
           {{testToModifOrDelete.typeAC}}
         </div>
-        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.typeAC" placeholder="Modifier la valeur">
+        <input type="text" class="d-inline-block col-4 offset-1 height-limit" [(ngModel)]="tmpTest.typeAC" placeholder="Modifier la valeur">
       </div>
 
       <div class="row">
@@ -147,19 +147,19 @@
         <div class="d-inline-block col-2 ">
           Matériau
         </div>
-        <div class="d-inline-block col-4 border offset-1 border-0">
+        <div class="d-inline-block col-4 border offset-1 border-0 height-limit">
           {{testToModifOrDelete.material}}
         </div>
-        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.material" placeholder="Modifier la valeur">
+        <input type="text" class="d-inline-block col-4 offset-1 height-limit" [(ngModel)]="tmpTest.material" placeholder="Modifier la valeur">
       </div>
       <div class="row">
         <div class="d-inline-block col-2 ">
           Type décor
         </div>
-        <div class="d-inline-block col-4 border offset-1 border-0">
+        <div class="d-inline-block col-4 border offset-1 border-0 height-limit">
           {{testToModifOrDelete.decoType}}
         </div>
-        <input type="text" class="d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.decoType" placeholder="Modifier la valeur">
+        <input type="text" class="d-inline-block col-4 offset-1 height-limit" [(ngModel)]="tmpTest.decoType" placeholder="Modifier la valeur">
       </div>
       <div class="row">
         <div class="d-inline-block col-2 ">
@@ -245,10 +245,10 @@
         <div class="d-inline-block col-2 ">
           Test
         </div>
-        <div class="d-inline-block col-4 border offset-1 border-0">
+        <div class="d-inline-block col-4 border offset-1 border-0 height-limit">
           {{testToModifOrDelete.test}}
         </div>
-        <select id="onGoingTestSelect" class="form-control d-inline-block col-4 offset-1" [(ngModel)]="tmpTest.test">
+        <select id="onGoingTestSelect" class="form-control d-inline-block col-4 offset-1 height-limit" [(ngModel)]="tmpTest.test">
           <option selected></option>
           <ng-container *ngFor="let current of families[0].testType">
             <option *ngIf="isFirstFamily" value="{{current.code}} {{current.name}}">{{current.code}} {{current.name}}</option>
@@ -303,10 +303,10 @@
         <div class="d-inline-block col-2 ">
           Commentaire
         </div>
-        <div class="d-inline-block col-4 border offset-1 border-0">
+        <div class="d-inline-block col-4 border offset-1 border-0 height-limit">
           {{testToModifOrDelete.comments}}
         </div>
-        <input type="text" class="d-inline-block col-4 offset-1 " [(ngModel)]="tmpTest.comments" placeholder="Modifier la valeur">
+        <input type="text" class="d-inline-block col-4 offset-1 height-limit" [(ngModel)]="tmpTest.comments" placeholder="Modifier la valeur">
       </div>
 
       <!-- Date properties -->
